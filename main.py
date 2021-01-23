@@ -1,6 +1,5 @@
-import pygame
-
 from piceces import *
+from engine import Board, GameController
 from settings import Settings
 from spritesheet import SpriteSheet
 from window import Window
@@ -18,7 +17,6 @@ selected_piece = None
 pieces_group = pygame.sprite.Group()
 
 current_team = Team.WHITE
-
 
 def calculate_index(row, col):
     return row * 8 + col
@@ -46,17 +44,6 @@ def nearest_piece(position, listof):
         return None
 
 
-def drawboard(diplay: pygame.Surface):
-    width, height = Settings().get_window_size()
-    width, height = width // 8, height // 8
-    index = 1  # toswitchcolors (index - 1) * -1
-    for column in range(8):
-        for row in range(8):
-            cell = pygame.Rect(row * height, column * width, width + 1, height + 1)
-            pygame.draw.rect(diplay, colors[index], cell)
-            index = (index - 1) * -1
-        index = (index - 1) * -1
-
 
 ss = SpriteSheet("assets/chess-pieces-sprite.png")
 images = ss.images(2, 6)
@@ -77,25 +64,9 @@ for team in (Team.WHITE, Team.BLACK):
         pieces_type_image[(piece_type, team)] = images[piece_num]
         piece_num += 1
 
-board = [None for _ in range(8 * 8)]
 
-for index, type in enumerate((ChessPieceEnum.ROOK, ChessPieceEnum.KNIGHT, ChessPieceEnum.BISHOP, ChessPieceEnum.QUEEN,
-                              ChessPieceEnum.KING, ChessPieceEnum.BISHOP, ChessPieceEnum.KNIGHT, ChessPieceEnum.ROOK)):
-    board[calculate_index(0, index)] = type.get_class(pieces_type_image[(type, Team.BLACK)], (0, index), Team.BLACK)
+b = Board(window.game_display, pieces_type_image)
 
-for index in range(8):
-    board[calculate_index(1, index)] = Pawn(pieces_type_image[(ChessPieceEnum.PAWN, Team.BLACK)], (1, index), Team.BLACK)
-
-for index in range(8):
-    board[calculate_index(6, index)] = Pawn(pieces_type_image[(ChessPieceEnum.PAWN, Team.WHITE)], (6, index), Team.WHITE)
-
-for index, type in enumerate((ChessPieceEnum.ROOK, ChessPieceEnum.KNIGHT, ChessPieceEnum.BISHOP, ChessPieceEnum.QUEEN,
-                              ChessPieceEnum.KING, ChessPieceEnum.BISHOP, ChessPieceEnum.KNIGHT, ChessPieceEnum.ROOK)):
-    board[calculate_index(7, index)] = type.get_class(pieces_type_image[(type, Team.WHITE)], (7, index), Team.WHITE)
-
-for piece in board:
-    if piece is not None:
-        pieces_group.add(piece)
 
 
 def display_possible_moves(display, moves):
@@ -108,44 +79,51 @@ def display_possible_moves(display, moves):
         pygame.draw.circle(display, (255, 0, 0), (x, y), 15)
 
 
+white_controller, black_controller = GameController(b, Team.WHITE), GameController(b, Team.BLACK)
+
 def game_loop(display: pygame.Surface, events: [pygame.event.Event]):
     global selected_piece
     global current_team
 
-    mouse_was_press = False
-    for event in events:
-        if event.type == pygame.MOUSEBUTTONUP:
-            mouse_was_press = True
+    if b.turn() == Team.WHITE:
+        game_controller = white_controller
+    else:
+        game_controller = black_controller
 
-    next_move = None
+    game_controller.pipe_events(events)
 
-    if mouse_was_press:
-        cursor_position = pygame.mouse.get_pos()
-        nearest = nearest_piece(cursor_position, pieces_group)
+    # mouse_was_press = False
+    #
+    # next_move = None
+    #
+    # if mouse_was_press:
+    #     cursor_position = pygame.mouse.get_pos()
+    #     nearest = nearest_piece(cursor_position, pieces_group)
+    #
+    #     if nearest and nearest.belongs_to_team(current_team):
+    #         selected_piece = nearest
+    #     else:
+    #         width, height = Settings().get_cell_size()
+    #
+    #         mouse_x, mouse_y = cursor_position
+    #         next_move = (mouse_y // width, mouse_x // height)
 
-        if nearest and nearest.belongs_to_team(current_team):
-            selected_piece = nearest
-        else:
-            width, height = Settings().get_cell_size()
+    b.draw()
 
-            mouse_x, mouse_y = cursor_position
-            next_move = (mouse_y // width, mouse_x // height)
-
-    drawboard(display)
-
-    if selected_piece:
-        possible_moves = selected_piece.precalculated_moves()
-
-        if next_move:
-            if next_move in possible_moves:
-                selected_piece.move_to(next_move)
-                current_team = Team.BLACK if current_team == Team.WHITE else Team.WHITE
-            selected_piece = None
-        else:
-            display_possible_moves(display, possible_moves)
-
-
-    pieces_group.draw(display)
+    game_controller.action()
+    # if selected_piece:
+    #     possible_moves = selected_piece.precalculated_moves()
+    #
+    #     if next_move:
+    #         if next_move in possible_moves:
+    #             selected_piece.move_to(next_move)
+    #             current_team = Team.BLACK if current_team == Team.WHITE else Team.WHITE
+    #         selected_piece = None
+    #     else:
+    #         display_possible_moves(display, possible_moves)
+    #
+    #
+    # pieces_group.draw(display)
 
 
 window.loop(game_loop)

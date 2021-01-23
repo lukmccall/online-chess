@@ -11,9 +11,9 @@ class Team(Enum):
 
 class ChessPiece(pygame.sprite.Sprite):
 
+
     def __init__(self, image: pygame.Surface, position, team: Team):
         pygame.sprite.Sprite.__init__(self)
-
         width, height = Settings().get_cell_size()
 
         self.image = pygame.transform.smoothscale(image, (width, height))
@@ -23,7 +23,7 @@ class ChessPiece(pygame.sprite.Sprite):
 
         self._set_rect_according_to_position()
 
-    def move(self, new_position):
+    def move_to(self, new_position):
         self.position = new_position
         self._set_rect_according_to_position()
 
@@ -36,5 +36,8 @@ class ChessPiece(pygame.sprite.Sprite):
 
         self.rect.topleft = (top_x, top_y)
 
-    def belongs_to_team(selfs, team: Team):
-        return selfs.team == team
+    def belongs_to_team(self, team: Team):
+        return self.team == team
+
+    def precalculated_moves(self):
+        return []

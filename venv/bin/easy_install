@@ -1,4 +1,4 @@
-#!/Users/lukasz/studies/python/chess-online/venv/bin/python
+#!/Users/lukasz/studies/chess-online/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

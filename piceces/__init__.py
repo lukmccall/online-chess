@@ -1,5 +1,3 @@
-from enum import Enum
-
 from .chesspiece import *
 from .pawn import *
 from .knight import *
@@ -20,3 +18,4 @@ class ChessPieceEnum(Enum):
     @property
     def get_class(self) -> type(ChessPiece):
         return self.value
+
