@@ -90,8 +90,6 @@ def game_loop(display: pygame.Surface, events: [pygame.event.Event]):
     else:
         game_controller = black_controller
 
-    game_controller.pipe_events(events)
-
     # mouse_was_press = False
     #
     # next_move = None
@@ -109,6 +107,13 @@ def game_loop(display: pygame.Surface, events: [pygame.event.Event]):
     #         next_move = (mouse_y // width, mouse_x // height)
 
     b.draw()
+    if b.is_game_over():
+        window.is_running = False
+        print("koniec")
+        return
+
+    game_controller.pipe_events(events)
+
 
     game_controller.action()
     # if selected_piece:

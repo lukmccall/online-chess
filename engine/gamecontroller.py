@@ -3,6 +3,7 @@ from piceces import Team
 import pygame
 from settings import Settings
 
+
 class GameController:
     def __init__(self, board: Board, team: Team):
         self.board = board
@@ -40,4 +41,3 @@ class GameController:
 
         if self.possible_moves:
             self.board.draw_moves(self.possible_moves)
-
