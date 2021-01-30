@@ -18,7 +18,7 @@ def iterate_over_board_squares():
         yield square
 
 
-def map_piece_types(piece_type: chess.PieceType):
+def map_piece_types(piece_type: chess.PieceType) -> ChessPieceEnum:
     if piece_type not in piece_type_mapper:
         raise TypeError("Invalid piece_type")
     return piece_type_mapper[piece_type]

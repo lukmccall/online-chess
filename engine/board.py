@@ -20,6 +20,7 @@ class Board(pygame.sprite.Group):
         self.logicBoard = chess.Board()
 
         self.displayBoard = defaultdict()
+        self.pieces_type_images = pieces_type_images
 
         for square in iterate_over_board_squares():
             piece = self.logicBoard.piece_at(square)
@@ -77,17 +78,45 @@ class Board(pygame.sprite.Group):
         moves = list(self.logicBoard.generate_legal_moves(from_mask, to_mask))
         if len(moves) == 1:
             return moves[0]
+        elif len(moves) > 1:
+            return moves[0]  # TODO: promotion
 
         return None
 
     def move(self, move: chess.Move):
-        self.logicBoard.push(move)
+        if not self.logicBoard.is_legal(move):
+            raise AssertionError("Illegal move")
+
         piece = self.displayBoard.get(move.from_square)
         self.displayBoard.pop(move.from_square)
 
+        if move.to_square in self.displayBoard:
+            self.remove(self.displayBoard[move.to_square])
+
+        if self.logicBoard.is_en_passant(move):
+            sign = 1 if move.from_square < move.to_square else -1
+            square_in_front = move.from_square + 8 * sign
+            direction = square_in_front - move.to_square
+
+            captured_square = move.from_square - direction
+
+            self.remove(self.displayBoard[captured_square])
+            self.displayBoard.pop(captured_square)
+
         new_position = map_square_to_index(move.to_square)
-        piece.move_to(new_position)
-        self.displayBoard[move.to_square] = piece
+        if move.promotion is not None:
+            promoted_piece_type = map_piece_types(move.promotion)
+            promoted_piece_color = map_piece_color(self.logicBoard.color_at(move.from_square))
+            promoted_piece = promoted_piece_type.get_class(self.pieces_type_images[(promoted_piece_type, promoted_piece_color)], new_position, promoted_piece_color)
+            self.displayBoard[move.to_square] = promoted_piece
+
+            self.remove(piece)
+            self.add(promoted_piece)
+        else:
+            piece.move_to(new_position)
+            self.displayBoard[move.to_square] = piece
+
+        self.logicBoard.push(move)
 
     def turn(self):
         return map_piece_color(self.logicBoard.turn)
