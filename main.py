@@ -18,33 +18,6 @@ pieces_group = pygame.sprite.Group()
 
 current_team = Team.WHITE
 
-def calculate_index(row, col):
-    return row * 8 + col
-
-
-def square(x):
-    return x * x
-
-
-def distance_formula(pos1, pos2):
-    return math.sqrt(square(pos2[0] - pos1[0]) + square(pos2[1] - pos1[1]))
-
-
-def nearest_piece(position, listof):
-    # TODO refactor this
-    nearest = None
-    posCounter = 50000  # a very high number/ could use board dimension^2
-    for piece in listof:
-        if distance_formula(piece.rect.center, position) < posCounter:
-            nearest = piece
-            posCounter = distance_formula(piece.rect.center, position)
-    if posCounter < Settings().get_window_size()[1] / 8 - 30:
-        return nearest  # only works when close
-    else:
-        return None
-
-
-
 ss = SpriteSheet("assets/chess-pieces-sprite.png")
 images = ss.images(2, 6)
 
@@ -64,9 +37,7 @@ for team in (Team.WHITE, Team.BLACK):
         pieces_type_image[(piece_type, team)] = images[piece_num]
         piece_num += 1
 
-
 b = Board(window.game_display, pieces_type_image)
-
 
 
 def display_possible_moves(display, moves):
@@ -80,6 +51,7 @@ def display_possible_moves(display, moves):
 
 
 white_controller, black_controller = GameController(b, Team.WHITE), GameController(b, Team.BLACK)
+
 
 def game_loop(display: pygame.Surface, events: [pygame.event.Event]):
     global selected_piece
@@ -113,7 +85,6 @@ def game_loop(display: pygame.Surface, events: [pygame.event.Event]):
         return
 
     game_controller.pipe_events(events)
-
 
     game_controller.action()
     # if selected_piece:

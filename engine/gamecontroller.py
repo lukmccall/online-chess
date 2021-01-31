@@ -1,4 +1,4 @@
-from .board import Board
+from .gameboard import Board
 from piceces import Team
 import pygame
 from settings import Settings
@@ -32,7 +32,7 @@ class GameController:
                 self.selected_position = (row, col)
                 self.possible_moves = list(self.board.get_possible_moves_from(row, col))
             elif self.selected_position:
-                legal_move = self.board.can_move(*self.selected_position, row, col)
+                legal_move = self.board.generate_move(*self.selected_position, row, col)
                 if legal_move:
                     self.board.move(legal_move)
 

@@ -1,4 +1,4 @@
-from singletonmetaclass import SingletonMeta
+from extensions import SingletonMeta
 
 
 class Settings(metaclass=SingletonMeta):

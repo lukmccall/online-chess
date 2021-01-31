@@ -11,7 +11,6 @@ class Team(Enum):
 
 class ChessPiece(pygame.sprite.Sprite):
 
-
     def __init__(self, image: pygame.Surface, position, team: Team):
         pygame.sprite.Sprite.__init__(self)
         width, height = Settings().get_cell_size()
@@ -38,6 +37,3 @@ class ChessPiece(pygame.sprite.Sprite):
 
     def belongs_to_team(self, team: Team):
         return self.team == team
-
-    def precalculated_moves(self):
-        return []
