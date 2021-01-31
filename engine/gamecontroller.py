@@ -61,7 +61,7 @@ class MultiplayerGameController:
         if not self.team == self.board.turn():
             try:
                 self.message = pickle.loads(self.connection.recv(1024 * 8))
-            except:
+            except BlockingIOError:
                 pass
 
             return

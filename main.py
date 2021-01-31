@@ -3,6 +3,7 @@ from engine import Board, GameController
 from settings import Settings
 from spritesheet import SpriteSheet
 from window import Window
+import pygame_menu
 
 window = Window(*Settings().get_window_size())
 
@@ -34,12 +35,47 @@ for team in (Team.WHITE, Team.BLACK):
 
 b = Board(window.game_display, pieces_type_image)
 
-
-
 white_controller, black_controller = GameController(b, Team.WHITE), GameController(b, Team.BLACK)
 
 
+menu = pygame_menu.Menu(window.height, window.width, "Online Chess",
+                        theme=pygame_menu.themes.THEME_DARK)
+
+
+result_menu = pygame_menu.Menu(window.height, window.width, "Online Chess",
+                             theme=pygame_menu.themes.THEME_DARK)
+
+result_menu.disable()
+
+result_label = pygame_menu.widgets.Label("")
+result_menu.add_generic_widget(result_label)
+result_menu.add_vertical_margin(10)
+
+def go_to_main_menu():
+    menu.enable()
+    result_menu.disable()
+
+result_menu.add_button("Go to main menu", go_to_main_menu)
+
+
+def start_the_game():
+    menu.disable()
+    pass
+
+
+
+
+menu.add_button("Play", start_the_game)
+menu.add_button("Quit", pygame_menu.events.EXIT)
+
+
 def game_loop(display: pygame.Surface, events: [pygame.event.Event]):
+    menu.mainloop(display)
+    result_menu.mainloop(display)
+
+    if menu.enable() or result_menu.enable():
+        return
+
     if b.turn() == Team.WHITE:
         game_controller = white_controller
     else:
@@ -47,8 +83,8 @@ def game_loop(display: pygame.Surface, events: [pygame.event.Event]):
 
     b.draw()
     if b.is_game_over():
-        window.is_running = False
-        print("koniec")
+        result_label.set_title("koniec")
+        result_menu.enable()
         return
 
     game_controller.pipe_events(events)

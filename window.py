@@ -8,7 +8,7 @@ class Window:
         self.height = height
 
         pygame.time.Clock().tick(fps)
-
+        pygame.init()
         self.game_display = pygame.display.set_mode((width, height))
         self.is_running = False
 
