@@ -35,6 +35,10 @@ class GameBoardInterface(metaclass=Interface):
     def is_game_over(self):
         pass
 
+    @abstract
+    def turn(self):
+        pass
+
 
 class Board(GameBoardInterface):
     def __init__(self, surface: pygame.Surface, pieces_type_images,

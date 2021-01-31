@@ -3,7 +3,6 @@ from engine import Board, GameController
 from settings import Settings
 from spritesheet import SpriteSheet
 from window import Window
-import math
 
 window = Window(*Settings().get_window_size())
 
@@ -12,11 +11,7 @@ dark_brown = (139, 69, 0)
 
 colors = (light_brown, dark_brown)
 
-selected_piece = None
-
 pieces_group = pygame.sprite.Group()
-
-current_team = Team.WHITE
 
 ss = SpriteSheet("assets/chess-pieces-sprite.png")
 images = ss.images(2, 6)
@@ -40,43 +35,15 @@ for team in (Team.WHITE, Team.BLACK):
 b = Board(window.game_display, pieces_type_image)
 
 
-def display_possible_moves(display, moves):
-    width, height = Settings().get_cell_size()
-    print(moves)
-    for move in moves:
-        row, col = move
-        x = col * width + width / 2
-        y = row * height + height / 2
-        pygame.draw.circle(display, (255, 0, 0), (x, y), 15)
-
 
 white_controller, black_controller = GameController(b, Team.WHITE), GameController(b, Team.BLACK)
 
 
 def game_loop(display: pygame.Surface, events: [pygame.event.Event]):
-    global selected_piece
-    global current_team
-
     if b.turn() == Team.WHITE:
         game_controller = white_controller
     else:
         game_controller = black_controller
-
-    # mouse_was_press = False
-    #
-    # next_move = None
-    #
-    # if mouse_was_press:
-    #     cursor_position = pygame.mouse.get_pos()
-    #     nearest = nearest_piece(cursor_position, pieces_group)
-    #
-    #     if nearest and nearest.belongs_to_team(current_team):
-    #         selected_piece = nearest
-    #     else:
-    #         width, height = Settings().get_cell_size()
-    #
-    #         mouse_x, mouse_y = cursor_position
-    #         next_move = (mouse_y // width, mouse_x // height)
 
     b.draw()
     if b.is_game_over():
@@ -87,19 +54,6 @@ def game_loop(display: pygame.Surface, events: [pygame.event.Event]):
     game_controller.pipe_events(events)
 
     game_controller.action()
-    # if selected_piece:
-    #     possible_moves = selected_piece.precalculated_moves()
-    #
-    #     if next_move:
-    #         if next_move in possible_moves:
-    #             selected_piece.move_to(next_move)
-    #             current_team = Team.BLACK if current_team == Team.WHITE else Team.WHITE
-    #         selected_piece = None
-    #     else:
-    #         display_possible_moves(display, possible_moves)
-    #
-    #
-    # pieces_group.draw(display)
 
 
 window.loop(game_loop)

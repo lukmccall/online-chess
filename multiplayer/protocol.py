@@ -31,9 +31,9 @@ class StartMessage(Message):
         super().__init__(MessageType.START)
 
 
-class Move(Message):
+class MoveMessage(Message):
     def __init__(self, move: chess.Move):
-        super(Move, self).__init__(MessageType.MOVE)
+        super(MoveMessage, self).__init__(MessageType.MOVE)
         self.move = move
 
     def __str__(self):

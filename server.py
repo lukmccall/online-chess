@@ -17,6 +17,7 @@ lobbies = []
 class Lobby:
     def __init__(self):
         self.clients = []
+        self.current_team = Team.WHITE
 
     def add_client(self, connection):
         self.clients.append(connection)
@@ -30,6 +31,15 @@ class Lobby:
     def __len__(self):
         return len(self.clients)
 
+    def get_other_client(self, connection):
+        for client in self.clients:
+            if client is not connection:
+                return client
+        return None
+
+
+
+
 
 def send(connection, message: mp.Message):
     connection.send(pickle.dumps(message))
@@ -37,8 +47,10 @@ def send(connection, message: mp.Message):
 
 def client(connection, lobby):
     if lobby.is_waiting():
+        team = Team.WHITE
         send(connection, mp.SetTeamMessage(Team.WHITE))
     else:
+        team = Team.BLACK
         send(connection, mp.SetTeamMessage(Team.BLACK))
 
     while lobby.is_waiting():
@@ -46,9 +58,15 @@ def client(connection, lobby):
 
     send(connection, mp.StartMessage())
 
-    while True:
-        pass
+    other_client = lobby.get_other_client(connection)
 
+    while True:
+        if lobby.current_team == team:
+            move_message = pickle.loads(connection.recv(1024 * 8))  # type: mp.MoveMessage
+            lobby.current_team = Team.WHITE if lobby.current_team == Team.BLACK else Team.BLACK
+            other_client.send(pickle.dumps(move_message))
+
+        time.sleep(0.5)
 
 
 def find_lobby():
