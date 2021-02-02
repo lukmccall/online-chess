@@ -8,11 +8,6 @@ from .logicboard import LogicBoardInterface, PythonChessLogicBoard
 from settings import Settings
 from piceces import ChessPiece
 
-light_brown = (251, 196, 117)
-dark_brown = (139, 69, 0)
-
-colors = (light_brown, dark_brown)
-
 
 class GameBoardInterface(metaclass=Interface):
     @abstract
@@ -39,15 +34,22 @@ class GameBoardInterface(metaclass=Interface):
     def turn(self):
         pass
 
+    @abstract
+    def winner(self) -> Optional[chess.Color]:
+        pass
+
 
 class Board(GameBoardInterface):
-    def __init__(self, surface: pygame.Surface, pieces_type_images,
+    def __init__(self, surface: pygame.Surface, pieces_factory,
                  logic_board: LogicBoardInterface = None):
         self.surface = surface
         self.logic_board = logic_board if logic_board is not None else PythonChessLogicBoard()
 
         self.displayBoard = defaultdict()
-        self.pieces_type_images = pieces_type_images
+        self.pieces_factory = pieces_factory
+
+        self.colors = (Settings().get_light_squares_color(), Settings().get_dark_squares_color())
+        self.cell_size = self.surface.get_width() // 8, self.surface.get_height() // 8
 
         for square in iterate_over_board_squares():
             piece = self.logic_board.piece_at(square)
@@ -55,8 +57,8 @@ class Board(GameBoardInterface):
                 mapped_piece = map_piece_types(piece.piece_type)
                 mapped_color = map_piece_color(piece.color)
 
-                index = map_square_to_index(square)
-                py_piece = mapped_piece.get_class(pieces_type_images[(mapped_piece, mapped_color)], index, mapped_color)
+                position = map_square_to_index(square)
+                py_piece = pieces_factory.crete_piece(mapped_piece, mapped_color, position, self.cell_size)
 
                 self.displayBoard[square] = py_piece
 
@@ -74,12 +76,12 @@ class Board(GameBoardInterface):
         for column in range(8):
             for row in range(8):
                 cell = pygame.Rect(row * height, column * width, width + 1, height + 1)
-                pygame.draw.rect(self.surface, colors[index], cell)
+                pygame.draw.rect(self.surface, self.colors[index], cell)
                 index = (index - 1) * -1
             index = (index - 1) * -1
 
     def get_piece_at(self, row, col) -> Optional[ChessPiece]:
-        index = row * Settings().get_board_size() + col
+        index = row * 8 + col
         if index in self.displayBoard:
             return self.displayBoard[index]
         return None
@@ -88,16 +90,16 @@ class Board(GameBoardInterface):
         return self.logic_board.get_possible_moves_from(row, col)
 
     def draw_moves(self, moves: [chess.Move]):
-        width, height = Settings().get_cell_size()
+        width, height = self.cell_size
 
         for move in moves:
             target = move.to_square
-            row = target // Settings().get_board_size()
-            col = target % Settings().get_board_size()
+            row = target // 8
+            col = target % 8
 
             x = col * width + width / 2
             y = row * height + height / 2
-            pygame.draw.circle(self.surface, (255, 0, 0), (x, y), 15)
+            pygame.draw.circle(self.surface, Settings().get_highlights_moves_color(), (x, y), Settings().get_highlights_moves_size())
 
     def generate_move(self, from_row, from_col, to_row, to_col) -> Optional[chess.Move]:
         return self.logic_board.generate_move(from_row, from_col, to_row, to_col)
@@ -123,9 +125,7 @@ class Board(GameBoardInterface):
         if move.promotion is not None:
             promoted_piece_type = map_piece_types(move.promotion)
             promoted_piece_color = map_piece_color(self.logic_board.piece_at(move.from_square).color)
-            promoted_piece = promoted_piece_type.get_class(
-                self.pieces_type_images[(promoted_piece_type, promoted_piece_color)], new_position,
-                promoted_piece_color)
+            promoted_piece = self.pieces_factory.crete_piece(promoted_piece_type, promoted_piece_color, new_position, self.cell_size)
             self.displayBoard[move.to_square] = promoted_piece
         else:
             piece.move_to(new_position)
@@ -155,3 +155,6 @@ class Board(GameBoardInterface):
 
     def is_game_over(self):
         return self.logic_board.is_game_over()
+
+    def winner(self) -> Optional[chess.Color]:
+        return self.logic_board.winner()

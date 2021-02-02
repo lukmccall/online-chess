@@ -1,6 +1,5 @@
 import pygame
 
-from settings import Settings
 from enum import Enum
 
 
@@ -11,29 +10,24 @@ class Team(Enum):
 
 class ChessPiece(pygame.sprite.Sprite):
 
-    def __init__(self, image: pygame.Surface, position, team: Team):
+    def __init__(self, image: pygame.Surface, position, team: Team, cell_size):
         pygame.sprite.Sprite.__init__(self)
-        width, height = Settings().get_cell_size()
 
-        self.image = pygame.transform.smoothscale(image, (width, height))
+        self.cell_size = cell_size
+        self.image = pygame.transform.smoothscale(image, cell_size)
         self.team = team
-        self.position = position
         self.rect = self.image.get_rect()
 
-        self._set_rect_according_to_position()
+        self._set_rect_according_to_position(position)
 
     def move_to(self, new_position):
-        self.position = new_position
-        self._set_rect_according_to_position()
+        self._set_rect_according_to_position(new_position)
 
-    def _set_rect_according_to_position(self):
-        width, height = Settings().get_cell_size()
+    def _set_rect_according_to_position(self, position):
+        width, height = self.cell_size
 
-        row, col = self.position
+        row, col = position
         top_y = row * height
         top_x = col * width
 
         self.rect.topleft = (top_x, top_y)
-
-    def belongs_to_team(self, team: Team):
-        return self.team == team

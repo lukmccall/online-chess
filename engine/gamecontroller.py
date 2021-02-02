@@ -26,7 +26,7 @@ class GameController:
         if self.mouse_was_press:
             cursor_position = pygame.mouse.get_pos()
             mouse_x, mouse_y = cursor_position
-            width, height = Settings().get_cell_size()
+            width, height = self.board.cell_size
             row, col = (mouse_y // width, mouse_x // height)
 
             piece = self.board.get_piece_at(row, col)
@@ -83,7 +83,7 @@ class MultiplayerGameController:
         if self.mouse_was_press:
             cursor_position = pygame.mouse.get_pos()
             mouse_x, mouse_y = cursor_position
-            width, height = Settings().get_cell_size()
+            width, height = self.board.cell_size
             row, col = (mouse_y // width, mouse_x // height)
 
             piece = self.board.get_piece_at(row, col)

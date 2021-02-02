@@ -1,6 +1,5 @@
 import chess
 
-from settings.settings import Settings
 from piceces import ChessPieceEnum, Team
 
 piece_type_mapper = {
@@ -31,5 +30,4 @@ def map_piece_color(piece_color: chess.Color):
 
 
 def map_square_to_index(square: chess.Square):
-    board_size = Settings().get_board_size()
-    return square // board_size, square % board_size
+    return square // 8, square % 8

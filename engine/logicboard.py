@@ -44,7 +44,12 @@ class LogicBoardInterface(metaclass=Interface):
     def piece_at(self, square: chess.Square) -> chess.Piece:
         pass
 
+    @abstract
     def turn(self) -> chess.Color:
+        pass
+
+    @abstract
+    def winner(self) -> Optional[chess.Color]:
         pass
 
 
@@ -62,10 +67,8 @@ class PythonChessLogicBoard(LogicBoardInterface):
 
         moves = list(self.board.generate_legal_moves(from_mask, to_mask))
         print(moves)
-        if len(moves) == 1:
+        if len(moves) >= 1:
             return moves[0]
-        elif len(moves) > 1:
-            return moves[0]  # TODO: promotion
 
         if from_mask & chess.BB_BACKRANKS and to_mask & chess.BB_BACKRANKS:
             move = chess.Move(to_square=from_row * 8 + to_col, from_square=from_row * 8 + from_col)
@@ -89,17 +92,30 @@ class PythonChessLogicBoard(LogicBoardInterface):
     def is_move_legal(self, move: chess.Move) -> bool:
         return self.board.is_legal(move)
 
-    @abstract
     def is_en_passant(self, move: chess.Move) -> bool:
         return self.board.is_en_passant(move)
 
-    @abstract
     def is_castling(self, move: chess.Move) -> bool:
         return self.board.is_castling(move)
 
-    @abstract
     def piece_at(self, square: chess.Square) -> chess.Piece:
         return self.board.piece_at(square)
 
     def turn(self) -> chess.Color:
         return self.board.turn
+
+    def winner(self) -> Optional[chess.Color]:
+        if not self.board.is_game_over():
+            return None
+
+        result = self.board.result()
+
+        if result == "1/2-1/2":
+            return None
+        elif result == "1-0":
+            return chess.WHITE
+        elif result == "0-1":
+            return chess.BLACK
+
+        return None
+
