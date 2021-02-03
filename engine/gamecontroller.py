@@ -1,10 +1,8 @@
-from .gameboard import Board
-from piceces import Team
 import pygame
-from settings import Settings
-import socket
-import pickle
+
 import multiplayer as mp
+from piceces import Team
+from .gameboard import Board
 
 
 class GameController:
@@ -45,9 +43,12 @@ class GameController:
         if self.possible_moves:
             self.board.draw_moves(self.possible_moves)
 
+        if self.team == Team.WHITE:
+            self.board.flip()
+
 
 class MultiplayerGameController:
-    def __init__(self, board: Board, team: Team, connection: socket.socket):
+    def __init__(self, board: Board, team: Team, connection: mp.SocketWrapperInterface):
         self.board = board
         self.team = team
         self.connection = connection
@@ -59,11 +60,7 @@ class MultiplayerGameController:
     def pipe_events(self, events: [pygame.event.Event]):
         self.mouse_was_press = False
         if not self.team == self.board.turn():
-            try:
-                self.message = pickle.loads(self.connection.recv(1024 * 8))
-            except BlockingIOError:
-                pass
-
+            self.message = self.connection.receive()
             return
 
         for event in events:
@@ -95,7 +92,7 @@ class MultiplayerGameController:
                 legal_move = self.board.generate_move(*self.selected_position, row, col)
                 if legal_move:
                     self.board.move(legal_move)
-                    self.connection.send(pickle.dumps(mp.MoveMessage(legal_move)))
+                    self.connection.send(mp.MoveMessage(legal_move))
 
                 self.selected_position = None
                 self.possible_moves = None

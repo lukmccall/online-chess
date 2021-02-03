@@ -158,3 +158,6 @@ class Board(GameBoardInterface):
 
     def winner(self) -> Optional[chess.Color]:
         return self.logic_board.winner()
+
+    def flip(self):
+        pygame.transform.flip(self.surface, True, False)

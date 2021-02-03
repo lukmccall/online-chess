@@ -5,7 +5,7 @@ def abstract(func):
 
 class Interface(type):
     # noinspection PyMissingConstructor
-    def __init__(cls, name, bases, namespace):
+    def __init__(cls, name, bases, _):
         for base in bases:
             must_implement = getattr(base, 'abstract_methods', [])
             class_methods = getattr(cls, 'all_methods', [])

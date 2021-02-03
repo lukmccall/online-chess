@@ -1,11 +1,12 @@
-from engine import GameController, Board, Settings
+from engine import GameController, MultiplayerGameController, Board, Settings
 from extensions import Interface, abstract
 from piceces import Team
 from window import Window
 import pygame_menu
 import pygame
 import chess
-
+from multiplayer import SocketWrapperInterface, NoneBlockingSocketWrapper, MessageType, SetTeamMessage, StartMessage
+import socket
 
 class GameStateInterface(metaclass=Interface):
     @abstract
@@ -56,6 +57,7 @@ class MainMenuState(GameStateInterface):
         )
 
         self.menu.add_button("Play", self.on_new_local_game)
+        self.menu.add_button("Multiplayer", self.on_multiplayer_game)
         self.menu.add_button("Quit", self.on_end)
 
     def on_state_exit(self):
@@ -76,6 +78,11 @@ class MainMenuState(GameStateInterface):
 
     def on_end(self):
         self.game_manager.window.is_running = False
+
+    def on_multiplayer_game(self):
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect(("127.0.0.1", 5555))
+        self.game_manager.change_state(JoiningGameState(self.game_manager, NoneBlockingSocketWrapper(s)))
 
 
 class ResultState(GameStateInterface):
@@ -150,3 +157,91 @@ class LocalGameState(GameStateInterface):
 
         game_controller.pipe_events(events)
         game_controller.action()
+
+
+class JoiningGameState(GameStateInterface):
+    def __init__(self, game_manager: GameManager, socket: SocketWrapperInterface):
+        self.game_manager = game_manager
+        self.socket = socket
+
+        self.menu = pygame_menu.Menu(
+            game_manager.window.height,
+            game_manager.window.width,
+            "Online Chess",
+            theme=pygame_menu.themes.THEME_DARK,
+            enabled=False
+        )
+
+        self.menu.add_label("Waiting for connection")
+        self.menu.add_button("Quit", self.on_end)
+
+        self.team = None
+
+    @abstract
+    def on_state_exit(self):
+        self.menu.disable()
+
+    @abstract
+    def on_state_start(self):
+        self.menu.enable()
+
+    @abstract
+    def on_game_loop(self, display: pygame.surface.Surface, events: [pygame.event.Event]):
+        if self.menu.is_enabled():
+            self.menu.update(events)
+            if not self.menu.is_enabled():
+                return
+            self.menu.draw(self.game_manager.window.game_display)
+
+        message = self.socket.receive()
+        if message is None:
+            return
+
+        if self.team is None:
+            if message.type == MessageType.SET_TEAM:
+                self.team = message.team
+            else:
+                raise AssertionError("Expect [SET_TEAM] message but got {}.".format(message))
+        else:
+            if message.type == MessageType.START:
+                self.game_manager.change_state(OnlineGameState(self.game_manager, self.socket, self.team))
+            else:
+                raise AssertionError("Expect [START] message but got {}.".format(message))
+
+    def on_end(self):
+        pass
+
+
+class OnlineGameState(GameStateInterface):
+    def __init__(self, game_manager: GameManager, socket: SocketWrapperInterface, team: Team):
+        self.game_manager = game_manager
+        self.socket = socket
+        self.team = team
+
+        self.game_controller = None
+        self.board = None
+
+    @abstract
+    def on_state_exit(self):
+        pass
+
+    @abstract
+    def on_state_start(self):
+        self.board = Board(
+            self.game_manager.window.game_display,
+            self.game_manager.asset_provider.get_pieces_factory()
+        )
+
+        self.game_controller = MultiplayerGameController(self.board, self.team, self.socket)
+
+    @abstract
+    def on_game_loop(self, display: pygame.surface.Surface, events: [pygame.event.Event]):
+        self.board.draw()
+
+        if self.board.is_game_over():
+            self.game_manager.change_state(ResultState(self.game_manager, self.board))
+            return
+
+        self.game_controller.pipe_events(events)
+        self.game_controller.action()
+

@@ -1,10 +1,14 @@
 import socket
 from _thread import *
 import time
+from typing import Optional
+
 import multiplayer as mp
 import pickle
 from piceces import Team
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+from multiplayer import ServerSocketWrapper, SocketWrapper
+
+server_socket = ServerSocketWrapper(socket.socket(socket.AF_INET, socket.SOCK_STREAM))
 
 server_name = "localhost"
 port = 5555
@@ -39,19 +43,22 @@ class Lobby:
 
 
 
-
-
 def send(connection, message: mp.Message):
-    connection.send(pickle.dumps(message))
+    bytes = pickle.dumps(message)
+    size = len(bytes)
+    encoded = size.to_bytes(4, 'little')
+    connection.send(encoded + bytes)
 
 
 def client(connection, lobby):
+    this_connection = SocketWrapper(connection)
+
     if lobby.is_waiting():
         team = Team.WHITE
-        send(connection, mp.SetTeamMessage(Team.WHITE))
     else:
         team = Team.BLACK
-        send(connection, mp.SetTeamMessage(Team.BLACK))
+
+    this_connection.send(mp.SetTeamMessage(team))
 
     while lobby.is_waiting():
         time.sleep(0.5)
@@ -59,12 +66,15 @@ def client(connection, lobby):
     send(connection, mp.StartMessage())
 
     other_client = lobby.get_other_client(connection)
+    other_connection = SocketWrapper(other_client)
 
     while True:
         if lobby.current_team == team:
-            move_message = pickle.loads(connection.recv(1024 * 8))  # type: mp.MoveMessage
+            move_message = this_connection.receive()  # type: Optional[mp.MoveMessage]
+            if move_message is None:
+                continue
             lobby.current_team = Team.WHITE if lobby.current_team == Team.BLACK else Team.BLACK
-            other_client.send(pickle.dumps(move_message))
+            other_connection.send(move_message)
 
         time.sleep(0.5)
 
@@ -79,14 +89,15 @@ def find_lobby():
 
 
 try:
-    s.bind((server_name, port))
+    server_socket.bind(server_name, port)
 except socket.error as e:
     print(str(e))
 
-s.listen()
+server_socket.listen()
+
 print("Socket start: {}:{}".format(ip, port))
 while True:
-    connection, address = s.accept()
+    connection, address = server_socket.accept()
     print("{} connect".format(address))
 
     lobby = find_lobby()

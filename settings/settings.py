@@ -10,6 +10,7 @@ class Settings(metaclass=SingletonMeta):
         self._highlights_possible_moves_color = (244, 0, 0)
         self._highlights_possible_moves_size = 12
         self._text_color = (255, 0, 0)
+        self._mtu = 1024 * 4
 
     def get_window_size(self):
         return self._window_size
@@ -31,6 +32,9 @@ class Settings(metaclass=SingletonMeta):
 
     def get_text_color(self):
         return self._text_color
+
+    def get_mtu(self):
+        return self._mtu
 
     # self._calc_cell_size()
     #
