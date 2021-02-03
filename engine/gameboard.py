@@ -39,6 +39,34 @@ class GameBoardInterface(metaclass=Interface):
         pass
 
 
+class FlippableGroup(pygame.sprite.Group):
+    def __init__(self, is_flipped: bool):
+        pygame.sprite.Group.__init__(self)
+        self.is_flipped = is_flipped
+
+    def draw(self, surface):
+        if self.is_flipped:
+            sprites = self.sprites()
+
+            self.spritedict.update(
+                zip(
+                    sprites,
+                    surface.blits((spr.image, self.transform_rect(surface, spr.rect)) for spr in sprites)
+                )
+            )
+
+            self.lostsprites = []
+        else:
+            super().draw(surface)
+
+    def transform_rect(self, surface: pygame.surface.Surface, rect: pygame.rect.Rect) -> pygame.rect.Rect:
+
+        new_rect = rect.copy()
+        new_rect.y = surface.get_height() - rect.y - rect.height
+
+        return new_rect
+
+
 class Board(GameBoardInterface):
     def __init__(self, surface: pygame.Surface, pieces_factory,
                  logic_board: LogicBoardInterface = None):
@@ -50,6 +78,7 @@ class Board(GameBoardInterface):
 
         self.colors = (Settings().get_light_squares_color(), Settings().get_dark_squares_color())
         self.cell_size = self.surface.get_width() // 8, self.surface.get_height() // 8
+        self.is_flipped = True
 
         for square in iterate_over_board_squares():
             piece = self.logic_board.piece_at(square)
@@ -64,7 +93,7 @@ class Board(GameBoardInterface):
 
     def draw(self):
         self.draw_board_cells()
-        group = pygame.sprite.Group()
+        group = FlippableGroup(self.is_flipped)
         for piece in self.displayBoard.values():
             group.add(piece)
         group.draw(self.surface)
@@ -81,12 +110,18 @@ class Board(GameBoardInterface):
             index = (index - 1) * -1
 
     def get_piece_at(self, row, col) -> Optional[ChessPiece]:
+        if self.is_flipped:
+            row = 7 - row
+
         index = row * 8 + col
         if index in self.displayBoard:
             return self.displayBoard[index]
         return None
 
     def get_possible_moves_from(self, row, col) -> Iterator[chess.Move]:
+        if self.is_flipped:
+            row = 7 - row
+
         return self.logic_board.get_possible_moves_from(row, col)
 
     def draw_moves(self, moves: [chess.Move]):
@@ -97,11 +132,19 @@ class Board(GameBoardInterface):
             row = target // 8
             col = target % 8
 
+            if self.is_flipped:
+                row = 7 - row
+
             x = col * width + width / 2
             y = row * height + height / 2
+
             pygame.draw.circle(self.surface, Settings().get_highlights_moves_color(), (x, y), Settings().get_highlights_moves_size())
 
     def generate_move(self, from_row, from_col, to_row, to_col) -> Optional[chess.Move]:
+        if self.is_flipped:
+            from_row = 7 - from_row
+            to_row = 7 - to_row
+
         return self.logic_board.generate_move(from_row, from_col, to_row, to_col)
 
     def move(self, move: chess.Move):
@@ -159,5 +202,5 @@ class Board(GameBoardInterface):
     def winner(self) -> Optional[chess.Color]:
         return self.logic_board.winner()
 
-    def flip(self):
-        pygame.transform.flip(self.surface, True, False)
+    def set_flip(self, to: bool):
+        self.is_flipped = to

@@ -2,6 +2,7 @@ import pygame
 
 import multiplayer as mp
 from piceces import Team
+from settings import Settings
 from .gameboard import Board
 
 
@@ -12,6 +13,10 @@ class GameController:
         self.mouse_was_press = False
         self.selected_position = None
         self.possible_moves = None
+
+    def prepare(self):
+        if Settings().get_flip_board():
+            self.board.set_flip(self.team == Team.WHITE)
 
     def pipe_events(self, events: [pygame.event.Event]):
         self.mouse_was_press = False
@@ -28,7 +33,6 @@ class GameController:
             row, col = (mouse_y // width, mouse_x // height)
 
             piece = self.board.get_piece_at(row, col)
-
             if piece and piece.team == self.team:
                 self.selected_position = (row, col)
                 self.possible_moves = list(self.board.get_possible_moves_from(row, col))
@@ -43,9 +47,6 @@ class GameController:
         if self.possible_moves:
             self.board.draw_moves(self.possible_moves)
 
-        if self.team == Team.WHITE:
-            self.board.flip()
-
 
 class MultiplayerGameController:
     def __init__(self, board: Board, team: Team, connection: mp.SocketWrapperInterface):
@@ -56,6 +57,9 @@ class MultiplayerGameController:
         self.selected_position = None
         self.possible_moves = None
         self.message = None
+
+    def prepare(self):
+        pass
 
     def pipe_events(self, events: [pygame.event.Event]):
         self.mouse_was_press = False
@@ -70,7 +74,6 @@ class MultiplayerGameController:
     def action(self):
         if not self.team == self.board.turn():
             if self.message is not None:
-                print(self.message)
                 if self.message.type == mp.MessageType.MOVE:
                     move = self.message.move
                     self.board.move(move)

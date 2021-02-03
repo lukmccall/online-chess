@@ -10,7 +10,8 @@ class Settings(metaclass=SingletonMeta):
         self._highlights_possible_moves_color = (244, 0, 0)
         self._highlights_possible_moves_size = 12
         self._text_color = (255, 0, 0)
-        self._mtu = 1024 * 4
+
+        self._flip_board = False
 
     def get_window_size(self):
         return self._window_size
@@ -33,8 +34,12 @@ class Settings(metaclass=SingletonMeta):
     def get_text_color(self):
         return self._text_color
 
-    def get_mtu(self):
-        return self._mtu
+    def get_flip_board(self):
+        return self._flip_board
+
+    def set_flip_board(self, to: bool):
+        self._flip_board = to
+
 
     # self._calc_cell_size()
     #

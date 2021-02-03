@@ -11,7 +11,7 @@ class Team(Enum):
 class ChessPiece(pygame.sprite.Sprite):
 
     def __init__(self, image: pygame.Surface, position, team: Team, cell_size):
-        pygame.sprite.Sprite.__init__(self)
+        super().__init__()
 
         self.cell_size = cell_size
         self.image = pygame.transform.smoothscale(image, cell_size)

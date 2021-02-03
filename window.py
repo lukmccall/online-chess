@@ -10,6 +10,7 @@ class Window:
         pygame.time.Clock().tick(fps)
         pygame.init()
         self.game_display = pygame.display.set_mode((width, height))
+        pygame.display.set_caption("Chess Online")
         self.is_running = False
 
     def loop(self, fn):

@@ -66,7 +66,6 @@ class PythonChessLogicBoard(LogicBoardInterface):
         to_mask = 1 << to_row * 8 + to_col
 
         moves = list(self.board.generate_legal_moves(from_mask, to_mask))
-        print(moves)
         if len(moves) >= 1:
             return moves[0]
 

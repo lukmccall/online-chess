@@ -35,6 +35,9 @@ class GameManager:
             if event.type == pygame.QUIT:
                 self.window.is_running = False
                 return
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                self.change_state(MainMenuState(self))
+                return
 
         self.state.on_game_loop(display, events)
 
@@ -58,6 +61,14 @@ class MainMenuState(GameStateInterface):
 
         self.menu.add_button("Play", self.on_new_local_game)
         self.menu.add_button("Multiplayer", self.on_multiplayer_game)
+        self.menu.add_vertical_margin(20)
+        self.menu.add_selector(
+            "Flip board",
+            [("No", False), ("Yes", True)],
+            default=1 if Settings().get_flip_board() else 0,
+            onchange=lambda _, to: Settings().set_flip_board(to)
+        )
+        self.menu.add_vertical_margin(20)
         self.menu.add_button("Quit", self.on_end)
 
     def on_state_exit(self):
@@ -80,8 +91,12 @@ class MainMenuState(GameStateInterface):
         self.game_manager.window.is_running = False
 
     def on_multiplayer_game(self):
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect(("127.0.0.1", 5555))
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect(("127.0.0.1", 5555))
+        except ConnectionRefusedError as e:
+            print(e)
+            return
         self.game_manager.change_state(JoiningGameState(self.game_manager, NoneBlockingSocketWrapper(s)))
 
 
@@ -148,6 +163,8 @@ class LocalGameState(GameStateInterface):
             game_controller = self.white_controller
         else:
             game_controller = self.black_controller
+
+        game_controller.prepare()
 
         self.board.draw()
 
