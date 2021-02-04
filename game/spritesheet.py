@@ -5,6 +5,7 @@ import pygame
 from piceces import Team, ChessPieceEnum, ChessPiece
 from settings import Settings
 
+
 class SpriteSheet:
     def __init__(self, filename):
         self.img = pygame.image.load(filename)

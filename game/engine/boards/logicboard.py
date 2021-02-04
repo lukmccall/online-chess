@@ -1,56 +1,8 @@
-from extensions import Interface, abstract
 from typing import Optional, Iterator
+
 import chess
 
-
-class LogicBoardInterface(metaclass=Interface):
-    @abstract
-    def get_possible_moves_from(self, row, col) -> Iterator[chess.Move]:
-        pass
-
-    @abstract
-    def generate_move(self, from_row, from_col, to_row, to_col) -> Optional[chess.Move]:
-        pass
-
-    @abstract
-    def execute_move(self, move: chess.Move):
-        pass
-
-    @abstract
-    def is_checkmate(self) -> bool:
-        pass
-
-    @abstract
-    def is_stalemate(self) -> bool:
-        pass
-
-    @abstract
-    def is_game_over(self) -> bool:
-        pass
-
-    @abstract
-    def is_move_legal(self, move: chess.Move) -> bool:
-        pass
-
-    @abstract
-    def is_en_passant(self, move: chess.Move) -> bool:
-        pass
-
-    @abstract
-    def is_castling(self, move: chess.Move) -> bool:
-        pass
-
-    @abstract
-    def piece_at(self, square: chess.Square) -> chess.Piece:
-        pass
-
-    @abstract
-    def turn(self) -> chess.Color:
-        pass
-
-    @abstract
-    def winner(self) -> Optional[chess.Color]:
-        pass
+from .logicboardinterface import LogicBoardInterface
 
 
 class PythonChessLogicBoard(LogicBoardInterface):
@@ -111,10 +63,11 @@ class PythonChessLogicBoard(LogicBoardInterface):
 
         if result == "1/2-1/2":
             return None
-        elif result == "1-0":
+
+        if result == "1-0":
             return chess.WHITE
-        elif result == "0-1":
+
+        if result == "0-1":
             return chess.BLACK
 
         return None
-

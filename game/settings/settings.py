@@ -39,18 +39,3 @@ class Settings(metaclass=SingletonMeta):
 
     def set_flip_board(self, to: bool):
         self._flip_board = to
-
-
-    # self._calc_cell_size()
-    #
-    # def set_window_size(self, width, height):
-    #     self.window_size = (width, height)
-    #     self._calc_cell_size()
-    #
-    #
-    # def get_cell_size(self):
-    #     return self.cell_size
-    #
-    # def _calc_cell_size(self):
-    #     w, h = self.window_size
-    #     self.cell_size = 25, 25

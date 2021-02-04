@@ -1,4 +1,3 @@
-from .gameboard import *
-from .gamecontroller import *
-from .logicboard import *
-from .gamemanager import *
+from .boards import *
+from .gamecontrollers import *
+from .gamemanagers import GameManager
