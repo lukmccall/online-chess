@@ -1,3 +1,4 @@
+from typing import List
 import pygame
 
 from langextensions import Interface, abstract
@@ -13,5 +14,5 @@ class StateInterface(metaclass=Interface):
         pass
 
     @abstract
-    def on_game_loop(self, events: [pygame.event.Event]):
+    def on_game_loop(self, events: List[pygame.event.Event]):
         pass

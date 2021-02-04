@@ -1,3 +1,4 @@
+from typing import List
 import pygame
 import pygame_menu
 
@@ -19,8 +20,8 @@ class JoiningGameState(MenuBaseState):
         self.socket = socket
 
         self.menu = pygame_menu.Menu(
-            game_manager.window.height,
-            game_manager.window.width,
+            game_manager.get_window().height,
+            game_manager.get_window().width,
             "Online Chess",
             theme=pygame_menu.themes.THEME_DARK,
             enabled=False
@@ -38,7 +39,7 @@ class JoiningGameState(MenuBaseState):
         if not self.preserve_socket:
             self.socket.close()
 
-    def on_game_loop(self, events: [pygame.event.Event]):
+    def on_game_loop(self, events: List[pygame.event.Event]):
         message = self.socket.receive()
         if message is None:
             super().on_game_loop(events)

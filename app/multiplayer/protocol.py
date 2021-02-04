@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 import chess
 
-from engine.piceces import Team
+from constants import Team
 
 
 class MessageType(Enum):

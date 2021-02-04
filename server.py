@@ -6,8 +6,8 @@ from typing import Optional
 
 import multiplayer as mp
 import pickle
-from piceces import Team
-from multiplayer import ServerSocketWrapper, SocketWrapper
+from constants import Team
+from multiplayer import ServerSocketWrapper, NoneBlockingSocketWrapper
 
 server_socket = ServerSocketWrapper(socket.socket(socket.AF_INET, socket.SOCK_STREAM))
 
@@ -73,7 +73,7 @@ def send(connection, message: mp.Message):
 
 
 def client(connection, lobby):
-    this_connection = SocketWrapper(connection)
+    this_connection = NoneBlockingSocketWrapper(connection)
 
     if lobby.is_waiting():
         team = Team.WHITE
@@ -86,15 +86,15 @@ def client(connection, lobby):
         try:
             _ = this_connection.receive()
         except ConnectionAbortedError:
-            print("close")
             lobby.close()
             return
+
         time.sleep(0.1)
 
-    send(connection, mp.StartMessage())
+    this_connection.send(mp.StartMessage())
 
     other_client = lobby.get_other_client(connection)
-    other_connection = SocketWrapper(other_client)
+    other_connection = NoneBlockingSocketWrapper(other_client)
 
     try:
         while True:
@@ -102,8 +102,8 @@ def client(connection, lobby):
                 move_message = this_connection.receive()  # type: Optional[mp.MoveMessage]
                 if move_message is None:
                     continue
-                lobby.current_team = Team.WHITE if lobby.current_team == Team.BLACK else Team.BLACK
                 other_connection.send(move_message)
+                lobby.current_team = Team.WHITE if lobby.current_team == Team.BLACK else Team.BLACK
             elif lobby.get_is_close():
                 return
 
@@ -111,10 +111,11 @@ def client(connection, lobby):
 
     except ConnectionAbortedError:
         pass
-    except Exception as e:
-        print(e)
+    except Exception as exception:
+        print(exception)
 
     lobby.close()
+
 
 def find_lobby():
     for lobby in lobbies:

@@ -1,0 +1,182 @@
+2021-02-05 00:19:52 INFO Running as pid: 32509
+2021-02-05 00:19:52 INFO Version: 180e970acf39bb947b6a116c631900e08a3b2fb1
+2021-02-05 00:19:52 INFO Build info: Darwin x86_64 @ Fri Jan 15 15:46:59 PST 2021
+2021-02-05 00:19:53 PERFORMANCE Module tracker built: 0.387389s
+2021-02-05 00:19:53 INFO Building type environment...
+2021-02-05 00:19:53 INFO Parsing 6424 stubs and sources...
+2021-02-05 00:19:57 PERFORMANCE Sources parsed: 3.229488s
+2021-02-05 00:20:00 ENVIRONMENT Updating is from empty stub result Environment
+2021-02-05 00:20:00 ENVIRONMENT Updating Alias Environment
+2021-02-05 00:20:00 ENVIRONMENT Updating Edges Environment
+2021-02-05 00:20:00 ENVIRONMENT Updating Class metadata Environment
+2021-02-05 00:20:00 ENVIRONMENT Updating parse annotation Environment
+2021-02-05 00:20:00 ENVIRONMENT Updating metaclasses Environment
+2021-02-05 00:20:00 ENVIRONMENT Updating attributes Environment
+2021-02-05 00:20:00 ENVIRONMENT Updating Global Environment
+2021-02-05 00:20:00 ENVIRONMENT Updating Global Locations Environment
+2021-02-05 00:20:00 PERFORMANCE Full environment built: 6.204905s
+2021-02-05 00:20:00 INFO Checking 243 functions...
+2021-02-05 00:20:00 PROGRESS Processed 11 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 22 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 33 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 44 of 243 functions
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 PROGRESS Processed 55 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 66 of 243 functions
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 PROGRESS Processed 77 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 88 of 243 functions
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 PROGRESS Processed 99 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 110 of 243 functions
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 PROGRESS Processed 121 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 132 of 243 functions
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 PROGRESS Processed 143 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 154 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 165 of 243 functions
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 PROGRESS Processed 176 of 243 functions
+2021-02-05 00:20:00 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:20:00 PROGRESS Processed 177 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 188 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 199 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 210 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 221 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 232 of 243 functions
+2021-02-05 00:20:00 PROGRESS Processed 243 of 243 functions
+2021-02-05 00:20:00 PERFORMANCE Check_TypeCheck: 0.327967s
+2021-02-05 00:20:00 MEMORY Shared memory size post-typecheck (size: 81)
+2021-02-05 00:20:00 PROGRESS Postprocessing 6424 sources...
+2021-02-05 00:20:00 PROGRESS Postprocessed 248 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 496 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 744 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 992 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 1240 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 1488 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 1736 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 1984 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 2232 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 2480 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 2728 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 2976 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 3224 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 3472 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 3720 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 3968 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 4216 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 4464 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 4688 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 4936 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 5184 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 5432 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 5680 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 5928 of 6424 sources
+2021-02-05 00:20:00 PROGRESS Postprocessed 6176 of 6424 sources
+2021-02-05 00:20:01 PROGRESS Postprocessed 6424 of 6424 sources
+2021-02-05 00:20:01 PERFORMANCE Initialization: 7.633313s
+2021-02-05 00:20:01 INFO Server started using incremental style Configuration.Analysis.FineGrained
+2021-02-05 00:20:01 INFO Enabled features = { Configuration.Features.click_to_fix = false; go_to_definition = false;
+  hover = false }
+2021-02-05 00:20:01 PERFORMANCE Server request: 0.001315s
+2021-02-05 00:20:01 PERFORMANCE Server request: 0.001473s
+2021-02-05 00:20:19 PERFORMANCE Module tracker updated: 0.022605s
+2021-02-05 00:20:19 INFO Repopulating the environment...
+2021-02-05 00:20:19 ENVIRONMENT Updating is from empty stub result Environment
+2021-02-05 00:20:19 ENVIRONMENT Updating Alias Environment
+2021-02-05 00:20:19 ENVIRONMENT Updating Edges Environment
+2021-02-05 00:20:19 ENVIRONMENT Updating Class metadata Environment
+2021-02-05 00:20:19 ENVIRONMENT Updating parse annotation Environment
+2021-02-05 00:20:19 ENVIRONMENT Updating metaclasses Environment
+2021-02-05 00:20:19 ENVIRONMENT Updating attributes Environment
+2021-02-05 00:20:19 ENVIRONMENT Updating Global Environment
+2021-02-05 00:20:19 ENVIRONMENT Updating Global Locations Environment
+2021-02-05 00:20:19 INFO Checking 7 functions...
+2021-02-05 00:20:19 PROGRESS Processed 7 of 7 functions
+2021-02-05 00:20:19 PERFORMANCE Check_TypeCheck: 0.005498s
+2021-02-05 00:20:19 PROGRESS Postprocessing 3 sources...
+2021-02-05 00:20:19 PROGRESS Postprocessed 3 of 3 sources
+2021-02-05 00:20:19 MEMORY Shared memory size (size: 81)
+2021-02-05 00:20:19 INFO Number of new errors = 1
+2021-02-05 00:20:19 PERFORMANCE Incremental check: 0.076810s
+2021-02-05 00:20:19 PERFORMANCE Server request: 0.077316s
+2021-02-05 00:20:19 PERFORMANCE Server request: 0.077386s
+2021-02-05 00:22:08 PERFORMANCE Server request: 0.000492s
+2021-02-05 00:22:08 PERFORMANCE Server request: 0.000557s
+2021-02-05 00:22:23 PERFORMANCE Server request: 0.001095s
+2021-02-05 00:22:23 PERFORMANCE Server request: 0.001216s
+2021-02-05 00:22:56 PERFORMANCE Module tracker updated: 0.000262s
+2021-02-05 00:22:56 INFO Repopulating the environment...
+2021-02-05 00:22:56 ENVIRONMENT Updating is from empty stub result Environment
+2021-02-05 00:22:56 ENVIRONMENT Updating Alias Environment
+2021-02-05 00:22:56 ENVIRONMENT Updating Edges Environment
+2021-02-05 00:22:56 ENVIRONMENT Updating Class metadata Environment
+2021-02-05 00:22:56 ENVIRONMENT Updating parse annotation Environment
+2021-02-05 00:22:56 ENVIRONMENT Updating metaclasses Environment
+2021-02-05 00:22:56 ENVIRONMENT Updating attributes Environment
+2021-02-05 00:22:56 ENVIRONMENT Updating Global Environment
+2021-02-05 00:22:56 ENVIRONMENT Updating Global Locations Environment
+2021-02-05 00:22:56 INFO Checking 7 functions...
+2021-02-05 00:22:56 PROGRESS Processed 7 of 7 functions
+2021-02-05 00:22:56 PERFORMANCE Check_TypeCheck: 0.006999s
+2021-02-05 00:22:56 PROGRESS Postprocessing 3 sources...
+2021-02-05 00:22:56 PROGRESS Postprocessed 3 of 3 sources
+2021-02-05 00:22:56 MEMORY Shared memory size (size: 81)
+2021-02-05 00:22:56 INFO Number of new errors = 0
+2021-02-05 00:22:56 PERFORMANCE Incremental check: 0.060878s
+2021-02-05 00:22:56 PERFORMANCE Server request: 0.061331s
+2021-02-05 00:22:56 PERFORMANCE Server request: 0.061394s
+2021-02-05 00:23:20 PERFORMANCE Module tracker updated: 0.000144s
+2021-02-05 00:23:20 INFO Repopulating the environment...
+2021-02-05 00:23:20 ENVIRONMENT Updating is from empty stub result Environment
+2021-02-05 00:23:20 ENVIRONMENT Updating Alias Environment
+2021-02-05 00:23:20 ENVIRONMENT Updating Edges Environment
+2021-02-05 00:23:20 ENVIRONMENT Updating Class metadata Environment
+2021-02-05 00:23:20 ENVIRONMENT Updating parse annotation Environment
+2021-02-05 00:23:20 ENVIRONMENT Updating metaclasses Environment
+2021-02-05 00:23:20 ENVIRONMENT Updating attributes Environment
+2021-02-05 00:23:20 ENVIRONMENT Updating Global Environment
+2021-02-05 00:23:20 ENVIRONMENT Updating Global Locations Environment
+2021-02-05 00:23:20 INFO Checking 10 functions...
+2021-02-05 00:23:20 PROGRESS Processed 10 of 10 functions
+2021-02-05 00:23:20 PERFORMANCE Check_TypeCheck: 0.009734s
+2021-02-05 00:23:20 PROGRESS Postprocessing 4 sources...
+2021-02-05 00:23:20 PROGRESS Postprocessed 4 of 4 sources
+2021-02-05 00:23:20 MEMORY Shared memory size (size: 81)
+2021-02-05 00:23:20 INFO Number of new errors = 0
+2021-02-05 00:23:20 PERFORMANCE Incremental check: 0.061996s
+2021-02-05 00:23:20 PERFORMANCE Server request: 0.062460s
+2021-02-05 00:23:20 PERFORMANCE Server request: 0.062508s
+2021-02-05 00:23:43 PERFORMANCE Module tracker updated: 0.000267s
+2021-02-05 00:23:43 INFO Repopulating the environment...
+2021-02-05 00:23:43 ENVIRONMENT Updating is from empty stub result Environment
+2021-02-05 00:23:43 ENVIRONMENT Updating Alias Environment
+2021-02-05 00:23:43 ENVIRONMENT Updating Edges Environment
+2021-02-05 00:23:43 ENVIRONMENT Updating Class metadata Environment
+2021-02-05 00:23:43 ENVIRONMENT Updating parse annotation Environment
+2021-02-05 00:23:43 ENVIRONMENT Updating metaclasses Environment
+2021-02-05 00:23:43 ENVIRONMENT Updating attributes Environment
+2021-02-05 00:23:43 ENVIRONMENT Updating Global Environment
+2021-02-05 00:23:43 ENVIRONMENT Updating Global Locations Environment
+2021-02-05 00:23:43 INFO Checking 10 functions...
+2021-02-05 00:23:43 PROGRESS Processed 10 of 10 functions
+2021-02-05 00:23:43 PERFORMANCE Check_TypeCheck: 0.004708s
+2021-02-05 00:23:43 PROGRESS Postprocessing 4 sources...
+2021-02-05 00:23:43 PROGRESS Postprocessed 4 of 4 sources
+2021-02-05 00:23:43 MEMORY Shared memory size (size: 81)
+2021-02-05 00:23:43 INFO Number of new errors = 0
+2021-02-05 00:23:43 PERFORMANCE Incremental check: 0.058731s
+2021-02-05 00:23:43 PERFORMANCE Server request: 0.059033s
+2021-02-05 00:23:43 PERFORMANCE Server request: 0.059097s
+2021-02-05 00:23:44 PERFORMANCE Server request: 0.000737s
+2021-02-05 00:23:44 PERFORMANCE Server request: 0.000857s
+2021-02-05 00:23:49 PERFORMANCE Server request: 0.000654s
+2021-02-05 00:23:49 PERFORMANCE Server request: 0.000779s

@@ -1,3 +1,4 @@
+from typing import List
 import pygame
 
 from settings import Settings
@@ -18,7 +19,7 @@ class GameController:
         if Settings().get_flip_board():
             self.board.set_flip(self.team == Team.WHITE)
 
-    def pipe_events(self, events: [pygame.event.Event]):
+    def pipe_events(self, events: List[pygame.event.Event]):
         self.mouse_was_press = False
 
         for event in events:

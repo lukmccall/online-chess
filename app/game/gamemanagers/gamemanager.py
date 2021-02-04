@@ -1,3 +1,5 @@
+from typing import List
+
 import pygame
 
 from .gamemanagerinterface import GameManagerInterface
@@ -13,7 +15,7 @@ class GameManager(GameManagerInterface):
         self.state = None
         self.go_to_main_state()
 
-    def game_loop(self, events: [pygame.event.Event]):
+    def game_loop(self, events: List[pygame.event.Event]):
         for event in events:
             if event.type == pygame.QUIT:
                 self.window.is_running = False

@@ -1,4 +1,4 @@
-from typing import Optional, Iterator
+from typing import Optional, Iterator, List
 
 from langextensions import Interface, abstract
 
@@ -19,7 +19,7 @@ class GameBoardInterface(metaclass=Interface):
         pass
 
     @abstract
-    def draw_moves(self, moves: [chess.Move]):
+    def draw_moves(self, moves: List[chess.Move]):
         pass
 
     @abstract

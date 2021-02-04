@@ -1,3 +1,4 @@
+from typing import List
 import pygame
 
 from settings import Settings
@@ -23,7 +24,7 @@ class MultiplayerGameController(GameController):
         if Settings().get_flip_board():
             self.board.set_flip(self.team == Team.WHITE)
 
-    def pipe_events(self, events: [pygame.event.Event]):
+    def pipe_events(self, events: List[pygame.event.Event]):
         if not self.team == self.board.turn():
             self.message = self.connection.receive()
             return

@@ -1,3 +1,4 @@
+from typing import List
 import pygame
 
 from ..gamemanagers import GameManagerInterface
@@ -21,5 +22,5 @@ class BaseState(StateInterface):
     def on_state_start(self):
         pass
 
-    def on_game_loop(self, events: [pygame.event.Event]):
+    def on_game_loop(self, events: List[pygame.event.Event]):
         pass

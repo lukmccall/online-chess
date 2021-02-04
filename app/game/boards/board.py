@@ -1,5 +1,5 @@
 from collections import defaultdict
-from typing import Optional, Iterator
+from typing import Optional, Iterator, List
 
 import pygame
 import chess
@@ -51,7 +51,7 @@ class FlippableGroup(pygame.sprite.Group):
 
 class Board(GameBoardInterface):
     def __init__(self, surface: pygame.Surface, pieces_factory,
-                 logic_board: LogicBoardInterface = None):
+                 logic_board: Optional[LogicBoardInterface] = None):
         self.surface = surface
         self.logic_board = logic_board if logic_board is not None else PythonChessLogicBoard()
 
@@ -111,7 +111,7 @@ class Board(GameBoardInterface):
 
         return self.logic_board.get_possible_moves_from(row, col)
 
-    def draw_moves(self, moves: [chess.Move]):
+    def draw_moves(self, moves: List[chess.Move]):
         width, height = self.cell_size
 
         for move in moves:

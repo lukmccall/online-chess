@@ -1,0 +1,84 @@
+2021-02-05 00:35:09 INFO Running as pid: 36876
+2021-02-05 00:35:09 INFO Version: 180e970acf39bb947b6a116c631900e08a3b2fb1
+2021-02-05 00:35:09 INFO Build info: Darwin x86_64 @ Fri Jan 15 15:46:59 PST 2021
+2021-02-05 00:35:09 PERFORMANCE Module tracker built: 0.104298s
+2021-02-05 00:35:09 INFO Building type environment...
+2021-02-05 00:35:09 INFO Parsing 1327 stubs and sources...
+2021-02-05 00:35:10 PERFORMANCE Sources parsed: 0.600333s
+2021-02-05 00:35:10 ENVIRONMENT Updating is from empty stub result Environment
+2021-02-05 00:35:10 ENVIRONMENT Updating Alias Environment
+2021-02-05 00:35:10 ENVIRONMENT Updating Edges Environment
+2021-02-05 00:35:10 ENVIRONMENT Updating Class metadata Environment
+2021-02-05 00:35:10 ENVIRONMENT Updating parse annotation Environment
+2021-02-05 00:35:10 ENVIRONMENT Updating metaclasses Environment
+2021-02-05 00:35:10 ENVIRONMENT Updating attributes Environment
+2021-02-05 00:35:10 ENVIRONMENT Updating Global Environment
+2021-02-05 00:35:10 ENVIRONMENT Updating Global Locations Environment
+2021-02-05 00:35:10 PERFORMANCE Full environment built: 1.210116s
+2021-02-05 00:35:11 INFO Checking 242 functions...
+2021-02-05 00:35:11 ENVIRONMENT Superclass annotation type is missing
+2021-02-05 00:35:11 ENVIRONMENT Superclass annotation type is missing
+2021-02-05 00:35:11 ENVIRONMENT Superclass annotation type is missing
+2021-02-05 00:35:11 ENVIRONMENT Superclass annotation type is missing
+2021-02-05 00:35:11 ENVIRONMENT Superclass annotation type is missing
+2021-02-05 00:35:11 PROGRESS Processed 11 of 242 functions
+2021-02-05 00:35:11 ENVIRONMENT Superclass annotation pygame.sprite.Sprite is missing
+2021-02-05 00:35:11 ENVIRONMENT Superclass annotation dict is missing
+2021-02-05 00:35:11 ENVIRONMENT Superclass annotation type is missing
+2021-02-05 00:35:11 ENVIRONMENT Superclass annotation dict is missing
+2021-02-05 00:35:11 ENVIRONMENT Superclass annotation type is missing
+2021-02-05 00:35:11 ENVIRONMENT Superclass annotation pygame.sprite.Group is missing
+2021-02-05 00:35:11 PROGRESS Processed 22 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 33 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 44 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 55 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 66 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 77 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 88 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 99 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 110 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 121 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 132 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 143 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 154 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 165 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 176 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 187 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 198 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 209 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 220 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 231 of 242 functions
+2021-02-05 00:35:11 PROGRESS Processed 242 of 242 functions
+2021-02-05 00:35:11 PERFORMANCE Check_TypeCheck: 0.181683s
+2021-02-05 00:35:11 MEMORY Shared memory size post-typecheck (size: 14)
+2021-02-05 00:35:11 PROGRESS Postprocessing 1327 sources...
+2021-02-05 00:35:11 PROGRESS Postprocessed 56 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 112 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 168 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 224 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 280 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 336 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 392 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 448 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 504 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 560 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 616 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 672 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 728 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 784 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 840 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 896 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 952 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 991 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 1047 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 1103 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 1159 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 1215 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 1271 of 1327 sources
+2021-02-05 00:35:11 PROGRESS Postprocessed 1327 of 1327 sources
+2021-02-05 00:35:11 PERFORMANCE Initialization: 1.723309s
+2021-02-05 00:35:11 INFO Server started using incremental style Configuration.Analysis.FineGrained
+2021-02-05 00:35:11 INFO Enabled features = { Configuration.Features.click_to_fix = false; go_to_definition = false;
+  hover = false }
+2021-02-05 00:35:11 PERFORMANCE Server request: 0.007069s
+2021-02-05 00:35:11 PERFORMANCE Server request: 0.007172s

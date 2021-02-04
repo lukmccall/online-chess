@@ -1,0 +1,8 @@
+{
+  "binary": "/Users/lukasz/studies/chess-online/venv/bin/pyre.bin",
+  "source_directories": [
+    "app"
+  ],
+  "taint_models_path": "/Users/lukasz/studies/chess-online/venv/lib",
+  "typeshed": "/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed"
+}

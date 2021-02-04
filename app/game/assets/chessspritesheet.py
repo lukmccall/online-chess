@@ -1,3 +1,4 @@
+from typing import ValuesView
 import pygame
 
 from constants import Team
@@ -28,5 +29,5 @@ class ChessSpriteSheet:
     def get_piece_image(self, piece_type: ChessPieceEnum, team: Team) -> pygame.Surface:
         return self.pieces_type_image[(piece_type, team)]
 
-    def get_all_images(self) -> [pygame.Surface]:
+    def get_all_images(self) -> ValuesView[pygame.surface.Surface]:
         return self.pieces_type_image.values()

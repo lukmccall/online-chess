@@ -1,0 +1,508 @@
+2021-02-05 00:19:52,157 [PID 32501] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-05 00:19:52,157 [PID 32501] INFO Waiting for server...
+2021-02-05 00:19:52,157 [PID 32501] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:19:52,158 [PID 32501] INFO Starting server at `/Users/lukasz/studies/chess-online/app`.
+2021-02-05 00:19:52,158 [PID 32501] INFO Waiting on the pyre client lock.
+2021-02-05 00:19:52,158 [PID 32501] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:19:52,158 [PID 32501] DEBUG Daemonizing the configuration_monitor.
+2021-02-05 00:19:52,159 [PID 32501] INFO Waiting for monitor to start up...
+2021-02-05 00:19:52,161 [PID 32501] DEBUG The configuration monitor is down.
+2021-02-05 00:19:52,162 [PID 32506] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.lock
+2021-02-05 00:19:52,164 [PID 32506] DEBUG Registering process with pid 32506 in pid file `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:19:52,267 [PID 32501] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/server/server.lock
+2021-02-05 00:19:52,268 [PID 32501] DEBUG Unable to acquire lock because lock file /Users/lukasz/studies/chess-online/.pyre/server/server.lock was not found
+2021-02-05 00:19:52,268 [PID 32501] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-05 00:19:52,270 [PID 32501] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin start -logging-sections environment -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -taint-models /Users/lukasz/studies/chess-online/venv/lib -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -expected-binary-version unversioned -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 -new-incremental-check /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:19:52,278 [PID 32501] DEBUG Registering process with pid 32508 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-32508.pid`
+2021-02-05 00:19:52,715 [PID 32501] INFO Starting up server ...
+2021-02-05 00:19:52,716 [PID 32501] INFO Running as pid: 32508
+2021-02-05 00:19:52,716 [PID 32501] INFO Version: 180e970acf39bb947b6a116c631900e08a3b2fb1
+2021-02-05 00:19:52,716 [PID 32501] INFO Build info: Darwin x86_64 @ Fri Jan 15 15:46:59 PST 2021
+2021-02-05 00:19:52,717 [PID 32501] INFO Starting the server. Please wait...
+2021-02-05 00:19:52,719 [PID 32501] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-32508.pid`
+2021-02-05 00:20:01,072 [PID 32501] DEBUG Daemonizing the file_monitor.
+2021-02-05 00:20:01,074 [PID 32501] INFO Waiting for monitor to start up...
+2021-02-05 00:20:01,076 [PID 32501] DEBUG The file monitor is down.
+2021-02-05 00:20:01,078 [PID 32759] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.lock
+2021-02-05 00:20:01,080 [PID 32759] DEBUG Registering process with pid 32759 in pid file `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:20:01,182 [PID 32501] DEBUG Initialized file monitor.
+2021-02-05 00:20:01,275 [PID 32501] PERFORMANCE Server request: 0.001315s
+2021-02-05 00:20:01,276 [PID 32501] PERFORMANCE Server request: 0.001473s
+2021-02-05 00:20:01,283 [PID 32501] ERROR Found 29 type errors!
+2021-02-05 00:21:53,930 [PID 33050] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre start`...
+2021-02-05 00:21:53,931 [PID 33050] INFO Waiting on the pyre client lock.
+2021-02-05 00:21:53,931 [PID 33050] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:21:53,931 [PID 33050] DEBUG Daemonizing the configuration_monitor.
+2021-02-05 00:21:53,932 [PID 33050] INFO Waiting for monitor to start up...
+2021-02-05 00:21:53,934 [PID 33050] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/server/server.lock
+2021-02-05 00:21:53,935 [PID 33050] WARNING Server at `/Users/lukasz/studies/chess-online/app` exists, skipping.
+2021-02-05 00:21:53,935 [PID 33055] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.lock
+2021-02-05 00:22:08,353 [PID 33137] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-05 00:22:08,353 [PID 33137] INFO Waiting for server...
+2021-02-05 00:22:08,353 [PID 33137] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:22:08,372 [PID 33137] PERFORMANCE Server request: 0.000492s
+2021-02-05 00:22:08,373 [PID 33137] PERFORMANCE Server request: 0.000557s
+2021-02-05 00:22:08,377 [PID 33137] ERROR Found 29 type errors!
+2021-02-05 00:22:23,421 [PID 33218] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre incremental`...
+2021-02-05 00:22:23,421 [PID 33218] INFO Waiting for server...
+2021-02-05 00:22:23,422 [PID 33218] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:22:23,462 [PID 33218] PERFORMANCE Server request: 0.001095s
+2021-02-05 00:22:23,463 [PID 33218] PERFORMANCE Server request: 0.001216s
+2021-02-05 00:22:23,470 [PID 33218] ERROR Found 29 type errors!
+2021-02-05 00:23:44,471 [PID 33358] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre incremental`...
+2021-02-05 00:23:44,471 [PID 33358] INFO Waiting for server...
+2021-02-05 00:23:44,471 [PID 33358] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:23:44,529 [PID 33358] PERFORMANCE Server request: 0.000737s
+2021-02-05 00:23:44,530 [PID 33358] PERFORMANCE Server request: 0.000857s
+2021-02-05 00:23:44,536 [PID 33358] ERROR Found 28 type errors!
+2021-02-05 00:23:49,595 [PID 33440] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-05 00:23:49,596 [PID 33440] INFO Waiting for server...
+2021-02-05 00:23:49,596 [PID 33440] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:23:49,668 [PID 33440] PERFORMANCE Server request: 0.000654s
+2021-02-05 00:23:49,669 [PID 33440] PERFORMANCE Server request: 0.000779s
+2021-02-05 00:23:49,675 [PID 33440] ERROR Found 28 type errors!
+2021-02-05 00:24:48,738 [PID 33690] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre check`...
+2021-02-05 00:24:48,739 [PID 33690] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-05 00:24:48,739 [PID 33690] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin check -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:24:48,744 [PID 33690] DEBUG Registering process with pid 33693 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/check-33693.pid`
+2021-02-05 00:24:49,256 [PID 33690] PERFORMANCE Module tracker built: 0.429253s
+2021-02-05 00:24:49,256 [PID 33690] INFO Building type environment...
+2021-02-05 00:24:49,468 [PID 33690] INFO Parsing 6424 stubs and sources...
+2021-02-05 00:24:52,613 [PID 33690] PERFORMANCE Sources parsed: 3.146579s
+2021-02-05 00:24:54,949 [PID 33690] PERFORMANCE Full environment built: 5.697681s
+2021-02-05 00:24:55,246 [PID 33690] INFO Checking 243 functions...
+2021-02-05 00:24:55,314 [PID 33690] INFO Processed 11 of 243 functions
+2021-02-05 00:24:55,333 [PID 33690] INFO Processed 22 of 243 functions
+2021-02-05 00:24:55,346 [PID 33690] INFO Processed 33 of 243 functions
+2021-02-05 00:24:55,351 [PID 33690] INFO Processed 44 of 243 functions
+2021-02-05 00:24:55,352 [PID 33690] INFO Processed 55 of 243 functions
+2021-02-05 00:24:55,352 [PID 33690] INFO Processed 66 of 243 functions
+2021-02-05 00:24:55,367 [PID 33690] INFO Processed 77 of 243 functions
+2021-02-05 00:24:55,367 [PID 33690] INFO Processed 88 of 243 functions
+2021-02-05 00:24:55,367 [PID 33690] INFO Processed 99 of 243 functions
+2021-02-05 00:24:55,367 [PID 33690] INFO Processed 110 of 243 functions
+2021-02-05 00:24:55,386 [PID 33690] INFO Processed 121 of 243 functions
+2021-02-05 00:24:55,415 [PID 33690] INFO Processed 132 of 243 functions
+2021-02-05 00:24:55,416 [PID 33690] INFO Processed 143 of 243 functions
+2021-02-05 00:24:55,422 [PID 33690] INFO Processed 154 of 243 functions
+2021-02-05 00:24:55,427 [PID 33690] INFO Processed 165 of 243 functions
+2021-02-05 00:24:55,438 [PID 33690] INFO Processed 176 of 243 functions
+2021-02-05 00:24:55,445 [PID 33690] INFO Processed 177 of 243 functions
+2021-02-05 00:24:55,447 [PID 33690] INFO Processed 188 of 243 functions
+2021-02-05 00:24:55,447 [PID 33690] INFO Processed 199 of 243 functions
+2021-02-05 00:24:55,450 [PID 33690] INFO Processed 210 of 243 functions
+2021-02-05 00:24:55,457 [PID 33690] INFO Processed 221 of 243 functions
+2021-02-05 00:24:55,465 [PID 33690] INFO Processed 232 of 243 functions
+2021-02-05 00:24:55,466 [PID 33690] INFO Processed 243 of 243 functions
+2021-02-05 00:24:55,466 [PID 33690] PERFORMANCE Check_TypeCheck: 0.220092s
+2021-02-05 00:24:55,466 [PID 33690] MEMORY Shared memory size post-typecheck (size: 81)
+2021-02-05 00:24:55,466 [PID 33690] INFO Postprocessing 6424 sources...
+2021-02-05 00:24:55,541 [PID 33690] INFO Postprocessed 248 of 6424 sources
+2021-02-05 00:24:55,552 [PID 33690] INFO Postprocessed 496 of 6424 sources
+2021-02-05 00:24:55,566 [PID 33690] INFO Postprocessed 744 of 6424 sources
+2021-02-05 00:24:55,576 [PID 33690] INFO Postprocessed 992 of 6424 sources
+2021-02-05 00:24:55,577 [PID 33690] INFO Postprocessed 1240 of 6424 sources
+2021-02-05 00:24:55,589 [PID 33690] INFO Postprocessed 1488 of 6424 sources
+2021-02-05 00:24:55,589 [PID 33690] INFO Postprocessed 1736 of 6424 sources
+2021-02-05 00:24:55,598 [PID 33690] INFO Postprocessed 1984 of 6424 sources
+2021-02-05 00:24:55,598 [PID 33690] INFO Postprocessed 2232 of 6424 sources
+2021-02-05 00:24:55,598 [PID 33690] INFO Postprocessed 2480 of 6424 sources
+2021-02-05 00:24:55,599 [PID 33690] INFO Postprocessed 2728 of 6424 sources
+2021-02-05 00:24:55,613 [PID 33690] INFO Postprocessed 2976 of 6424 sources
+2021-02-05 00:24:55,624 [PID 33690] INFO Postprocessed 3224 of 6424 sources
+2021-02-05 00:24:55,633 [PID 33690] INFO Postprocessed 3472 of 6424 sources
+2021-02-05 00:24:55,655 [PID 33690] INFO Postprocessed 3720 of 6424 sources
+2021-02-05 00:24:55,684 [PID 33690] INFO Postprocessed 3968 of 6424 sources
+2021-02-05 00:24:55,685 [PID 33690] INFO Postprocessed 4216 of 6424 sources
+2021-02-05 00:24:55,703 [PID 33690] INFO Postprocessed 4464 of 6424 sources
+2021-02-05 00:24:55,743 [PID 33690] INFO Postprocessed 4712 of 6424 sources
+2021-02-05 00:24:55,744 [PID 33690] INFO Postprocessed 4960 of 6424 sources
+2021-02-05 00:24:55,745 [PID 33690] INFO Postprocessed 5184 of 6424 sources
+2021-02-05 00:24:55,749 [PID 33690] INFO Postprocessed 5432 of 6424 sources
+2021-02-05 00:24:55,762 [PID 33690] INFO Postprocessed 5680 of 6424 sources
+2021-02-05 00:24:55,762 [PID 33690] INFO Postprocessed 5928 of 6424 sources
+2021-02-05 00:24:55,763 [PID 33690] INFO Postprocessed 6176 of 6424 sources
+2021-02-05 00:24:55,799 [PID 33690] INFO Postprocessed 6424 of 6424 sources
+2021-02-05 00:24:55,801 [PID 33690] PERFORMANCE Check: 6.983547s
+2021-02-05 00:24:55,840 [PID 33690] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/check-33693.pid`
+2021-02-05 00:24:55,845 [PID 33690] ERROR Found 28 type errors!
+2021-02-05 00:25:58,814 [PID 32506] INFO Waiting for the client lock...
+2021-02-05 00:25:58,816 [PID 32506] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:25:58,817 [PID 32506] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin stop -log-directory /Users/lukasz/studies/chess-online/.pyre /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:25:58,826 [PID 32506] DEBUG Registering process with pid 34061 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-34061.pid`
+2021-02-05 00:25:58,850 [PID 32506] INFO Server stopped, polling for deletion of socket.
+2021-02-05 00:25:58,852 [PID 32506] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-34061.pid`
+2021-02-05 00:25:58,853 [PID 32506] INFO Polling for server's process to stop...
+2021-02-05 00:25:58,954 [PID 32506] INFO The server process has stopped.
+2021-02-05 00:25:58,956 [PID 32506] INFO Stopped server at `/Users/lukasz/studies/chess-online/app`
+2021-02-05 00:25:58,959 [PID 32759] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:25:58,960 [PID 32506] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:26:02,464 [PID 34073] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre check`...
+2021-02-05 00:26:02,465 [PID 34073] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-05 00:26:02,465 [PID 34073] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin check -strict -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:26:02,471 [PID 34073] DEBUG Registering process with pid 34078 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/check-34078.pid`
+2021-02-05 00:26:02,922 [PID 34073] PERFORMANCE Module tracker built: 0.405883s
+2021-02-05 00:26:02,922 [PID 34073] INFO Building type environment...
+2021-02-05 00:26:03,141 [PID 34073] INFO Parsing 6424 stubs and sources...
+2021-02-05 00:26:06,148 [PID 34073] PERFORMANCE Sources parsed: 3.006805s
+2021-02-05 00:26:08,389 [PID 34073] PERFORMANCE Full environment built: 5.465846s
+2021-02-05 00:26:08,695 [PID 34073] INFO Checking 243 functions...
+2021-02-05 00:26:08,765 [PID 34073] INFO Processed 11 of 243 functions
+2021-02-05 00:26:08,782 [PID 34073] INFO Processed 22 of 243 functions
+2021-02-05 00:26:08,794 [PID 34073] INFO Processed 33 of 243 functions
+2021-02-05 00:26:08,803 [PID 34073] INFO Processed 44 of 243 functions
+2021-02-05 00:26:08,803 [PID 34073] INFO Processed 55 of 243 functions
+2021-02-05 00:26:08,813 [PID 34073] INFO Processed 66 of 243 functions
+2021-02-05 00:26:08,814 [PID 34073] INFO Processed 77 of 243 functions
+2021-02-05 00:26:08,814 [PID 34073] INFO Processed 88 of 243 functions
+2021-02-05 00:26:08,827 [PID 34073] INFO Processed 99 of 243 functions
+2021-02-05 00:26:08,827 [PID 34073] INFO Processed 110 of 243 functions
+2021-02-05 00:26:08,836 [PID 34073] INFO Processed 121 of 243 functions
+2021-02-05 00:26:08,867 [PID 34073] INFO Processed 132 of 243 functions
+2021-02-05 00:26:08,869 [PID 34073] INFO Processed 143 of 243 functions
+2021-02-05 00:26:08,882 [PID 34073] INFO Processed 154 of 243 functions
+2021-02-05 00:26:08,886 [PID 34073] INFO Processed 165 of 243 functions
+2021-02-05 00:26:08,895 [PID 34073] INFO Processed 176 of 243 functions
+2021-02-05 00:26:08,898 [PID 34073] INFO Processed 177 of 243 functions
+2021-02-05 00:26:08,906 [PID 34073] INFO Processed 188 of 243 functions
+2021-02-05 00:26:08,906 [PID 34073] INFO Processed 199 of 243 functions
+2021-02-05 00:26:08,909 [PID 34073] INFO Processed 210 of 243 functions
+2021-02-05 00:26:08,916 [PID 34073] INFO Processed 221 of 243 functions
+2021-02-05 00:26:08,927 [PID 34073] INFO Processed 232 of 243 functions
+2021-02-05 00:26:08,928 [PID 34073] INFO Processed 243 of 243 functions
+2021-02-05 00:26:08,928 [PID 34073] PERFORMANCE Check_TypeCheck: 0.232878s
+2021-02-05 00:26:08,928 [PID 34073] MEMORY Shared memory size post-typecheck (size: 81)
+2021-02-05 00:26:08,928 [PID 34073] INFO Postprocessing 6424 sources...
+2021-02-05 00:26:09,005 [PID 34073] INFO Postprocessed 248 of 6424 sources
+2021-02-05 00:26:09,017 [PID 34073] INFO Postprocessed 496 of 6424 sources
+2021-02-05 00:26:09,054 [PID 34073] INFO Postprocessed 744 of 6424 sources
+2021-02-05 00:26:09,067 [PID 34073] INFO Postprocessed 992 of 6424 sources
+2021-02-05 00:26:09,079 [PID 34073] INFO Postprocessed 1240 of 6424 sources
+2021-02-05 00:26:09,088 [PID 34073] INFO Postprocessed 1488 of 6424 sources
+2021-02-05 00:26:09,088 [PID 34073] INFO Postprocessed 1736 of 6424 sources
+2021-02-05 00:26:09,089 [PID 34073] INFO Postprocessed 1984 of 6424 sources
+2021-02-05 00:26:09,107 [PID 34073] INFO Postprocessed 2232 of 6424 sources
+2021-02-05 00:26:09,107 [PID 34073] INFO Postprocessed 2480 of 6424 sources
+2021-02-05 00:26:09,108 [PID 34073] INFO Postprocessed 2728 of 6424 sources
+2021-02-05 00:26:09,108 [PID 34073] INFO Postprocessed 2976 of 6424 sources
+2021-02-05 00:26:09,108 [PID 34073] INFO Postprocessed 3224 of 6424 sources
+2021-02-05 00:26:09,127 [PID 34073] INFO Postprocessed 3472 of 6424 sources
+2021-02-05 00:26:09,156 [PID 34073] INFO Postprocessed 3720 of 6424 sources
+2021-02-05 00:26:09,196 [PID 34073] INFO Postprocessed 3968 of 6424 sources
+2021-02-05 00:26:09,211 [PID 34073] INFO Postprocessed 4216 of 6424 sources
+2021-02-05 00:26:09,215 [PID 34073] INFO Postprocessed 4464 of 6424 sources
+2021-02-05 00:26:09,267 [PID 34073] INFO Postprocessed 4712 of 6424 sources
+2021-02-05 00:26:09,271 [PID 34073] INFO Postprocessed 4960 of 6424 sources
+2021-02-05 00:26:09,272 [PID 34073] INFO Postprocessed 5184 of 6424 sources
+2021-02-05 00:26:09,287 [PID 34073] INFO Postprocessed 5432 of 6424 sources
+2021-02-05 00:26:09,287 [PID 34073] INFO Postprocessed 5680 of 6424 sources
+2021-02-05 00:26:09,293 [PID 34073] INFO Postprocessed 5928 of 6424 sources
+2021-02-05 00:26:09,295 [PID 34073] INFO Postprocessed 6176 of 6424 sources
+2021-02-05 00:26:09,314 [PID 34073] INFO Postprocessed 6424 of 6424 sources
+2021-02-05 00:26:09,316 [PID 34073] PERFORMANCE Check: 6.800989s
+2021-02-05 00:26:09,354 [PID 34073] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/check-34078.pid`
+2021-02-05 00:26:09,401 [PID 34073] ERROR Found 251 type errors!
+2021-02-05 00:26:46,025 [PID 34926] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-05 00:26:46,026 [PID 34926] INFO Waiting for server...
+2021-02-05 00:26:46,026 [PID 34926] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:26:46,026 [PID 34926] INFO Starting server at `/Users/lukasz/studies/chess-online/app`.
+2021-02-05 00:26:46,027 [PID 34926] INFO Waiting on the pyre client lock.
+2021-02-05 00:26:46,027 [PID 34926] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:26:46,027 [PID 34926] DEBUG Daemonizing the configuration_monitor.
+2021-02-05 00:26:46,029 [PID 34926] INFO Waiting for monitor to start up...
+2021-02-05 00:26:46,030 [PID 34926] DEBUG The configuration monitor is down.
+2021-02-05 00:26:46,031 [PID 34931] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.lock
+2021-02-05 00:26:46,033 [PID 34931] DEBUG Registering process with pid 34931 in pid file `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:26:46,132 [PID 34926] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/server/server.lock
+2021-02-05 00:26:46,132 [PID 34926] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-05 00:26:46,133 [PID 34926] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin start -logging-sections environment -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -taint-models /Users/lukasz/studies/chess-online/venv/lib -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -expected-binary-version unversioned -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 -new-incremental-check /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:26:46,141 [PID 34926] DEBUG Registering process with pid 34933 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-34933.pid`
+2021-02-05 00:26:46,172 [PID 34926] INFO Starting up server ...
+2021-02-05 00:26:46,173 [PID 34926] INFO Running as pid: 34933
+2021-02-05 00:26:46,173 [PID 34926] INFO Version: 180e970acf39bb947b6a116c631900e08a3b2fb1
+2021-02-05 00:26:46,173 [PID 34926] INFO Build info: Darwin x86_64 @ Fri Jan 15 15:46:59 PST 2021
+2021-02-05 00:26:46,174 [PID 34926] INFO Starting the server. Please wait...
+2021-02-05 00:26:46,175 [PID 34926] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-34933.pid`
+2021-02-05 00:26:54,441 [PID 34926] DEBUG Daemonizing the file_monitor.
+2021-02-05 00:26:54,442 [PID 34926] INFO Waiting for monitor to start up...
+2021-02-05 00:26:54,444 [PID 34926] DEBUG The file monitor is down.
+2021-02-05 00:26:54,446 [PID 35181] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.lock
+2021-02-05 00:26:54,447 [PID 35181] DEBUG Registering process with pid 35181 in pid file `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:26:54,546 [PID 34926] DEBUG Initialized file monitor.
+2021-02-05 00:26:54,647 [PID 34926] PERFORMANCE Server request: 0.000927s
+2021-02-05 00:26:54,647 [PID 34926] PERFORMANCE Server request: 0.001039s
+2021-02-05 00:26:54,654 [PID 34926] ERROR Found 28 type errors!
+2021-02-05 00:31:07,385 [PID 35713] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-05 00:31:07,386 [PID 35713] INFO Waiting for server...
+2021-02-05 00:31:07,386 [PID 35713] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:31:07,416 [PID 35713] PERFORMANCE Server request: 0.000263s
+2021-02-05 00:31:07,420 [PID 35713] ERROR Found 16 type errors!
+2021-02-05 00:31:43,428 [PID 35835] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-05 00:31:43,428 [PID 35835] INFO Waiting for server...
+2021-02-05 00:31:43,428 [PID 35835] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:31:43,448 [PID 35835] PERFORMANCE Server request: 0.000363s
+2021-02-05 00:31:43,449 [PID 35835] PERFORMANCE Server request: 0.000551s
+2021-02-05 00:31:43,452 [PID 35835] ERROR Found 14 type errors!
+2021-02-05 00:33:33,592 [PID 34931] INFO Waiting for the client lock...
+2021-02-05 00:33:33,594 [PID 34931] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:33:33,597 [PID 34931] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin stop -log-directory /Users/lukasz/studies/chess-online/.pyre /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:33:33,612 [PID 34931] DEBUG Registering process with pid 35929 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-35929.pid`
+2021-02-05 00:33:33,639 [PID 34931] INFO Server stopped, polling for deletion of socket.
+2021-02-05 00:33:33,641 [PID 34931] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-35929.pid`
+2021-02-05 00:33:33,642 [PID 34931] INFO Polling for server's process to stop...
+2021-02-05 00:33:33,743 [PID 34931] INFO The server process has stopped.
+2021-02-05 00:33:33,744 [PID 34931] INFO Stopped server at `/Users/lukasz/studies/chess-online/app`
+2021-02-05 00:33:33,746 [PID 35181] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:33:33,747 [PID 34931] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:33:43,771 [PID 36020] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-05 00:33:43,771 [PID 36020] INFO Waiting for server...
+2021-02-05 00:33:43,772 [PID 36020] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:33:43,772 [PID 36020] INFO Starting server at `/Users/lukasz/studies/chess-online/app`.
+2021-02-05 00:33:43,772 [PID 36020] INFO Waiting on the pyre client lock.
+2021-02-05 00:33:43,772 [PID 36020] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:33:43,772 [PID 36020] DEBUG Daemonizing the configuration_monitor.
+2021-02-05 00:33:43,773 [PID 36020] INFO Waiting for monitor to start up...
+2021-02-05 00:33:43,775 [PID 36020] DEBUG The configuration monitor is down.
+2021-02-05 00:33:43,777 [PID 36024] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.lock
+2021-02-05 00:33:43,778 [PID 36024] DEBUG Registering process with pid 36024 in pid file `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:33:43,880 [PID 36020] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/server/server.lock
+2021-02-05 00:33:43,881 [PID 36020] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-05 00:33:43,882 [PID 36020] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin start -logging-sections environment -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -taint-models /Users/lukasz/studies/chess-online/venv/lib -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -expected-binary-version unversioned -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 -new-incremental-check /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:33:43,890 [PID 36020] DEBUG Registering process with pid 36027 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-36027.pid`
+2021-02-05 00:33:43,922 [PID 36020] INFO Starting up server ...
+2021-02-05 00:33:43,922 [PID 36020] INFO Running as pid: 36027
+2021-02-05 00:33:43,922 [PID 36020] INFO Version: 180e970acf39bb947b6a116c631900e08a3b2fb1
+2021-02-05 00:33:43,922 [PID 36020] INFO Build info: Darwin x86_64 @ Fri Jan 15 15:46:59 PST 2021
+2021-02-05 00:33:43,925 [PID 36020] INFO Starting the server. Please wait...
+2021-02-05 00:33:43,926 [PID 36020] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-36027.pid`
+2021-02-05 00:33:52,076 [PID 36020] DEBUG Daemonizing the file_monitor.
+2021-02-05 00:33:52,078 [PID 36020] INFO Waiting for monitor to start up...
+2021-02-05 00:33:52,079 [PID 36020] DEBUG The file monitor is down.
+2021-02-05 00:33:52,081 [PID 36273] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.lock
+2021-02-05 00:33:52,083 [PID 36273] DEBUG Registering process with pid 36273 in pid file `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:33:52,184 [PID 36020] DEBUG Initialized file monitor.
+2021-02-05 00:33:52,384 [PID 36020] PERFORMANCE Server request: 0.000948s
+2021-02-05 00:33:52,385 [PID 36020] PERFORMANCE Server request: 0.001111s
+2021-02-05 00:33:52,389 [PID 36020] ERROR Found 14 type errors!
+2021-02-05 00:34:13,505 [PID 36024] INFO Waiting for the client lock...
+2021-02-05 00:34:13,507 [PID 36024] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:34:13,509 [PID 36024] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin stop -log-directory /Users/lukasz/studies/chess-online/.pyre /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:34:13,518 [PID 36024] DEBUG Registering process with pid 36485 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-36485.pid`
+2021-02-05 00:34:13,541 [PID 36024] INFO Server stopped, polling for deletion of socket.
+2021-02-05 00:34:13,543 [PID 36024] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-36485.pid`
+2021-02-05 00:34:13,544 [PID 36024] INFO Polling for server's process to stop...
+2021-02-05 00:34:13,646 [PID 36024] INFO The server process has stopped.
+2021-02-05 00:34:13,647 [PID 36024] INFO Stopped server at `/Users/lukasz/studies/chess-online/app`
+2021-02-05 00:34:13,649 [PID 36273] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:34:13,650 [PID 36024] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:34:16,928 [PID 36492] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-05 00:34:16,929 [PID 36492] INFO Waiting for server...
+2021-02-05 00:34:16,929 [PID 36492] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:34:16,929 [PID 36492] INFO Starting server at `/Users/lukasz/studies/chess-online/app`.
+2021-02-05 00:34:16,929 [PID 36492] INFO Waiting on the pyre client lock.
+2021-02-05 00:34:16,930 [PID 36492] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:34:16,930 [PID 36492] DEBUG Daemonizing the configuration_monitor.
+2021-02-05 00:34:16,930 [PID 36492] INFO Waiting for monitor to start up...
+2021-02-05 00:34:16,931 [PID 36492] DEBUG The configuration monitor is down.
+2021-02-05 00:34:16,933 [PID 36497] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.lock
+2021-02-05 00:34:16,934 [PID 36497] DEBUG Registering process with pid 36497 in pid file `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:34:17,035 [PID 36492] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/server/server.lock
+2021-02-05 00:34:17,035 [PID 36492] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-05 00:34:17,036 [PID 36492] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin start -logging-sections environment -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -taint-models /Users/lukasz/studies/chess-online/venv/lib -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -expected-binary-version unversioned -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages/chess,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 -new-incremental-check /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:34:17,043 [PID 36492] DEBUG Registering process with pid 36500 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-36500.pid`
+2021-02-05 00:34:17,070 [PID 36492] INFO Starting up server ...
+2021-02-05 00:34:17,071 [PID 36492] INFO Running as pid: 36500
+2021-02-05 00:34:17,071 [PID 36492] INFO Version: 180e970acf39bb947b6a116c631900e08a3b2fb1
+2021-02-05 00:34:17,071 [PID 36492] INFO Build info: Darwin x86_64 @ Fri Jan 15 15:46:59 PST 2021
+2021-02-05 00:34:17,072 [PID 36492] INFO Starting the server. Please wait...
+2021-02-05 00:34:17,073 [PID 36492] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-36500.pid`
+2021-02-05 00:34:20,429 [PID 36492] DEBUG Daemonizing the file_monitor.
+2021-02-05 00:34:20,430 [PID 36492] INFO Waiting for monitor to start up...
+2021-02-05 00:34:20,432 [PID 36492] DEBUG The file monitor is down.
+2021-02-05 00:34:20,433 [PID 36564] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.lock
+2021-02-05 00:34:20,435 [PID 36564] DEBUG Registering process with pid 36564 in pid file `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:34:20,536 [PID 36492] DEBUG Initialized file monitor.
+2021-02-05 00:34:20,641 [PID 36492] PERFORMANCE Server request: 0.001632s
+2021-02-05 00:34:20,641 [PID 36492] PERFORMANCE Server request: 0.001757s
+2021-02-05 00:34:20,655 [PID 36492] ERROR Found 59 type errors!
+2021-02-05 00:35:00,243 [PID 36497] INFO Waiting for the client lock...
+2021-02-05 00:35:00,244 [PID 36497] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:35:00,246 [PID 36497] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin stop -log-directory /Users/lukasz/studies/chess-online/.pyre /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:35:00,253 [PID 36497] DEBUG Registering process with pid 36774 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-36774.pid`
+2021-02-05 00:35:00,285 [PID 36497] INFO Server stopped, polling for deletion of socket.
+2021-02-05 00:35:00,287 [PID 36497] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-36774.pid`
+2021-02-05 00:35:00,288 [PID 36497] INFO Polling for server's process to stop...
+2021-02-05 00:35:00,389 [PID 36497] INFO The server process has stopped.
+2021-02-05 00:35:00,391 [PID 36497] INFO Stopped server at `/Users/lukasz/studies/chess-online/app`
+2021-02-05 00:35:00,393 [PID 36564] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:35:00,394 [PID 36497] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:35:08,999 [PID 36867] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-05 00:35:08,999 [PID 36867] INFO Waiting for server...
+2021-02-05 00:35:09,000 [PID 36867] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:35:09,000 [PID 36867] INFO Starting server at `/Users/lukasz/studies/chess-online/app`.
+2021-02-05 00:35:09,000 [PID 36867] INFO Waiting on the pyre client lock.
+2021-02-05 00:35:09,000 [PID 36867] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:35:09,000 [PID 36867] DEBUG Daemonizing the configuration_monitor.
+2021-02-05 00:35:09,001 [PID 36867] INFO Waiting for monitor to start up...
+2021-02-05 00:35:09,003 [PID 36867] DEBUG The configuration monitor is down.
+2021-02-05 00:35:09,004 [PID 36873] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.lock
+2021-02-05 00:35:09,006 [PID 36873] DEBUG Registering process with pid 36873 in pid file `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:35:09,109 [PID 36867] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/server/server.lock
+2021-02-05 00:35:09,110 [PID 36867] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-05 00:35:09,111 [PID 36867] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin start -logging-sections environment -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -taint-models /Users/lukasz/studies/chess-online/venv/lib -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -expected-binary-version unversioned -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages/chess,/Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages/pygame,/Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages/pygame_menu,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 -new-incremental-check /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:35:09,120 [PID 36867] DEBUG Registering process with pid 36875 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-36875.pid`
+2021-02-05 00:35:09,153 [PID 36867] INFO Starting up server ...
+2021-02-05 00:35:09,153 [PID 36867] INFO Running as pid: 36875
+2021-02-05 00:35:09,153 [PID 36867] INFO Version: 180e970acf39bb947b6a116c631900e08a3b2fb1
+2021-02-05 00:35:09,153 [PID 36867] INFO Build info: Darwin x86_64 @ Fri Jan 15 15:46:59 PST 2021
+2021-02-05 00:35:09,155 [PID 36867] INFO Starting the server. Please wait...
+2021-02-05 00:35:09,157 [PID 36867] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-36875.pid`
+2021-02-05 00:35:11,415 [PID 36867] DEBUG Daemonizing the file_monitor.
+2021-02-05 00:35:11,416 [PID 36867] INFO Waiting for monitor to start up...
+2021-02-05 00:35:11,417 [PID 36867] DEBUG The file monitor is down.
+2021-02-05 00:35:11,419 [PID 36980] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.lock
+2021-02-05 00:35:11,421 [PID 36980] DEBUG Registering process with pid 36980 in pid file `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:35:11,524 [PID 36867] DEBUG Initialized file monitor.
+2021-02-05 00:35:11,630 [PID 36867] PERFORMANCE Server request: 0.007069s
+2021-02-05 00:35:11,630 [PID 36867] PERFORMANCE Server request: 0.007172s
+2021-02-05 00:35:11,676 [PID 36867] ERROR Found 147 type errors!
+2021-02-05 00:36:39,571 [PID 36873] INFO Waiting for the client lock...
+2021-02-05 00:36:39,572 [PID 36873] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:36:39,573 [PID 36873] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin stop -log-directory /Users/lukasz/studies/chess-online/.pyre /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:36:39,580 [PID 36873] DEBUG Registering process with pid 37087 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-37087.pid`
+2021-02-05 00:36:39,609 [PID 36873] INFO Server stopped, polling for deletion of socket.
+2021-02-05 00:36:39,611 [PID 36873] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-37087.pid`
+2021-02-05 00:36:39,612 [PID 36873] INFO Polling for server's process to stop...
+2021-02-05 00:36:39,713 [PID 36873] INFO The server process has stopped.
+2021-02-05 00:36:39,714 [PID 36873] INFO Stopped server at `/Users/lukasz/studies/chess-online/app`
+2021-02-05 00:36:39,715 [PID 36980] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:36:39,716 [PID 36873] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:36:40,996 [PID 37092] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-05 00:36:40,996 [PID 37092] INFO Waiting for server...
+2021-02-05 00:36:40,996 [PID 37092] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:36:40,996 [PID 37092] INFO Starting server at `/Users/lukasz/studies/chess-online/app`.
+2021-02-05 00:36:40,997 [PID 37092] INFO Waiting on the pyre client lock.
+2021-02-05 00:36:40,997 [PID 37092] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:36:40,997 [PID 37092] DEBUG Daemonizing the configuration_monitor.
+2021-02-05 00:36:40,998 [PID 37092] INFO Waiting for monitor to start up...
+2021-02-05 00:36:40,999 [PID 37092] DEBUG The configuration monitor is down.
+2021-02-05 00:36:41,001 [PID 37097] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.lock
+2021-02-05 00:36:41,003 [PID 37097] DEBUG Registering process with pid 37097 in pid file `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:36:41,106 [PID 37092] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/server/server.lock
+2021-02-05 00:36:41,107 [PID 37092] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-05 00:36:41,108 [PID 37092] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin start -logging-sections environment -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -taint-models /Users/lukasz/studies/chess-online/venv/lib -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -expected-binary-version unversioned -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 -new-incremental-check /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:36:41,116 [PID 37092] DEBUG Registering process with pid 37099 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-37099.pid`
+2021-02-05 00:36:41,146 [PID 37092] INFO Starting up server ...
+2021-02-05 00:36:41,147 [PID 37092] INFO Running as pid: 37099
+2021-02-05 00:36:41,147 [PID 37092] INFO Version: 180e970acf39bb947b6a116c631900e08a3b2fb1
+2021-02-05 00:36:41,147 [PID 37092] INFO Build info: Darwin x86_64 @ Fri Jan 15 15:46:59 PST 2021
+2021-02-05 00:36:41,149 [PID 37092] INFO Starting the server. Please wait...
+2021-02-05 00:36:41,150 [PID 37092] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-37099.pid`
+2021-02-05 00:36:49,130 [PID 37092] DEBUG Daemonizing the file_monitor.
+2021-02-05 00:36:49,131 [PID 37092] INFO Waiting for monitor to start up...
+2021-02-05 00:36:49,133 [PID 37092] DEBUG The file monitor is down.
+2021-02-05 00:36:49,134 [PID 37345] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.lock
+2021-02-05 00:36:49,136 [PID 37345] DEBUG Registering process with pid 37345 in pid file `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:36:49,239 [PID 37092] DEBUG Initialized file monitor.
+2021-02-05 00:36:49,332 [PID 37092] PERFORMANCE Server request: 0.000460s
+2021-02-05 00:36:49,333 [PID 37092] PERFORMANCE Server request: 0.000583s
+2021-02-05 00:36:49,336 [PID 37092] ERROR Found 14 type errors!
+2021-02-05 00:37:08,407 [PID 37435] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-05 00:37:08,407 [PID 37435] INFO Waiting for server...
+2021-02-05 00:37:08,407 [PID 37435] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:37:08,467 [PID 37435] PERFORMANCE Server request: 0.000402s
+2021-02-05 00:37:08,468 [PID 37435] PERFORMANCE Server request: 0.000519s
+2021-02-05 00:37:08,471 [PID 37435] ERROR Found 13 type errors!
+2021-02-05 00:38:26,465 [PID 37097] INFO Waiting for the client lock...
+2021-02-05 00:38:26,467 [PID 37097] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:38:26,469 [PID 37097] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin stop -log-directory /Users/lukasz/studies/chess-online/.pyre /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:38:26,476 [PID 37097] DEBUG Registering process with pid 37538 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-37538.pid`
+2021-02-05 00:38:26,503 [PID 37097] INFO Server stopped, polling for deletion of socket.
+2021-02-05 00:38:26,505 [PID 37097] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-37538.pid`
+2021-02-05 00:38:26,506 [PID 37097] INFO Polling for server's process to stop...
+2021-02-05 00:38:26,608 [PID 37097] INFO The server process has stopped.
+2021-02-05 00:38:26,609 [PID 37097] INFO Stopped server at `/Users/lukasz/studies/chess-online/app`
+2021-02-05 00:38:26,610 [PID 37345] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:38:26,611 [PID 37097] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:38:59,933 [PID 37550] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-05 00:38:59,934 [PID 37550] INFO Waiting for server...
+2021-02-05 00:38:59,934 [PID 37550] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:38:59,934 [PID 37550] INFO Starting server at `/Users/lukasz/studies/chess-online/app`.
+2021-02-05 00:38:59,934 [PID 37550] INFO Waiting on the pyre client lock.
+2021-02-05 00:38:59,934 [PID 37550] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:38:59,935 [PID 37550] DEBUG Daemonizing the configuration_monitor.
+2021-02-05 00:38:59,936 [PID 37550] INFO Waiting for monitor to start up...
+2021-02-05 00:38:59,937 [PID 37550] DEBUG The configuration monitor is down.
+2021-02-05 00:38:59,939 [PID 37555] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.lock
+2021-02-05 00:38:59,940 [PID 37555] DEBUG Registering process with pid 37555 in pid file `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:39:00,043 [PID 37550] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/server/server.lock
+2021-02-05 00:39:00,044 [PID 37550] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-05 00:39:00,045 [PID 37550] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin start -logging-sections environment -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -taint-models /Users/lukasz/studies/chess-online/venv/lib -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -expected-binary-version unversioned -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 -exclude venv/lib/python3.8/chess -new-incremental-check /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:39:00,053 [PID 37550] DEBUG Registering process with pid 37557 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-37557.pid`
+2021-02-05 00:39:00,085 [PID 37550] INFO Starting up server ...
+2021-02-05 00:39:00,085 [PID 37550] INFO Running as pid: 37557
+2021-02-05 00:39:00,086 [PID 37550] INFO Version: 180e970acf39bb947b6a116c631900e08a3b2fb1
+2021-02-05 00:39:00,086 [PID 37550] INFO Build info: Darwin x86_64 @ Fri Jan 15 15:46:59 PST 2021
+2021-02-05 00:39:00,088 [PID 37550] INFO Starting the server. Please wait...
+2021-02-05 00:39:00,090 [PID 37550] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-37557.pid`
+2021-02-05 00:39:08,107 [PID 37550] DEBUG Daemonizing the file_monitor.
+2021-02-05 00:39:08,108 [PID 37550] INFO Waiting for monitor to start up...
+2021-02-05 00:39:08,110 [PID 37550] DEBUG The file monitor is down.
+2021-02-05 00:39:08,112 [PID 37803] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.lock
+2021-02-05 00:39:08,113 [PID 37803] DEBUG Registering process with pid 37803 in pid file `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:39:08,212 [PID 37550] DEBUG Initialized file monitor.
+2021-02-05 00:39:08,312 [PID 37550] PERFORMANCE Server request: 0.000441s
+2021-02-05 00:39:08,313 [PID 37550] PERFORMANCE Server request: 0.000554s
+2021-02-05 00:39:08,316 [PID 37550] ERROR Found 13 type errors!
+2021-02-05 00:40:22,691 [PID 37555] INFO Waiting for the client lock...
+2021-02-05 00:40:22,692 [PID 37555] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:40:22,694 [PID 37555] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin stop -log-directory /Users/lukasz/studies/chess-online/.pyre /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:40:22,703 [PID 37555] DEBUG Registering process with pid 37888 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-37888.pid`
+2021-02-05 00:40:22,734 [PID 37555] INFO Server stopped, polling for deletion of socket.
+2021-02-05 00:40:22,736 [PID 37555] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-37888.pid`
+2021-02-05 00:40:22,737 [PID 37555] INFO Polling for server's process to stop...
+2021-02-05 00:40:22,838 [PID 37555] INFO The server process has stopped.
+2021-02-05 00:40:22,840 [PID 37555] INFO Stopped server at `/Users/lukasz/studies/chess-online/app`
+2021-02-05 00:40:22,841 [PID 37803] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:40:22,843 [PID 37555] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:40:25,190 [PID 37896] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-05 00:40:25,191 [PID 37896] INFO Waiting for server...
+2021-02-05 00:40:25,191 [PID 37896] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:40:25,191 [PID 37896] INFO Starting server at `/Users/lukasz/studies/chess-online/app`.
+2021-02-05 00:40:25,191 [PID 37896] INFO Waiting on the pyre client lock.
+2021-02-05 00:40:25,191 [PID 37896] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:40:25,192 [PID 37896] DEBUG Daemonizing the configuration_monitor.
+2021-02-05 00:40:25,192 [PID 37896] INFO Waiting for monitor to start up...
+2021-02-05 00:40:25,194 [PID 37896] DEBUG The configuration monitor is down.
+2021-02-05 00:40:25,195 [PID 37901] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.lock
+2021-02-05 00:40:25,197 [PID 37901] DEBUG Registering process with pid 37901 in pid file `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-05 00:40:25,298 [PID 37896] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/server/server.lock
+2021-02-05 00:40:25,299 [PID 37896] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-05 00:40:25,300 [PID 37896] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin start -logging-sections environment -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -taint-models /Users/lukasz/studies/chess-online/venv/lib -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -expected-binary-version unversioned -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 -exclude venv/lib/python3.8/site-packages/chess -new-incremental-check /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:40:25,309 [PID 37896] DEBUG Registering process with pid 37903 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-37903.pid`
+2021-02-05 00:40:25,341 [PID 37896] INFO Starting up server ...
+2021-02-05 00:40:25,342 [PID 37896] INFO Running as pid: 37903
+2021-02-05 00:40:25,342 [PID 37896] INFO Version: 180e970acf39bb947b6a116c631900e08a3b2fb1
+2021-02-05 00:40:25,342 [PID 37896] INFO Build info: Darwin x86_64 @ Fri Jan 15 15:46:59 PST 2021
+2021-02-05 00:40:25,344 [PID 37896] INFO Starting the server. Please wait...
+2021-02-05 00:40:25,346 [PID 37896] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-37903.pid`
+2021-02-05 00:40:33,493 [PID 37896] DEBUG Daemonizing the file_monitor.
+2021-02-05 00:40:33,495 [PID 37896] INFO Waiting for monitor to start up...
+2021-02-05 00:40:33,497 [PID 37896] DEBUG The file monitor is down.
+2021-02-05 00:40:33,498 [PID 38149] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.lock
+2021-02-05 00:40:33,500 [PID 38149] DEBUG Registering process with pid 38149 in pid file `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:40:33,599 [PID 37896] DEBUG Initialized file monitor.
+2021-02-05 00:40:33,698 [PID 37896] PERFORMANCE Server request: 0.000599s
+2021-02-05 00:40:33,698 [PID 37896] PERFORMANCE Server request: 0.000747s
+2021-02-05 00:40:33,702 [PID 37896] ERROR Found 13 type errors!
+2021-02-05 00:40:39,486 [PID 37901] INFO Waiting for the client lock...
+2021-02-05 00:40:39,488 [PID 37901] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-05 00:40:39,490 [PID 37901] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin stop -log-directory /Users/lukasz/studies/chess-online/.pyre /Users/lukasz/studies/chess-online/app`
+2021-02-05 00:40:39,499 [PID 37901] DEBUG Registering process with pid 38228 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-38228.pid`
+2021-02-05 00:40:39,523 [PID 37901] INFO Server stopped, polling for deletion of socket.
+2021-02-05 00:40:39,525 [PID 37901] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-38228.pid`
+2021-02-05 00:40:39,526 [PID 37901] INFO Polling for server's process to stop...
+2021-02-05 00:40:39,628 [PID 37901] INFO The server process has stopped.
+2021-02-05 00:40:39,629 [PID 37901] INFO Stopped server at `/Users/lukasz/studies/chess-online/app`
+2021-02-05 00:40:39,631 [PID 38149] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-05 00:40:39,632 [PID 37901] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`

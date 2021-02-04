@@ -1,3 +1,4 @@
+from typing import List
 import pygame
 import chess
 
@@ -57,7 +58,7 @@ class ResultState(BaseState):
         )
         self.get_display().blit(text, text_position)
 
-    def on_game_loop(self, events: [pygame.event.Event]):
+    def on_game_loop(self, events: List[pygame.event.Event]):
         for event in events:
             if event.type == pygame.KEYDOWN:
                 self.game_manager.go_to_main_state()

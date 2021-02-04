@@ -14,8 +14,8 @@ class MainMenuState(MenuBaseState):
     def __init__(self, game_manager: GameManagerInterface):
         super().__init__(game_manager)
         self.menu = pygame_menu.Menu(
-            game_manager.window.height,
-            game_manager.window.width,
+            game_manager.get_window().height,
+            game_manager.get_window().width,
             "Online Chess",
             theme=pygame_menu.themes.THEME_DARK,
             enabled=False

@@ -1,3 +1,4 @@
+from typing import List
 import pygame
 
 from .basestate import BaseState
@@ -23,7 +24,7 @@ class BaseGameState(BaseState):
     def get_game_controller(self) -> GameController:
         raise NotImplementedError()
 
-    def on_game_loop(self, events: [pygame.event.Event]):
+    def on_game_loop(self, events: List[pygame.event.Event]):
         game_controller = self.get_game_controller()
 
         game_controller.prepare()

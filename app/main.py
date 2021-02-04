@@ -1,14 +1,13 @@
 import sys
 import os
 
-from engine import GameManager
+from game import GameManager, AssetsProvider, Window
 from settings import Settings
-from spritesheet import AssetsProvider
-from window import Window
 
 
 if __name__ == '__main__':
     if getattr(sys, 'frozen', False):
+        # noinspection PyProtectedMember
         os.chdir(sys._MEIPASS)  # pylint: disable=E0401, E1101, W0212
 
     window = Window(*Settings().get_window_size())

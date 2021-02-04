@@ -1,0 +1,87 @@
+2021-02-05 00:34:17 INFO Running as pid: 36501
+2021-02-05 00:34:17 INFO Version: 180e970acf39bb947b6a116c631900e08a3b2fb1
+2021-02-05 00:34:17 INFO Build info: Darwin x86_64 @ Fri Jan 15 15:46:59 PST 2021
+2021-02-05 00:34:17 PERFORMANCE Module tracker built: 0.062475s
+2021-02-05 00:34:17 INFO Building type environment...
+2021-02-05 00:34:17 INFO Parsing 1081 stubs and sources...
+2021-02-05 00:34:19 PERFORMANCE Sources parsed: 1.435562s
+2021-02-05 00:34:19 ENVIRONMENT Updating is from empty stub result Environment
+2021-02-05 00:34:19 ENVIRONMENT Updating Alias Environment
+2021-02-05 00:34:19 ENVIRONMENT Updating Edges Environment
+2021-02-05 00:34:19 ENVIRONMENT Updating Class metadata Environment
+2021-02-05 00:34:19 ENVIRONMENT Updating parse annotation Environment
+2021-02-05 00:34:19 ENVIRONMENT Updating metaclasses Environment
+2021-02-05 00:34:19 ENVIRONMENT Updating attributes Environment
+2021-02-05 00:34:19 ENVIRONMENT Updating Global Environment
+2021-02-05 00:34:19 ENVIRONMENT Updating Global Locations Environment
+2021-02-05 00:34:19 PERFORMANCE Full environment built: 2.271815s
+2021-02-05 00:34:19 INFO Checking 243 functions...
+2021-02-05 00:34:20 ENVIRONMENT Superclass annotation pygame.sprite.Group is missing
+2021-02-05 00:34:20 ENVIRONMENT Superclass annotation pygame.sprite.Sprite is missing
+2021-02-05 00:34:20 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:34:20 PROGRESS Processed 11 of 243 functions
+2021-02-05 00:34:20 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:34:20 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:34:20 PROGRESS Processed 22 of 243 functions
+2021-02-05 00:34:20 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:34:20 PROGRESS Processed 33 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 44 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 55 of 243 functions
+2021-02-05 00:34:20 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:34:20 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:34:20 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:34:20 PROGRESS Processed 66 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 77 of 243 functions
+2021-02-05 00:34:20 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:34:20 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:34:20 PROGRESS Processed 88 of 243 functions
+2021-02-05 00:34:20 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:34:20 PROGRESS Processed 99 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 110 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 121 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 132 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 143 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 154 of 243 functions
+2021-02-05 00:34:20 ENVIRONMENT Unresolved superclass name: typing.Generic[]
+2021-02-05 00:34:20 PROGRESS Processed 165 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 176 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 187 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 198 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 209 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 220 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 221 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 232 of 243 functions
+2021-02-05 00:34:20 PROGRESS Processed 243 of 243 functions
+2021-02-05 00:34:20 PERFORMANCE Check_TypeCheck: 0.349115s
+2021-02-05 00:34:20 MEMORY Shared memory size post-typecheck (size: 11)
+2021-02-05 00:34:20 PROGRESS Postprocessing 1081 sources...
+2021-02-05 00:34:20 PROGRESS Postprocessed 46 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 92 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 138 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 184 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 230 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 276 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 322 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 368 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 414 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 460 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 506 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 552 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 598 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 644 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 690 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 736 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 782 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 828 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 874 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 897 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 943 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 989 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 1035 of 1081 sources
+2021-02-05 00:34:20 PROGRESS Postprocessed 1081 of 1081 sources
+2021-02-05 00:34:20 PERFORMANCE Initialization: 2.814241s
+2021-02-05 00:34:20 INFO Server started using incremental style Configuration.Analysis.FineGrained
+2021-02-05 00:34:20 INFO Enabled features = { Configuration.Features.click_to_fix = false; go_to_definition = false;
+  hover = false }
+2021-02-05 00:34:20 PERFORMANCE Server request: 0.001632s
+2021-02-05 00:34:20 PERFORMANCE Server request: 0.001757s

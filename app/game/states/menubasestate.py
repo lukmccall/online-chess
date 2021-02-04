@@ -1,3 +1,4 @@
+from typing import List
 import pygame
 
 from .basestate import BaseState
@@ -15,7 +16,7 @@ class MenuBaseState(BaseState):
     def on_state_start(self):
         self.menu.enable()
 
-    def on_game_loop(self, events: [pygame.event.Event]):
+    def on_game_loop(self, events: List[pygame.event.Event]):
         if self.menu.is_enabled():
             self.menu.update(events)
             if not self.menu.is_enabled():

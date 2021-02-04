@@ -49,7 +49,7 @@ class PythonChessLogicBoard(LogicBoardInterface):
     def is_castling(self, move: chess.Move) -> bool:
         return self.board.is_castling(move)
 
-    def piece_at(self, square: chess.Square) -> chess.Piece:
+    def piece_at(self, square: chess.Square) -> Optional[chess.Piece]:
         return self.board.piece_at(square)
 
     def turn(self) -> chess.Color:
