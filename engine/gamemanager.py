@@ -5,8 +5,9 @@ from window import Window
 import pygame_menu
 import pygame
 import chess
-from multiplayer import SocketWrapperInterface, NoneBlockingSocketWrapper, MessageType, SetTeamMessage, StartMessage
+from multiplayer import SocketWrapperInterface, NoneBlockingSocketWrapper, MessageType
 import socket
+
 
 class GameStateInterface(metaclass=Interface):
     @abstract
@@ -34,14 +35,19 @@ class GameManager:
         for event in events:
             if event.type == pygame.QUIT:
                 self.window.is_running = False
+                self.state.on_state_exit()
                 return
             if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                 self.change_state(MainMenuState(self))
                 return
-
-        self.state.on_game_loop(display, events)
+        try:
+            self.state.on_game_loop(display, events)
+        except Exception as e:
+            print(e)
+            self.change_state(MainMenuState(self))
 
     def change_state(self, new_state: GameStateInterface):
+        print("change stata")
         self.state.on_state_exit()
         self.state = new_state
         self.state.on_state_start()
@@ -192,17 +198,18 @@ class JoiningGameState(GameStateInterface):
         self.menu.add_label("Waiting for connection")
         self.menu.add_button("Quit", self.on_end)
 
+        self.preserve_socket = False
         self.team = None
 
-    @abstract
     def on_state_exit(self):
         self.menu.disable()
 
-    @abstract
+        if not self.preserve_socket:
+            self.socket.close()
+
     def on_state_start(self):
         self.menu.enable()
 
-    @abstract
     def on_game_loop(self, display: pygame.surface.Surface, events: [pygame.event.Event]):
         if self.menu.is_enabled():
             self.menu.update(events)
@@ -221,12 +228,13 @@ class JoiningGameState(GameStateInterface):
                 raise AssertionError("Expect [SET_TEAM] message but got {}.".format(message))
         else:
             if message.type == MessageType.START:
+                self.preserve_socket = True
                 self.game_manager.change_state(OnlineGameState(self.game_manager, self.socket, self.team))
             else:
                 raise AssertionError("Expect [START] message but got {}.".format(message))
 
     def on_end(self):
-        pass
+        self.game_manager.change_state(MainMenuState(self.game_manager))
 
 
 class OnlineGameState(GameStateInterface):
@@ -238,11 +246,9 @@ class OnlineGameState(GameStateInterface):
         self.game_controller = None
         self.board = None
 
-    @abstract
     def on_state_exit(self):
-        pass
+        self.socket.close()
 
-    @abstract
     def on_state_start(self):
         self.board = Board(
             self.game_manager.window.game_display,
@@ -251,7 +257,6 @@ class OnlineGameState(GameStateInterface):
 
         self.game_controller = MultiplayerGameController(self.board, self.team, self.socket)
 
-    @abstract
     def on_game_loop(self, display: pygame.surface.Surface, events: [pygame.event.Event]):
         self.board.draw()
 

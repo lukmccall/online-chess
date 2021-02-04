@@ -1,5 +1,6 @@
 import socket
 from _thread import *
+from threading import Lock
 import time
 from typing import Optional
 
@@ -22,6 +23,8 @@ class Lobby:
     def __init__(self):
         self.clients = []
         self.current_team = Team.WHITE
+        self.is_close = False
+        self.lock = Lock()
 
     def add_client(self, connection):
         self.clients.append(connection)
@@ -40,6 +43,25 @@ class Lobby:
             if client is not connection:
                 return client
         return None
+
+    def get_is_close(self):
+        return self.is_close
+
+    def close(self):
+        self.lock.acquire()
+        if self.is_close:
+            self.lock.release()
+            return
+
+        for client in self.clients:
+            try:
+                client.close()
+            except Exception as e:
+                print(e)
+        self.is_close = True
+        lobbies.remove(self)
+        self.lock.release()
+
 
 
 
@@ -61,23 +83,38 @@ def client(connection, lobby):
     this_connection.send(mp.SetTeamMessage(team))
 
     while lobby.is_waiting():
-        time.sleep(0.5)
+        try:
+            _ = this_connection.receive()
+        except ConnectionAbortedError:
+            print("close")
+            lobby.close()
+            return
+        time.sleep(0.1)
 
     send(connection, mp.StartMessage())
 
     other_client = lobby.get_other_client(connection)
     other_connection = SocketWrapper(other_client)
 
-    while True:
-        if lobby.current_team == team:
-            move_message = this_connection.receive()  # type: Optional[mp.MoveMessage]
-            if move_message is None:
-                continue
-            lobby.current_team = Team.WHITE if lobby.current_team == Team.BLACK else Team.BLACK
-            other_connection.send(move_message)
+    try:
+        while True:
+            if lobby.current_team == team:
+                move_message = this_connection.receive()  # type: Optional[mp.MoveMessage]
+                if move_message is None:
+                    continue
+                lobby.current_team = Team.WHITE if lobby.current_team == Team.BLACK else Team.BLACK
+                other_connection.send(move_message)
+            elif lobby.get_is_close():
+                return
 
-        time.sleep(0.5)
+            time.sleep(0.1)
 
+    except ConnectionAbortedError:
+        pass
+    except Exception as e:
+        print(e)
+
+    lobby.close()
 
 def find_lobby():
     for lobby in lobbies:

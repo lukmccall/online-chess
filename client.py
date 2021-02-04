@@ -1,11 +1,4 @@
-from piceces import *
-from engine import Board, MultiplayerGameController
-from settings import Settings
-from spritesheet import SpriteSheet
-from window import Window
-
 import socket
-import pickle
 import multiplayer as mp
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

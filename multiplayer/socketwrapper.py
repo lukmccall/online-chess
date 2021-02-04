@@ -2,7 +2,6 @@ from extensions import Interface, abstract
 from typing import Optional, Tuple
 from .protocol import Message
 import socket as soc
-from settings import Settings
 import pickle
 
 
@@ -15,6 +14,10 @@ class SocketWrapperInterface(metaclass=Interface):
     def send(self, message: Message):
         pass
 
+    @abstract
+    def close(self):
+        pass
+
 
 class SocketWrapper(SocketWrapperInterface):
     def __init__(self, socket: soc.socket):
@@ -23,6 +26,9 @@ class SocketWrapper(SocketWrapperInterface):
     def receive(self) -> Optional[Message]:
         try:
             encoded_size = self.socket.recv(4, soc.MSG_PEEK)
+            if len(encoded_size) == 0:
+                raise ConnectionAbortedError("Connection abort")
+
             if len(encoded_size) != 4:
                 return None
             self.socket.recv(4)
@@ -35,7 +41,7 @@ class SocketWrapper(SocketWrapperInterface):
             self.socket.recv(size)
 
             return pickle.loads(data)
-        except BlockingIOError:
+        except BlockingIOError as e:
             return None
 
     def send(self, message: Message):
@@ -44,6 +50,10 @@ class SocketWrapper(SocketWrapperInterface):
         encoded_size = size.to_bytes(4, 'little')
 
         self.socket.send(encoded_size + data)
+
+    def close(self):
+        print("close")
+        self.socket.close()
 
 
 class NoneBlockingSocketWrapper(SocketWrapper):

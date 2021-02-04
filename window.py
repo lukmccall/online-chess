@@ -3,7 +3,7 @@ import pygame
 
 class Window:
 
-    def __init__(self, width, height, *, fps=30):
+    def __init__(self, width, height, *, fps=60):
         self.width = width
         self.height = height
 
