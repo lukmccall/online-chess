@@ -18,12 +18,14 @@ class AssetsProvider:
 
     def get_pieces_factory(self) -> PiecesFactory:
         """Gets piece factory
+
         :return: An instance of PiecesFactory
         """
         return self._pieces_factory
 
     def replace_pieces_factory(self, pieces_factory: PiecesFactory) -> None:
         """Replaces a bound factory
+
         :param pieces_factory:
         """
         self._pieces_factory = pieces_factory

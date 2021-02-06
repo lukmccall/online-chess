@@ -15,6 +15,7 @@ class PiecesFactory:  # pylint: disable=R0903
     """
     def __init__(self, chess_sprite_sheet: ChessSpriteSheet):
         """
+
         :param chess_sprite_sheet: A chess piece sprite sheet
         which will be use to construct pieces
         """

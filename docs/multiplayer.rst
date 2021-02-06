@@ -1,9 +1,6 @@
 multiplayer package
 ===================
 
-Submodules
-----------
-
 multiplayer.protocol module
 ---------------------------
 

@@ -14,14 +14,14 @@ class GameManagerInterface(metaclass=Interface):
     def get_window(self) -> Window:
         """Returns current window instance
 
-        :returns Window
+        :return: Window
         """
 
     @abstract
     def get_asset_provider(self) -> AssetsProvider:
         """Returns current asset provider
 
-        :returns AssetsProvider
+        :return: AssetsProvider
         """
 
     @abstract

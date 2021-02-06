@@ -11,7 +11,8 @@ from ..piceces import ChessPieceSprite
 
 
 class GameBoardInterface(metaclass=Interface):
-    """Interface of graphic and logic game board
+    """
+    Interface of graphic and logic game board
     """
     @abstract
     def get_possible_moves_from(self, row: int, col: int) -> Iterator[chess.Move]:
@@ -36,7 +37,7 @@ class GameBoardInterface(metaclass=Interface):
         :param from_col: Col of source square
         :param to_row: Row of target square
         :param to_col: Col of target square
-        :returns Move if exists otherwise None
+        :return: Move if exists otherwise None
         """
 
     @abstract
@@ -55,21 +56,21 @@ class GameBoardInterface(metaclass=Interface):
     def is_game_over(self) -> bool:
         """Checks if the game is over
 
-        :returns True if game was finished otherwise False
+        :return: True if game was finished otherwise False
         """
 
     @abstract
     def turn(self) -> chess.Color:
         """Gets current team
 
-        :returns Currently playing team
+        :return: Currently playing team
         """
 
     @abstract
     def winner(self) -> Optional[chess.Color]:
         """Gets winner
 
-        :returns Winner team or None if draw
+        :return: Winner team or None if draw
         """
 
     @abstract
@@ -84,7 +85,7 @@ class GameBoardInterface(metaclass=Interface):
         """Executes provided move
 
         :param move: Move
-        :raises AssertionError if the move is illegal
+        :raise AssertionError: if the move is illegal
         """
 
     @abstract

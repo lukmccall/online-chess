@@ -38,6 +38,7 @@ class ChessSpriteSheet:
 
     def get_piece_image(self, piece_type: ChessPieceEnum, team: Team) -> pygame.Surface:
         """Gets a piece image
+
         :param piece_type: Type of the piece
         :param team: Piece team
         :return: A surface containing piece image
@@ -46,6 +47,7 @@ class ChessSpriteSheet:
 
     def get_all_images(self) -> ValuesView[pygame.surface.Surface]:
         """Gets all images
+
         :return: An collection of all images in the sprite sheet
         """
         return self._pieces_type_image.values()

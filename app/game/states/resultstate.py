@@ -31,7 +31,7 @@ class ResultState(BaseState):
     def _get_result(self) -> str:
         """Gets string representing game result
 
-        :returns Game result
+        :return: Game result
         """
         color = self._board.winner()
 

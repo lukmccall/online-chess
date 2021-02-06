@@ -17,7 +17,7 @@ class SocketWrapperInterface(metaclass=Interface):
         """Receives data from underlying socket
 
         :return: Message is available or None
-        :raises ConnectionAbortedError if connection was closed
+        :raise ConnectionAbortedError: if connection was closed
         """
 
     @abstract

@@ -72,7 +72,7 @@ class GameController:
     def _get_mouse_index(self) -> Tuple[int, int]:
         """Gets a mouse board index
 
-        :returns [row, col]
+        :return: [row, col]
         """
         cursor_position = pygame.mouse.get_pos()
         mouse_x, mouse_y = cursor_position

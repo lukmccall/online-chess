@@ -1,9 +1,6 @@
 langextensions package
 ======================
 
-Submodules
-----------
-
 langextensions.interface module
 -------------------------------
 

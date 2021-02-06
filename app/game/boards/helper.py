@@ -21,7 +21,7 @@ piece_type_mapper = {
 def iterate_over_board_squares() -> Iterator[chess.Square]:
     """Returns an iterator of all board squares
 
-    :returns An board square iterator
+    :return: An board square iterator
     """
     for square in chess.SQUARES:
         yield square
@@ -31,8 +31,8 @@ def map_piece_types(piece_type: chess.PieceType) -> ChessPieceEnum:
     """Maps pieces type
 
     :param piece_type: Piece type from chess package
-    :return: Piece type from constants package
-    :raises TypeError if provided type is incorrect
+    :return Piece type from constants package
+    :raises TypeError: if provided type is incorrect
     """
     if piece_type not in piece_type_mapper:
         raise TypeError("Invalid piece_type")
@@ -54,6 +54,6 @@ def map_square_to_index(square: chess.Square) -> Tuple[int, int]:
     """Maps square to index
 
     :param square: Square to map
-    :returns A tuple which contains row and col value
+    :returns: A tuple which contains row and col value
     """
     return square // 8, square % 8

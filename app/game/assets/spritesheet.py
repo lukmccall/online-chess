@@ -12,6 +12,7 @@ class SpriteSheet:
     """
     def __init__(self, filename: str):
         """Basic constructor, which loads a sprite sheet to the memory
+
         :param filename: Path to the sprite sheet
         """
         self._img = pygame.image.load(filename)
@@ -21,7 +22,7 @@ class SpriteSheet:
         at the provided position
 
         :param rectangle: The location of wanted image
-        :returns A surface with cut image
+        :return: A surface with cut image
         """
         rect = pygame.Rect(rectangle)
         image = pygame.Surface(rect.size).convert_alpha()
@@ -33,7 +34,7 @@ class SpriteSheet:
 
         :param rows: An number of rows
         :param cols: An number of cols
-        :returns A list with all images.
+        :return: A list with all images.
         """
         height = self._img.get_height() // rows
         width = self._img.get_width() // cols

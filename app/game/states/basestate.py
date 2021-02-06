@@ -20,14 +20,14 @@ class BaseState(StateInterface):
     def get_display(self) -> pygame.Surface:
         """Gets display surface
 
-         :returns Surface
+         :return: Surface
          """
         return self._game_manager.get_window().game_display
 
     def get_pieces_factory(self) -> PiecesFactory:
         """Gets pieces factory from game manager
 
-        :returns PiecesFactory
+        :return: PiecesFactory
         """
         asset_provider = self._game_manager.get_asset_provider()
         return asset_provider.get_pieces_factory()

@@ -1,9 +1,6 @@
 game.states package
 ===================
 
-Submodules
-----------
-
 game.states.basegamestate module
 --------------------------------
 

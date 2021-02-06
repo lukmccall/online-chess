@@ -23,49 +23,49 @@ class Settings(metaclass=SingletonMeta):  # pylint: disable=R0902
     def get_window_size(self) -> Tuple[int, int]:
         """Gets window size
 
-        :returns: Window size
+        :return: Window size
         """
         return self._window_size
 
     def get_chess_assets_path(self) -> str:
         """Gets asset path
 
-        :returns: Path to chess asset sprite
+        :return: Path to chess asset sprite
         """
         return self._chess_assets_path
 
     def get_light_squares_color(self) -> Tuple[int, int, int]:
         """Gets light squares color
 
-        :returns: Color of light squares
+        :return: Color of light squares
         """
         return self._light_squares_color
 
     def get_dark_squares_color(self) -> Tuple[int, int, int]:
         """Gets dar squares color
 
-        :returns: Color of dar squares
+        :return: Color of dar squares
         """
         return self._dark_squares_color
 
     def get_highlights_moves_color(self) -> Tuple[int, int, int]:
         """Gets highlight color
 
-        :returns: Highlight color
+        :return: Highlight color
         """
         return self._highlights_possible_moves_color
 
     def get_highlights_moves_size(self) -> int:
         """Gets highlight size
 
-        :returns: Size of highlight
+        :return: Size of highlight
         """
         return self._highlights_possible_moves_size
 
     def get_text_color(self) -> Tuple[int, int, int]:
         """Gets text color
 
-        :returns: Text color
+        :return: Text color
         """
         return self._text_color
 

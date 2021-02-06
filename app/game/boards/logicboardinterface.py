@@ -41,14 +41,14 @@ class LogicBoardInterface(metaclass=Interface):
         :param from_square_col: Col of source square
         :param to_square_row: Row of target square
         :param to_square_col: Col of target square
-        :returns Move if exists otherwise None
+        :return: Move if exists otherwise None
         """
 
     @abstract
     def is_game_over(self) -> bool:
         """Checks if the game is over
 
-        :returns True if game was finished otherwise False
+        :return: True if game was finished otherwise False
         """
 
     @abstract
@@ -87,12 +87,12 @@ class LogicBoardInterface(metaclass=Interface):
     def turn(self) -> chess.Color:
         """Gets current team
 
-        :returns Currently playing team
+        :return: Currently playing team
         """
 
     @abstract
     def winner(self) -> Optional[chess.Color]:
         """Gets winner
 
-        :returns Winner team or None if draw
+        :return: Winner team or None if draw
         """

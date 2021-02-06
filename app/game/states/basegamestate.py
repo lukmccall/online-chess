@@ -33,7 +33,7 @@ class BaseGameState(BaseState):
 
         Note: this method need to be implemented by all the derived classes
 
-        :returns An GameController instance
+        :return: An GameController instance
         """
         raise NotImplementedError()
 

@@ -31,6 +31,7 @@ class FlippableGroup(pygame.sprite.Group):
 
     def draw(self, surface: pygame.Surface) -> None:
         """Draws all sprites in the group on the provided surface
+
         :param surface: A surface
         """
         if self._is_flipped:
@@ -54,6 +55,7 @@ class FlippableGroup(pygame.sprite.Group):
             rect: pygame.Rect
     ) -> pygame.Rect:
         """Flips the position of the provided rectangle
+
         :param surface: Surface which will be used to calculate the flipped position
         :param rect: Rect
         :return: Rect with flipped position
@@ -64,7 +66,8 @@ class FlippableGroup(pygame.sprite.Group):
 
 
 class Board(GameBoardInterface):
-    """Bord class which binds graphic and logic.
+    """
+    Bord class which binds graphic and logic.
     It's the main class which is a bridge between logic board and user.
     """
     def __init__(self,
@@ -118,7 +121,6 @@ class Board(GameBoardInterface):
             index = (index - 1) * -1
 
     def get_piece_at(self, row, col) -> Optional[ChessPieceSprite]:
-
         if self._is_flipped:
             row = 7 - row
 
