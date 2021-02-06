@@ -1,3 +1,6 @@
+"""
+A module containing LocalGameState
+"""
 from constants import Team
 from multiplayer import SocketWrapperInterface
 
@@ -7,6 +10,9 @@ from ..gamemanagers import GameManagerInterface
 
 
 class OnlineGameState(BaseGameState):
+    """
+    State where user in in the online game.
+    """
     def __init__(
             self,
             game_manager: GameManagerInterface,
@@ -14,21 +20,21 @@ class OnlineGameState(BaseGameState):
             team: Team):
         super().__init__(game_manager)
 
-        self.socket = socket
-        self.team = team
-        self.game_controller = None
+        self._socket = socket
+        self._team = team
+        self._game_controller = None
 
-    def on_state_exit(self):
+    def on_state_exit(self) -> None:
         super().on_state_exit()
-        self.socket.close()
+        self._socket.close()
 
     def get_game_controller(self) -> GameController:
-        return self.game_controller
+        return self._game_controller
 
-    def on_state_start(self):
+    def on_state_start(self) -> None:
         super().on_state_start()
-        self.game_controller = MultiplayerGameController(
-            self.board,
-            self.team,
-            self.socket
+        self._game_controller = MultiplayerGameController(
+            self._board,
+            self._team,
+            self._socket
         )

@@ -1,5 +1,9 @@
-from typing import List
+"""
+A module containing the base game controller implementation
+"""
+from typing import List, Tuple
 import pygame
+import chess
 
 from settings import Settings
 from constants import Team
@@ -8,46 +12,69 @@ from ..boards import GameBoardInterface
 
 
 class GameController:
+    """
+    A simple game controller which is used to interact between user and the board.
+    This implementation is used in the local game.
+    Also this class contains the state of the current game.
+    """
     def __init__(self, board: GameBoardInterface, team: Team):
-        self.board = board
+        self._board = board
         self.team = team
-        self.mouse_was_press = False
-        self.selected_position = None
-        self.possible_moves = None
+        self._mouse_was_press = False
+        self._selected_position = None
+        self._possible_moves = None
 
-    def prepare(self):
+    def prepare(self) -> None:
+        """Prepare game controller
+
+        This method is triggered on every frame before the board is drawn
+        """
         if Settings().get_flip_board():
-            self.board.set_flip(self.team == Team.WHITE)
+            self._board.set_flip(self.team == Team.WHITE)
 
-    def pipe_events(self, events: List[pygame.event.Event]):
-        self.mouse_was_press = False
+    def pipe_events(self, events: List[pygame.event.Event]) -> None:
+        """Pipes events from pygame to the controller
+        """
+        self._mouse_was_press = False
 
         for event in events:
             if event.type == pygame.MOUSEBUTTONUP:
-                self.mouse_was_press = True
+                self._mouse_was_press = True
 
-    def on_move(self, move):
-        pass
+    def on_move(self, move: chess.Move) -> None:
+        """Hook which allow do something after the move was executed
+        """
 
-    def action(self):
-        if self.mouse_was_press:
-            cursor_position = pygame.mouse.get_pos()
-            mouse_x, mouse_y = cursor_position
-            width, height = self.board.cell_size
-            row, col = (mouse_y // width, mouse_x // height)
+    def action(self) -> None:
+        """Executes user actions
 
-            piece = self.board.get_piece_at(row, col)
+        This method is trigger after the board is drawn
+        """
+        if self._mouse_was_press:
+            row, col = self._get_mouse_index()
+
+            piece = self._board.get_piece_at(row, col)
             if piece and piece.team == self.team:
-                self.selected_position = (row, col)
-                self.possible_moves = list(self.board.get_possible_moves_from(row, col))
-            elif self.selected_position:
-                legal_move = self.board.generate_move(*self.selected_position, row, col)
+                self._selected_position = (row, col)
+                self._possible_moves = list(self._board.get_possible_moves_from(row, col))
+            elif self._selected_position:
+                legal_move = self._board.generate_move(*self._selected_position, row, col)
                 if legal_move:
-                    self.board.move(legal_move)
+                    self._board.move(legal_move)
                     self.on_move(legal_move)
 
-                self.selected_position = None
-                self.possible_moves = None
+                self._selected_position = None
+                self._possible_moves = None
 
-        if self.possible_moves:
-            self.board.draw_moves(self.possible_moves)
+        if self._possible_moves:
+            self._board.draw_moves(self._possible_moves)
+
+    def _get_mouse_index(self) -> Tuple[int, int]:
+        """Gets a mouse board index
+
+        :returns [row, col]
+        """
+        cursor_position = pygame.mouse.get_pos()
+        mouse_x, mouse_y = cursor_position
+        width, height = self._board.cell_size
+        return mouse_y // width, mouse_x // height

@@ -1,4 +1,12 @@
+"""
+This module contains singleton metaclass
+"""
+
+
 class SingletonMeta(type):
+    """
+    A metaclass which creates singleton class
+    """
     _instances = {}
 
     def __call__(cls, *args, **kwargs):

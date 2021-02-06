@@ -1,3 +1,6 @@
+"""
+A module which contains the game manager implementation
+"""
 from typing import List
 
 import pygame
@@ -9,16 +12,24 @@ from ..window import Window
 
 
 class GameManager(GameManagerInterface):
+    """
+    Class which responsible for holding and managing state of the application.
+    Moreover this class is also responsible for sending events from the window.
+    """
     def __init__(self, window: Window, asset_provider: AssetsProvider):
         self.window = window
         self.asset_provider = asset_provider
         self.state = None
         self.go_to_main_state()
 
-    def game_loop(self, events: List[pygame.event.Event]):
+    def game_loop(self, events: List[pygame.event.Event]) -> None:
+        """Main function which should be called every frame
+
+        :param events: List of events
+        """
         for event in events:
             if event.type == pygame.QUIT:
-                self.window.is_running = False
+                self.window.stop()
                 self.state.on_state_exit()
                 return
             if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:

@@ -1,3 +1,6 @@
+"""
+A main game package
+"""
 from .boards import *
 from .gamecontrollers import *
 from .gamemanagers import *

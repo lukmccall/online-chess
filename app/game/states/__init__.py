@@ -1,3 +1,6 @@
+"""
+This package contains all state which can be managed by the game manager class
+"""
 from .stateinterface import StateInterface
 
 from .localgamestate import LocalGameState

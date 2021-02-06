@@ -1,6 +1,8 @@
+"""
+A module containing JoiningGameState
+"""
 from typing import List
 import pygame
-import pygame_menu
 
 from multiplayer import SocketWrapperInterface, MessageType
 
@@ -10,6 +12,9 @@ from ..gamemanagers import GameManagerInterface
 
 
 class JoiningGameState(MenuBaseState):
+    """
+    A state where user is looking for new online player game
+    """
     def __init__(
             self,
             game_manager: GameManagerInterface,
@@ -17,49 +22,39 @@ class JoiningGameState(MenuBaseState):
     ):
         super().__init__(game_manager)
 
-        self.socket = socket
+        self._socket = socket
 
-        self.menu = pygame_menu.Menu(
-            game_manager.get_window().height,
-            game_manager.get_window().width,
-            "Online Chess",
-            theme=pygame_menu.themes.THEME_DARK,
-            enabled=False
-        )
+        self._menu.add_label("Waiting for connection")
+        self._menu.add_button("Quit", self.on_end)
 
-        self.menu.add_label("Waiting for connection")
-        self.menu.add_button("Quit", self.on_end)
+        self._preserve_socket = False
+        self._team = None
 
-        self.preserve_socket = False
-        self.team = None
-
-    def on_state_exit(self):
+    def on_state_exit(self) -> None:
         super().on_state_exit()
 
-        if not self.preserve_socket:
-            self.socket.close()
+        if not self._preserve_socket:
+            self._socket.close()
 
-    def on_game_loop(self, events: List[pygame.event.Event]):
-        message = self.socket.receive()
+    def on_game_loop(self, events: List[pygame.event.Event]) -> None:
+        message = self._socket.receive()
         if message is None:
             super().on_game_loop(events)
             return
 
-        print(message)
-        if self.team is None:
+        if self._team is None:
             if message.type == MessageType.SET_TEAM:
-                self.team = message.team
+                self._team = message.team
             else:
                 raise AssertionError("Expect [SET_TEAM] message but got {}.".format(message))
         else:
             if message.type == MessageType.START:
-                self.preserve_socket = True
-                print("Start")
-                self.game_manager.change_state(
+                self._preserve_socket = True
+                self._game_manager.change_state(
                     OnlineGameState(
-                        self.game_manager,
-                        self.socket,
-                        self.team
+                        self._game_manager,
+                        self._socket,
+                        self._team
                     )
                 )
                 return
@@ -68,5 +63,8 @@ class JoiningGameState(MenuBaseState):
 
         super().on_game_loop(events)
 
-    def on_end(self):
-        self.game_manager.go_to_main_state()
+    def on_end(self) -> None:
+        """Methods which is called when
+        the user clicks on the end button
+        """
+        self._game_manager.go_to_main_state()

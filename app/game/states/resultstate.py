@@ -1,3 +1,6 @@
+"""
+A module containing ResultState
+"""
 from typing import List
 import pygame
 import chess
@@ -10,21 +13,27 @@ from ..gamemanagers import GameManagerInterface
 
 
 class ResultState(BaseState):
+    """
+    State when the user finish local or multiplayer game with score.
+    """
     def __init__(
             self,
-            game_manager:
-            GameManagerInterface,
+            game_manager: GameManagerInterface,
             board: GameBoardInterface
     ):
         super().__init__(game_manager)
 
-        self.board = board
-        self.font = pygame.font.Font(pygame.font.get_default_font(), 70)
+        self._board = board
+        self._font = pygame.font.Font(pygame.font.get_default_font(), 70)
 
-        self.result = self._get_result()
+        self._result = self._get_result()
 
-    def _get_result(self):
-        color = self.board.winner()
+    def _get_result(self) -> str:
+        """Gets string representing game result
+
+        :returns Game result
+        """
+        color = self._board.winner()
 
         if color is None:
             text = "Draw"
@@ -35,18 +44,20 @@ class ResultState(BaseState):
 
         return text
 
-    def on_state_exit(self):
+    def on_state_exit(self) -> None:
         pass
 
-    def on_state_start(self):
+    def on_state_start(self) -> None:
         pass
 
-    def draw_game_result(self):
-        text = self.font.render(self.result, True, Settings().get_text_color())
+    def _draw_game_result(self) -> None:
+        """Draws message after the game
+        """
+        text = self._font.render(self._result, True, Settings().get_text_color())
 
         text_position = (
-            self.game_manager.window.width / 2 - text.get_width() / 2,
-            self.game_manager.window.height / 2 - text.get_height() / 2
+            self.get_display().get_width() / 2 - text.get_width() / 2,
+            self.get_display().get_height() / 2 - text.get_height() / 2
         )
         pygame.draw.rect(
             self.get_display(),
@@ -58,11 +69,11 @@ class ResultState(BaseState):
         )
         self.get_display().blit(text, text_position)
 
-    def on_game_loop(self, events: List[pygame.event.Event]):
+    def on_game_loop(self, events: List[pygame.event.Event]) -> None:
         for event in events:
             if event.type == pygame.KEYDOWN:
-                self.game_manager.go_to_main_state()
+                self._game_manager.go_to_main_state()
                 return
 
-        self.board.draw()
-        self.draw_game_result()
+        self._board.draw()
+        self._draw_game_result()

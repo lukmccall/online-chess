@@ -1,3 +1,6 @@
+"""
+A module that contains PythonChessLogicBoard class
+"""
 from typing import Optional, Iterator
 
 import chess
@@ -6,36 +9,42 @@ from .logicboardinterface import LogicBoardInterface
 
 
 class PythonChessLogicBoard(LogicBoardInterface):
+    """
+    Implementation of the logic board which uses python-chess package
+    """
     def __init__(self):
         self.board = chess.Board()
 
-    def get_possible_moves_from(self, row, col) -> Iterator[chess.Move]:
+    def get_possible_moves_from(self, row: int, col: int) -> Iterator[chess.Move]:
         mask = 1 << row * 8 + col
         return self.board.generate_legal_moves(mask, chess.BB_ALL)
 
-    def generate_move(self, from_row, from_col, to_row, to_col) -> Optional[chess.Move]:
-        from_mask = 1 << from_row * 8 + from_col
-        to_mask = 1 << to_row * 8 + to_col
+    def get_generate_move_from_to(
+            self,
+            from_square_row: int,
+            from_square_col: int,
+            to_square_row: int,
+            to_square_col: int
+    ) -> Optional[chess.Move]:
+        from_mask = 1 << from_square_row * 8 + from_square_col
+        to_mask = 1 << to_square_row * 8 + to_square_col
 
         moves = list(self.board.generate_legal_moves(from_mask, to_mask))
         if len(moves) >= 1:
             return moves[0]
 
         if from_mask & chess.BB_BACKRANKS and to_mask & chess.BB_BACKRANKS:
-            move = chess.Move(to_square=from_row * 8 + to_col, from_square=from_row * 8 + from_col)
+            move = chess.Move(
+                to_square=from_square_row * 8 + to_square_col,
+                from_square=from_square_row * 8 + from_square_col
+            )
             if self.board.is_castling(move) and self.board.is_legal(move):
                 return move
 
         return None
 
-    def execute_move(self, move: chess.Move):
+    def execute_move(self, move: chess.Move) -> None:
         self.board.push(move)
-
-    def is_checkmate(self) -> bool:
-        return self.board.is_checkmate()
-
-    def is_stalemate(self) -> bool:
-        return self.board.is_stalemate()
 
     def is_game_over(self) -> bool:
         return self.board.is_game_over()

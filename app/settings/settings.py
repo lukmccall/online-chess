@@ -1,7 +1,14 @@
+"""
+This module contains settings singleton class
+"""
+from typing import Tuple
 from langextensions import SingletonMeta
 
 
-class Settings(metaclass=SingletonMeta):
+class Settings(metaclass=SingletonMeta):  # pylint: disable=R0902
+    """
+    Singleton class which contains all configurable settings.
+    """
     def __init__(self):
         self._window_size = (640, 640)
         self._chess_assets_path = "assets/chess-pieces-sprite.png"
@@ -13,29 +20,63 @@ class Settings(metaclass=SingletonMeta):
 
         self._flip_board = False
 
-    def get_window_size(self):
+    def get_window_size(self) -> Tuple[int, int]:
+        """Gets window size
+
+        :returns: Window size
+        """
         return self._window_size
 
-    def get_chess_assets_path(self):
+    def get_chess_assets_path(self) -> str:
+        """Gets asset path
+
+        :returns: Path to chess asset sprite
+        """
         return self._chess_assets_path
 
-    def get_light_squares_color(self):
+    def get_light_squares_color(self) -> Tuple[int, int, int]:
+        """Gets light squares color
+
+        :returns: Color of light squares
+        """
         return self._light_squares_color
 
-    def get_dark_squares_color(self):
+    def get_dark_squares_color(self) -> Tuple[int, int, int]:
+        """Gets dar squares color
+
+        :returns: Color of dar squares
+        """
         return self._dark_squares_color
 
-    def get_highlights_moves_color(self):
+    def get_highlights_moves_color(self) -> Tuple[int, int, int]:
+        """Gets highlight color
+
+        :returns: Highlight color
+        """
         return self._highlights_possible_moves_color
 
-    def get_highlights_moves_size(self):
+    def get_highlights_moves_size(self) -> int:
+        """Gets highlight size
+
+        :returns: Size of highlight
+        """
         return self._highlights_possible_moves_size
 
-    def get_text_color(self):
+    def get_text_color(self) -> Tuple[int, int, int]:
+        """Gets text color
+
+        :returns: Text color
+        """
         return self._text_color
 
-    def get_flip_board(self):
+    def get_flip_board(self) -> bool:
+        """Gets flip board option
+
+        :return: Bool
+        """
         return self._flip_board
 
-    def set_flip_board(self, to: bool):
-        self._flip_board = to
+    def set_flip_board(self, new_value: bool) -> None:
+        """Sets the flip board option
+        """
+        self._flip_board = new_value

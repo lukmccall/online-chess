@@ -1,3 +1,6 @@
+"""
+This package contains an multiplayer protocol and socket wrappers
+"""
 from .protocol import \
     MessageType,\
     Message,\
