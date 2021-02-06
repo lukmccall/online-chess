@@ -17,7 +17,7 @@ class MainMenuState(MenuBaseState):
     State where user is in the main menu.
     Base state of the app.
     """
-    def __init__(self, game_manager: GameManagerInterface):
+    def __init__(self, game_manager: GameManagerInterface) -> None:
         super().__init__(game_manager)
         self._menu.add_button("Play", self.on_new_local_game)
         self._menu.add_button("Multiplayer", self.on_multiplayer_game)
@@ -39,7 +39,7 @@ class MainMenuState(MenuBaseState):
     def on_end(self) -> None:
         """Methods called when user selects quit button
         """
-        self._game_manager.window.stop()
+        self._game_manager.get_window().stop()
 
     def on_multiplayer_game(self) -> None:
         """Methods called when user selects new multiplayer game from menu

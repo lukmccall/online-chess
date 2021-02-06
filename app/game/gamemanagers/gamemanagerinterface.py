@@ -1,6 +1,7 @@
 """
 Module containing a GameManagerInterface
 """
+# pyre-ignore-all-errors
 from langextensions import Interface, abstract
 
 from ..assets import AssetsProvider

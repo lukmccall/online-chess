@@ -13,8 +13,9 @@ class MenuBaseState(BaseState):
     """
     A base state for all menu related states
     """
-    def __init__(self, game_manager: GameManagerInterface):
+    def __init__(self, game_manager: GameManagerInterface) -> None:
         super().__init__(game_manager)
+        # pyre-ignore[16]:
         self._menu = pygame_menu.Menu(
             game_manager.get_window().game_display.get_height(),
             game_manager.get_window().game_display.get_width(),

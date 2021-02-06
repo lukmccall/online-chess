@@ -1,6 +1,7 @@
 """
 A module that contains Interface extension for python
 """
+# pyre-ignore-all-errors
 from typing import Any, Callable, TypeVar, List
 
 GenericFuncType = TypeVar('GenericFuncType', bound=Callable[..., Any])

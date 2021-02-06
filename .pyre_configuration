@@ -4,5 +4,6 @@
     "app"
   ],
   "taint_models_path": "/Users/lukasz/studies/chess-online/venv/lib",
-  "typeshed": "/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed"
+  "typeshed": "/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed",
+  "strict": true
 }

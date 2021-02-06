@@ -13,7 +13,7 @@ class SocketWrapper(SocketWrapperInterface):
     """
     Basic blocking socket wrapper
     """
-    def __init__(self, socket: soc.socket):
+    def __init__(self, socket: soc.socket) -> None:
         self.socket = socket
 
     def receive(self) -> Optional[Message]:
@@ -52,7 +52,7 @@ class NoneBlockingSocketWrapper(SocketWrapper):
     """
     Implementation of non blocking socket wrapper
     """
-    def __init__(self, socket: soc.socket):
+    def __init__(self, socket: soc.socket) -> None:
         super().__init__(socket)
 
         self.socket.setblocking(False)

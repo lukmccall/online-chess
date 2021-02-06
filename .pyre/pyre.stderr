@@ -506,3 +506,1016 @@
 2021-02-05 00:40:39,629 [PID 37901] INFO Stopped server at `/Users/lukasz/studies/chess-online/app`
 2021-02-05 00:40:39,631 [PID 38149] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
 2021-02-05 00:40:39,632 [PID 37901] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-06 20:34:55,031 [PID 88659] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:34:55,032 [PID 88659] INFO Waiting for server...
+2021-02-06 20:34:55,032 [PID 88659] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:34:55,033 [PID 88659] INFO Starting server at `/Users/lukasz/studies/chess-online/app`.
+2021-02-06 20:34:55,033 [PID 88659] INFO Waiting on the pyre client lock.
+2021-02-06 20:34:55,033 [PID 88659] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:34:55,034 [PID 88659] DEBUG Daemonizing the configuration_monitor.
+2021-02-06 20:34:55,034 [PID 88659] INFO Waiting for monitor to start up...
+2021-02-06 20:34:55,036 [PID 88659] DEBUG The configuration monitor is down.
+2021-02-06 20:34:55,038 [PID 88664] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.lock
+2021-02-06 20:34:55,039 [PID 88664] DEBUG Registering process with pid 88664 in pid file `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-06 20:34:55,137 [PID 88659] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/server/server.lock
+2021-02-06 20:34:55,137 [PID 88659] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-06 20:34:55,138 [PID 88659] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin start -logging-sections environment -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -taint-models /Users/lukasz/studies/chess-online/venv/lib -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -expected-binary-version unversioned -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 -new-incremental-check /Users/lukasz/studies/chess-online/app`
+2021-02-06 20:34:55,143 [PID 88659] DEBUG Registering process with pid 88666 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-88666.pid`
+2021-02-06 20:34:55,862 [PID 88659] INFO Starting up server ...
+2021-02-06 20:34:55,862 [PID 88659] INFO Running as pid: 88666
+2021-02-06 20:34:55,862 [PID 88659] INFO Version: 180e970acf39bb947b6a116c631900e08a3b2fb1
+2021-02-06 20:34:55,862 [PID 88659] INFO Build info: Darwin x86_64 @ Fri Jan 15 15:46:59 PST 2021
+2021-02-06 20:34:55,865 [PID 88659] INFO Starting the server. Please wait...
+2021-02-06 20:34:55,866 [PID 88659] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-88666.pid`
+2021-02-06 20:35:04,907 [PID 88659] DEBUG Daemonizing the file_monitor.
+2021-02-06 20:35:04,908 [PID 88659] INFO Waiting for monitor to start up...
+2021-02-06 20:35:04,909 [PID 88659] DEBUG The file monitor is down.
+2021-02-06 20:35:04,911 [PID 88913] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.lock
+2021-02-06 20:35:04,913 [PID 88913] DEBUG Registering process with pid 88913 in pid file `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-06 20:35:05,012 [PID 88659] DEBUG Initialized file monitor.
+2021-02-06 20:35:05,117 [PID 88659] PERFORMANCE Server request: 0.001302s
+2021-02-06 20:35:05,118 [PID 88659] PERFORMANCE Server request: 0.001428s
+2021-02-06 20:35:05,127 [PID 88659] ERROR Found 36 type errors!
+2021-02-06 20:38:52,567 [PID 89619] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:38:52,568 [PID 89619] INFO Waiting for server...
+2021-02-06 20:38:52,568 [PID 89619] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:38:52,636 [PID 89619] PERFORMANCE Server request: 0.000873s
+2021-02-06 20:38:52,636 [PID 89619] PERFORMANCE Server request: 0.001042s
+2021-02-06 20:38:52,643 [PID 89619] ERROR Found 30 type errors!
+2021-02-06 20:39:00,988 [PID 89735] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:39:00,988 [PID 89735] INFO Waiting for server...
+2021-02-06 20:39:00,988 [PID 89735] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:39:01,057 [PID 89735] PERFORMANCE Server request: 0.000779s
+2021-02-06 20:39:01,058 [PID 89735] PERFORMANCE Server request: 0.000958s
+2021-02-06 20:39:01,065 [PID 89735] ERROR Found 27 type errors!
+2021-02-06 20:39:09,100 [PID 89846] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:39:09,100 [PID 89846] INFO Waiting for server...
+2021-02-06 20:39:09,101 [PID 89846] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:39:09,136 [PID 89846] PERFORMANCE Server request: 0.000610s
+2021-02-06 20:39:09,136 [PID 89846] PERFORMANCE Server request: 0.000760s
+2021-02-06 20:39:09,142 [PID 89846] ERROR Found 21 type errors!
+2021-02-06 20:39:30,963 [PID 89975] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:39:30,963 [PID 89975] INFO Waiting for server...
+2021-02-06 20:39:30,963 [PID 89975] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:39:31,038 [PID 89975] PERFORMANCE Server request: 0.000499s
+2021-02-06 20:39:31,039 [PID 89975] PERFORMANCE Server request: 0.000641s
+2021-02-06 20:39:31,043 [PID 89975] ERROR Found 21 type errors!
+2021-02-06 20:39:43,301 [PID 90109] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:39:43,301 [PID 90109] INFO Waiting for server...
+2021-02-06 20:39:43,302 [PID 90109] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:39:43,328 [PID 90109] PERFORMANCE Server request: 0.000258s
+2021-02-06 20:39:43,328 [PID 90109] PERFORMANCE Server request: 0.000330s
+2021-02-06 20:39:43,332 [PID 90109] ERROR Found 20 type errors!
+2021-02-06 20:41:08,424 [PID 90226] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:41:08,425 [PID 90226] INFO Waiting for server...
+2021-02-06 20:41:08,425 [PID 90226] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:41:08,480 [PID 90226] PERFORMANCE Server request: 0.000613s
+2021-02-06 20:41:08,480 [PID 90226] PERFORMANCE Server request: 0.000770s
+2021-02-06 20:41:08,486 [PID 90226] ERROR Found 21 type errors!
+2021-02-06 20:41:24,419 [PID 90333] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:41:24,419 [PID 90333] INFO Waiting for server...
+2021-02-06 20:41:24,419 [PID 90333] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:41:24,465 [PID 90333] PERFORMANCE Server request: 0.000613s
+2021-02-06 20:41:24,466 [PID 90333] PERFORMANCE Server request: 0.000778s
+2021-02-06 20:41:24,471 [PID 90333] ERROR Found 21 type errors!
+2021-02-06 20:41:38,697 [PID 90453] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:41:38,697 [PID 90453] INFO Waiting for server...
+2021-02-06 20:41:38,697 [PID 90453] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:41:38,753 [PID 90453] PERFORMANCE Server request: 0.000588s
+2021-02-06 20:41:38,753 [PID 90453] PERFORMANCE Server request: 0.000748s
+2021-02-06 20:41:38,759 [PID 90453] ERROR Found 21 type errors!
+2021-02-06 20:42:07,412 [PID 90578] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:42:07,412 [PID 90578] INFO Waiting for server...
+2021-02-06 20:42:07,412 [PID 90578] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:42:07,457 [PID 90578] PERFORMANCE Server request: 0.000407s
+2021-02-06 20:42:07,458 [PID 90578] PERFORMANCE Server request: 0.000529s
+2021-02-06 20:42:07,463 [PID 90578] ERROR Found 21 type errors!
+2021-02-06 20:42:16,205 [PID 90698] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:42:16,205 [PID 90698] INFO Waiting for server...
+2021-02-06 20:42:16,206 [PID 90698] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:42:16,217 [PID 90698] PERFORMANCE Server request: 0.000257s
+2021-02-06 20:42:16,217 [PID 90698] PERFORMANCE Server request: 0.000321s
+2021-02-06 20:42:16,221 [PID 90698] ERROR Found 20 type errors!
+2021-02-06 20:42:21,722 [PID 90804] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:42:21,723 [PID 90804] INFO Waiting for server...
+2021-02-06 20:42:21,723 [PID 90804] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:42:21,732 [PID 90804] PERFORMANCE Server request: 0.000233s
+2021-02-06 20:42:21,732 [PID 90804] PERFORMANCE Server request: 0.000373s
+2021-02-06 20:42:21,736 [PID 90804] ERROR Found 21 type errors!
+2021-02-06 20:42:37,179 [PID 90913] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:42:37,179 [PID 90913] INFO Waiting for server...
+2021-02-06 20:42:37,179 [PID 90913] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:42:37,189 [PID 90913] PERFORMANCE Server request: 0.000472s
+2021-02-06 20:42:37,190 [PID 90913] PERFORMANCE Server request: 0.000619s
+2021-02-06 20:42:37,194 [PID 90913] ERROR Found 22 type errors!
+2021-02-06 20:42:44,588 [PID 91021] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:42:44,589 [PID 91021] INFO Waiting for server...
+2021-02-06 20:42:44,589 [PID 91021] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:42:44,649 [PID 91021] PERFORMANCE Server request: 0.000405s
+2021-02-06 20:42:44,649 [PID 91021] PERFORMANCE Server request: 0.000527s
+2021-02-06 20:42:44,654 [PID 91021] ERROR Found 21 type errors!
+2021-02-06 20:42:57,802 [PID 91127] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:42:57,803 [PID 91127] INFO Waiting for server...
+2021-02-06 20:42:57,803 [PID 91127] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:42:57,883 [PID 91127] PERFORMANCE Server request: 0.000704s
+2021-02-06 20:42:57,884 [PID 91127] PERFORMANCE Server request: 0.000914s
+2021-02-06 20:42:57,889 [PID 91127] ERROR Found 21 type errors!
+2021-02-06 20:43:05,807 [PID 91235] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:43:05,808 [PID 91235] INFO Waiting for server...
+2021-02-06 20:43:05,808 [PID 91235] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:43:05,899 [PID 91235] PERFORMANCE Server request: 0.000613s
+2021-02-06 20:43:05,899 [PID 91235] PERFORMANCE Server request: 0.000777s
+2021-02-06 20:43:05,905 [PID 91235] ERROR Found 21 type errors!
+2021-02-06 20:43:12,523 [PID 91341] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:43:12,523 [PID 91341] INFO Waiting for server...
+2021-02-06 20:43:12,523 [PID 91341] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:43:12,549 [PID 91341] PERFORMANCE Server request: 0.000218s
+2021-02-06 20:43:12,549 [PID 91341] PERFORMANCE Server request: 0.000321s
+2021-02-06 20:43:12,552 [PID 91341] ERROR Found 19 type errors!
+2021-02-06 20:43:24,649 [PID 91461] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:43:24,649 [PID 91461] INFO Waiting for server...
+2021-02-06 20:43:24,650 [PID 91461] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:43:24,724 [PID 91461] PERFORMANCE Server request: 0.000516s
+2021-02-06 20:43:24,725 [PID 91461] PERFORMANCE Server request: 0.000686s
+2021-02-06 20:43:24,729 [PID 91461] ERROR Found 18 type errors!
+2021-02-06 20:43:32,184 [PID 91569] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:43:32,184 [PID 91569] INFO Waiting for server...
+2021-02-06 20:43:32,184 [PID 91569] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:43:32,241 [PID 91569] PERFORMANCE Server request: 0.000466s
+2021-02-06 20:43:32,242 [PID 91569] PERFORMANCE Server request: 0.000650s
+2021-02-06 20:43:32,246 [PID 91569] ERROR Found 17 type errors!
+2021-02-06 20:43:42,112 [PID 91675] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:43:42,113 [PID 91675] INFO Waiting for server...
+2021-02-06 20:43:42,113 [PID 91675] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:43:42,154 [PID 91675] PERFORMANCE Server request: 0.000481s
+2021-02-06 20:43:42,154 [PID 91675] PERFORMANCE Server request: 0.000664s
+2021-02-06 20:43:42,159 [PID 91675] ERROR Found 17 type errors!
+2021-02-06 20:43:49,729 [PID 91781] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:43:49,729 [PID 91781] INFO Waiting for server...
+2021-02-06 20:43:49,730 [PID 91781] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:43:49,833 [PID 91781] PERFORMANCE Server request: 0.000279s
+2021-02-06 20:43:49,834 [PID 91781] PERFORMANCE Server request: 0.000400s
+2021-02-06 20:43:49,838 [PID 91781] ERROR Found 16 type errors!
+2021-02-06 20:44:00,829 [PID 91888] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:44:00,829 [PID 91888] INFO Waiting for server...
+2021-02-06 20:44:00,830 [PID 91888] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:44:00,882 [PID 91888] PERFORMANCE Server request: 0.000267s
+2021-02-06 20:44:00,882 [PID 91888] PERFORMANCE Server request: 0.000398s
+2021-02-06 20:44:00,886 [PID 91888] ERROR Found 15 type errors!
+2021-02-06 20:44:09,828 [PID 91996] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:44:09,829 [PID 91996] INFO Waiting for server...
+2021-02-06 20:44:09,829 [PID 91996] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:44:09,866 [PID 91996] PERFORMANCE Server request: 0.000377s
+2021-02-06 20:44:09,870 [PID 91996] ERROR Found 14 type errors!
+2021-02-06 20:44:31,708 [PID 92109] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:44:31,708 [PID 92109] INFO Waiting for server...
+2021-02-06 20:44:31,708 [PID 92109] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:44:31,747 [PID 92109] PERFORMANCE Server request: 0.000186s
+2021-02-06 20:44:31,747 [PID 92109] PERFORMANCE Server request: 0.000272s
+2021-02-06 20:44:31,750 [PID 92109] ERROR Found 15 type errors!
+2021-02-06 20:44:39,627 [PID 92245] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:44:39,628 [PID 92245] INFO Waiting for server...
+2021-02-06 20:44:39,628 [PID 92245] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:44:39,700 [PID 92245] PERFORMANCE Server request: 0.000351s
+2021-02-06 20:44:39,704 [PID 92245] ERROR Found 13 type errors!
+2021-02-06 20:44:55,705 [PID 92366] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:44:55,706 [PID 92366] INFO Waiting for server...
+2021-02-06 20:44:55,706 [PID 92366] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:44:55,713 [PID 92366] PERFORMANCE Server request: 0.000088s
+2021-02-06 20:44:55,715 [PID 92366] ERROR Found 8 type errors!
+2021-02-06 20:45:02,615 [PID 92474] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:45:02,615 [PID 92474] INFO Waiting for server...
+2021-02-06 20:45:02,615 [PID 92474] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:45:02,639 [PID 92474] PERFORMANCE Server request: 0.000096s
+2021-02-06 20:45:02,639 [PID 92474] PERFORMANCE Server request: 0.000194s
+2021-02-06 20:45:02,641 [PID 92474] ERROR Found 6 type errors!
+2021-02-06 20:45:09,904 [PID 92581] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:45:09,904 [PID 92581] INFO Waiting for server...
+2021-02-06 20:45:09,905 [PID 92581] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:45:09,976 [PID 92581] PERFORMANCE Server request: 0.000183s
+2021-02-06 20:45:09,976 [PID 92581] PERFORMANCE Server request: 0.000325s
+2021-02-06 20:45:09,978 [PID 92581] ERROR Found 7 type errors!
+2021-02-06 20:45:20,859 [PID 92690] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:45:20,859 [PID 92690] INFO Waiting for server...
+2021-02-06 20:45:20,859 [PID 92690] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:45:20,910 [PID 92690] PERFORMANCE Server request: 0.000121s
+2021-02-06 20:45:20,911 [PID 92690] PERFORMANCE Server request: 0.000256s
+2021-02-06 20:45:20,912 [PID 92690] ERROR Found 5 type errors!
+2021-02-06 20:45:44,345 [PID 92824] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:45:44,345 [PID 92824] INFO Waiting for server...
+2021-02-06 20:45:44,346 [PID 92824] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:45:44,428 [PID 92824] PERFORMANCE Server request: 0.000065s
+2021-02-06 20:45:44,429 [PID 92824] ERROR Found 3 type errors!
+2021-02-06 20:46:03,224 [PID 88664] INFO Waiting for the client lock...
+2021-02-06 20:46:03,225 [PID 88664] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:46:03,227 [PID 88664] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin stop -log-directory /Users/lukasz/studies/chess-online/.pyre /Users/lukasz/studies/chess-online/app`
+2021-02-06 20:46:03,233 [PID 88664] DEBUG Registering process with pid 92926 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-92926.pid`
+2021-02-06 20:46:03,268 [PID 88664] INFO Server stopped, polling for deletion of socket.
+2021-02-06 20:46:03,271 [PID 88664] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/stop-92926.pid`
+2021-02-06 20:46:03,272 [PID 88664] INFO Polling for server's process to stop...
+2021-02-06 20:46:03,373 [PID 88664] INFO The server process has stopped.
+2021-02-06 20:46:03,374 [PID 88664] INFO Stopped server at `/Users/lukasz/studies/chess-online/app`
+2021-02-06 20:46:03,375 [PID 88913] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-06 20:46:03,375 [PID 88664] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-06 20:46:31,658 [PID 93032] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:46:31,659 [PID 93032] INFO Waiting for server...
+2021-02-06 20:46:31,659 [PID 93032] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:46:31,659 [PID 93032] INFO Starting server at `/Users/lukasz/studies/chess-online/app`.
+2021-02-06 20:46:31,659 [PID 93032] INFO Waiting on the pyre client lock.
+2021-02-06 20:46:31,659 [PID 93032] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:46:31,660 [PID 93032] DEBUG Daemonizing the configuration_monitor.
+2021-02-06 20:46:31,661 [PID 93032] INFO Waiting for monitor to start up...
+2021-02-06 20:46:31,662 [PID 93032] DEBUG The configuration monitor is down.
+2021-02-06 20:46:31,663 [PID 93037] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.lock
+2021-02-06 20:46:31,665 [PID 93037] DEBUG Registering process with pid 93037 in pid file `/Users/lukasz/studies/chess-online/.pyre/configuration_monitor/configuration_monitor.pid`
+2021-02-06 20:46:31,767 [PID 93032] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/server/server.lock
+2021-02-06 20:46:31,768 [PID 93032] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-06 20:46:31,769 [PID 93032] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin start -strict -logging-sections environment -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -taint-models /Users/lukasz/studies/chess-online/venv/lib -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -expected-binary-version unversioned -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 -new-incremental-check /Users/lukasz/studies/chess-online/app`
+2021-02-06 20:46:31,777 [PID 93032] DEBUG Registering process with pid 93039 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-93039.pid`
+2021-02-06 20:46:31,809 [PID 93032] INFO Starting up server ...
+2021-02-06 20:46:31,809 [PID 93032] INFO Running as pid: 93039
+2021-02-06 20:46:31,809 [PID 93032] INFO Version: 180e970acf39bb947b6a116c631900e08a3b2fb1
+2021-02-06 20:46:31,809 [PID 93032] INFO Build info: Darwin x86_64 @ Fri Jan 15 15:46:59 PST 2021
+2021-02-06 20:46:31,810 [PID 93032] INFO Starting the server. Please wait...
+2021-02-06 20:46:31,812 [PID 93032] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/start-93039.pid`
+2021-02-06 20:46:40,542 [PID 93032] DEBUG Daemonizing the file_monitor.
+2021-02-06 20:46:40,543 [PID 93032] INFO Waiting for monitor to start up...
+2021-02-06 20:46:40,544 [PID 93032] DEBUG The file monitor is down.
+2021-02-06 20:46:40,546 [PID 93286] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.lock
+2021-02-06 20:46:40,548 [PID 93286] DEBUG Registering process with pid 93286 in pid file `/Users/lukasz/studies/chess-online/.pyre/file_monitor/file_monitor.pid`
+2021-02-06 20:46:40,646 [PID 93032] DEBUG Initialized file monitor.
+2021-02-06 20:46:40,746 [PID 93032] PERFORMANCE Server request: 0.003056s
+2021-02-06 20:46:40,746 [PID 93032] PERFORMANCE Server request: 0.003184s
+2021-02-06 20:46:40,770 [PID 93032] ERROR Found 76 type errors!
+2021-02-06 20:47:43,061 [PID 94316] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:47:43,062 [PID 94316] INFO Waiting for server...
+2021-02-06 20:47:43,062 [PID 94316] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:47:43,116 [PID 94316] PERFORMANCE Server request: 0.002097s
+2021-02-06 20:47:43,116 [PID 94316] PERFORMANCE Server request: 0.002183s
+2021-02-06 20:47:43,132 [PID 94316] ERROR Found 74 type errors!
+2021-02-06 20:48:34,093 [PID 94432] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 20:48:34,094 [PID 94432] INFO Waiting for server...
+2021-02-06 20:48:34,094 [PID 94432] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 20:48:34,132 [PID 94432] PERFORMANCE Server request: 0.000861s
+2021-02-06 20:48:34,133 [PID 94432] PERFORMANCE Server request: 0.000952s
+2021-02-06 20:48:34,147 [PID 94432] ERROR Found 70 type errors!
+2021-02-06 22:57:26,920 [PID 95869] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 22:57:26,920 [PID 95869] INFO Waiting for server...
+2021-02-06 22:57:26,920 [PID 95869] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 22:57:26,953 [PID 95869] PERFORMANCE Server request: 0.002516s
+2021-02-06 22:57:26,953 [PID 95869] PERFORMANCE Server request: 0.002617s
+2021-02-06 22:57:26,969 [PID 95869] ERROR Found 70 type errors!
+2021-02-06 22:57:38,118 [PID 95981] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 22:57:38,119 [PID 95981] INFO Waiting for server...
+2021-02-06 22:57:38,119 [PID 95981] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 22:57:38,206 [PID 95981] PERFORMANCE Server request: 0.001855s
+2021-02-06 22:57:38,206 [PID 95981] PERFORMANCE Server request: 0.001969s
+2021-02-06 22:57:38,243 [PID 95981] ERROR Found 71 type errors!
+2021-02-06 22:57:51,075 [PID 96087] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 22:57:51,075 [PID 96087] INFO Waiting for server...
+2021-02-06 22:57:51,075 [PID 96087] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 22:57:51,089 [PID 96087] PERFORMANCE Server request: 0.000931s
+2021-02-06 22:57:51,089 [PID 96087] PERFORMANCE Server request: 0.000988s
+2021-02-06 22:57:51,103 [PID 96087] ERROR Found 69 type errors!
+2021-02-06 22:59:08,348 [PID 96277] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 22:59:08,348 [PID 96277] INFO Waiting for server...
+2021-02-06 22:59:08,349 [PID 96277] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 22:59:08,368 [PID 96277] PERFORMANCE Server request: 0.000881s
+2021-02-06 22:59:08,368 [PID 96277] PERFORMANCE Server request: 0.000961s
+2021-02-06 22:59:08,383 [PID 96277] ERROR Found 64 type errors!
+2021-02-06 23:00:52,108 [PID 96473] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:00:52,108 [PID 96473] INFO Waiting for server...
+2021-02-06 23:00:52,108 [PID 96473] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:00:52,117 [PID 96473] PERFORMANCE Server request: 0.000701s
+2021-02-06 23:00:52,117 [PID 96473] PERFORMANCE Server request: 0.000779s
+2021-02-06 23:00:52,130 [PID 96473] ERROR Found 55 type errors!
+2021-02-06 23:02:51,169 [PID 96774] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:02:51,169 [PID 96774] INFO Waiting for server...
+2021-02-06 23:02:51,170 [PID 96774] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:02:51,240 [PID 96774] PERFORMANCE Server request: 0.000801s
+2021-02-06 23:02:51,240 [PID 96774] PERFORMANCE Server request: 0.000930s
+2021-02-06 23:02:51,249 [PID 96774] ERROR Found 36 type errors!
+2021-02-06 23:05:12,091 [PID 97862] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:05:12,091 [PID 97862] INFO Waiting for server...
+2021-02-06 23:05:12,092 [PID 97862] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:05:12,192 [PID 97862] PERFORMANCE Server request: 0.001152s
+2021-02-06 23:05:12,193 [PID 97862] PERFORMANCE Server request: 0.001289s
+2021-02-06 23:05:12,202 [PID 97862] ERROR Found 34 type errors!
+2021-02-06 23:08:19,298 [PID 98069] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:08:19,298 [PID 98069] INFO Waiting for server...
+2021-02-06 23:08:19,298 [PID 98069] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:08:19,313 [PID 98069] PERFORMANCE Server request: 0.000382s
+2021-02-06 23:08:19,313 [PID 98069] PERFORMANCE Server request: 0.000448s
+2021-02-06 23:08:19,318 [PID 98069] ERROR Found 33 type errors!
+2021-02-06 23:08:45,631 [PID 98177] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:08:45,632 [PID 98177] INFO Waiting for server...
+2021-02-06 23:08:45,632 [PID 98177] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:08:45,673 [PID 98177] PERFORMANCE Server request: 0.000975s
+2021-02-06 23:08:45,674 [PID 98177] PERFORMANCE Server request: 0.001115s
+2021-02-06 23:08:45,681 [PID 98177] ERROR Found 31 type errors!
+2021-02-06 23:09:04,314 [PID 98285] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:09:04,315 [PID 98285] INFO Waiting for server...
+2021-02-06 23:09:04,315 [PID 98285] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:09:04,389 [PID 98285] PERFORMANCE Server request: 0.001046s
+2021-02-06 23:09:04,390 [PID 98285] PERFORMANCE Server request: 0.001183s
+2021-02-06 23:09:04,400 [PID 98285] ERROR Found 31 type errors!
+2021-02-06 23:09:14,099 [PID 98391] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:09:14,099 [PID 98391] INFO Waiting for server...
+2021-02-06 23:09:14,099 [PID 98391] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:09:14,208 [PID 98391] PERFORMANCE Server request: 0.001019s
+2021-02-06 23:09:14,208 [PID 98391] PERFORMANCE Server request: 0.001163s
+2021-02-06 23:09:14,216 [PID 98391] ERROR Found 31 type errors!
+2021-02-06 23:09:23,950 [PID 98497] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:09:23,951 [PID 98497] INFO Waiting for server...
+2021-02-06 23:09:23,951 [PID 98497] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:09:24,027 [PID 98497] PERFORMANCE Server request: 0.000402s
+2021-02-06 23:09:24,027 [PID 98497] PERFORMANCE Server request: 0.000503s
+2021-02-06 23:09:24,033 [PID 98497] ERROR Found 31 type errors!
+2021-02-06 23:10:05,545 [PID 98609] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:10:05,545 [PID 98609] INFO Waiting for server...
+2021-02-06 23:10:05,546 [PID 98609] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:10:05,569 [PID 98609] PERFORMANCE Server request: 0.000429s
+2021-02-06 23:10:05,569 [PID 98609] PERFORMANCE Server request: 0.000517s
+2021-02-06 23:10:05,574 [PID 98609] ERROR Found 30 type errors!
+2021-02-06 23:11:18,085 [PID 98787] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:11:18,085 [PID 98787] INFO Waiting for server...
+2021-02-06 23:11:18,085 [PID 98787] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:11:18,127 [PID 98787] PERFORMANCE Server request: 0.000331s
+2021-02-06 23:11:18,127 [PID 98787] PERFORMANCE Server request: 0.000423s
+2021-02-06 23:11:18,133 [PID 98787] ERROR Found 29 type errors!
+2021-02-06 23:11:46,034 [PID 98902] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:11:46,034 [PID 98902] INFO Waiting for server...
+2021-02-06 23:11:46,034 [PID 98902] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:11:46,047 [PID 98902] PERFORMANCE Server request: 0.001507s
+2021-02-06 23:11:46,047 [PID 98902] PERFORMANCE Server request: 0.001632s
+2021-02-06 23:11:46,051 [PID 98902] ERROR Found 29 type errors!
+2021-02-06 23:12:38,435 [PID 99030] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:12:38,435 [PID 99030] INFO Waiting for server...
+2021-02-06 23:12:38,435 [PID 99030] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:12:38,465 [PID 99030] PERFORMANCE Server request: 0.000529s
+2021-02-06 23:12:38,466 [PID 99030] PERFORMANCE Server request: 0.000648s
+2021-02-06 23:12:38,471 [PID 99030] ERROR Found 27 type errors!
+2021-02-06 23:13:19,782 [PID 99141] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:13:19,782 [PID 99141] INFO Waiting for server...
+2021-02-06 23:13:19,783 [PID 99141] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:13:19,842 [PID 99141] PERFORMANCE Server request: 0.000620s
+2021-02-06 23:13:19,843 [PID 99141] PERFORMANCE Server request: 0.000766s
+2021-02-06 23:13:19,849 [PID 99141] ERROR Found 28 type errors!
+2021-02-06 23:14:38,746 [PID 99266] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:14:38,746 [PID 99266] INFO Waiting for server...
+2021-02-06 23:14:38,746 [PID 99266] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:14:38,850 [PID 99266] PERFORMANCE Server request: 0.000547s
+2021-02-06 23:14:38,851 [PID 99266] PERFORMANCE Server request: 0.000708s
+2021-02-06 23:14:38,857 [PID 99266] ERROR Found 26 type errors!
+2021-02-06 23:18:01,478 [PID 195] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:18:01,478 [PID 195] INFO Waiting for server...
+2021-02-06 23:18:01,478 [PID 195] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:18:01,539 [PID 195] PERFORMANCE Server request: 0.000812s
+2021-02-06 23:18:01,540 [PID 195] PERFORMANCE Server request: 0.000970s
+2021-02-06 23:18:01,546 [PID 195] ERROR Found 25 type errors!
+2021-02-06 23:20:43,467 [PID 654] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:20:43,467 [PID 654] INFO Waiting for server...
+2021-02-06 23:20:43,468 [PID 654] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:20:43,562 [PID 654] PERFORMANCE Server request: 0.000785s
+2021-02-06 23:20:43,562 [PID 654] PERFORMANCE Server request: 0.001024s
+2021-02-06 23:20:43,568 [PID 654] ERROR Found 23 type errors!
+2021-02-06 23:21:13,461 [PID 775] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:21:13,462 [PID 775] INFO Waiting for server...
+2021-02-06 23:21:13,462 [PID 775] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:21:13,509 [PID 775] PERFORMANCE Server request: 0.000475s
+2021-02-06 23:21:13,510 [PID 775] PERFORMANCE Server request: 0.000625s
+2021-02-06 23:21:13,515 [PID 775] ERROR Found 22 type errors!
+2021-02-06 23:23:19,962 [PID 914] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:23:19,962 [PID 914] INFO Waiting for server...
+2021-02-06 23:23:19,962 [PID 914] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:23:20,009 [PID 914] PERFORMANCE Server request: 0.000767s
+2021-02-06 23:23:20,009 [PID 914] PERFORMANCE Server request: 0.000994s
+2021-02-06 23:23:20,015 [PID 914] ERROR Found 22 type errors!
+2021-02-06 23:23:35,181 [PID 1027] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:23:35,182 [PID 1027] INFO Waiting for server...
+2021-02-06 23:23:35,182 [PID 1027] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:23:35,255 [PID 1027] PERFORMANCE Server request: 0.000737s
+2021-02-06 23:23:35,256 [PID 1027] PERFORMANCE Server request: 0.000947s
+2021-02-06 23:23:35,261 [PID 1027] ERROR Found 21 type errors!
+2021-02-06 23:24:25,898 [PID 1139] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:24:25,898 [PID 1139] INFO Waiting for server...
+2021-02-06 23:24:25,899 [PID 1139] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:24:25,952 [PID 1139] PERFORMANCE Server request: 0.000413s
+2021-02-06 23:24:25,953 [PID 1139] PERFORMANCE Server request: 0.000564s
+2021-02-06 23:24:25,958 [PID 1139] ERROR Found 19 type errors!
+2021-02-06 23:25:31,585 [PID 1243] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:25:31,585 [PID 1243] INFO Waiting for server...
+2021-02-06 23:25:31,585 [PID 1243] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:25:31,611 [PID 1243] PERFORMANCE Server request: 0.000252s
+2021-02-06 23:25:31,611 [PID 1243] PERFORMANCE Server request: 0.000365s
+2021-02-06 23:25:31,615 [PID 1243] ERROR Found 17 type errors!
+2021-02-06 23:26:02,228 [PID 1366] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:26:02,229 [PID 1366] INFO Waiting for server...
+2021-02-06 23:26:02,229 [PID 1366] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:26:02,287 [PID 1366] PERFORMANCE Server request: 0.000375s
+2021-02-06 23:26:02,287 [PID 1366] PERFORMANCE Server request: 0.000527s
+2021-02-06 23:26:02,291 [PID 1366] ERROR Found 16 type errors!
+2021-02-06 23:26:40,688 [PID 1483] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:26:40,688 [PID 1483] INFO Waiting for server...
+2021-02-06 23:26:40,688 [PID 1483] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:26:40,704 [PID 1483] PERFORMANCE Server request: 0.000242s
+2021-02-06 23:26:40,704 [PID 1483] PERFORMANCE Server request: 0.000335s
+2021-02-06 23:26:40,707 [PID 1483] ERROR Found 16 type errors!
+2021-02-06 23:28:06,771 [PID 1637] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:28:06,771 [PID 1637] INFO Waiting for server...
+2021-02-06 23:28:06,771 [PID 1637] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:28:06,793 [PID 1637] PERFORMANCE Server request: 0.000203s
+2021-02-06 23:28:06,793 [PID 1637] PERFORMANCE Server request: 0.000299s
+2021-02-06 23:28:06,796 [PID 1637] ERROR Found 15 type errors!
+2021-02-06 23:30:32,540 [PID 1789] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:30:32,540 [PID 1789] INFO Waiting for server...
+2021-02-06 23:30:32,540 [PID 1789] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:30:32,638 [PID 1789] PERFORMANCE Server request: 0.000554s
+2021-02-06 23:30:32,638 [PID 1789] PERFORMANCE Server request: 0.000783s
+2021-02-06 23:30:32,643 [PID 1789] ERROR Found 15 type errors!
+2021-02-06 23:30:50,740 [PID 1902] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:30:50,741 [PID 1902] INFO Waiting for server...
+2021-02-06 23:30:50,741 [PID 1902] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:30:50,830 [PID 1902] PERFORMANCE Server request: 0.000388s
+2021-02-06 23:30:50,830 [PID 1902] PERFORMANCE Server request: 0.000545s
+2021-02-06 23:30:50,834 [PID 1902] ERROR Found 15 type errors!
+2021-02-06 23:31:27,014 [PID 2015] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:31:27,014 [PID 2015] INFO Waiting for server...
+2021-02-06 23:31:27,014 [PID 2015] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:31:27,080 [PID 2015] PERFORMANCE Server request: 0.000198s
+2021-02-06 23:31:27,081 [PID 2015] PERFORMANCE Server request: 0.000304s
+2021-02-06 23:31:27,083 [PID 2015] ERROR Found 15 type errors!
+2021-02-06 23:32:42,407 [PID 2147] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:32:42,408 [PID 2147] INFO Waiting for server...
+2021-02-06 23:32:42,408 [PID 2147] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:32:42,464 [PID 2147] PERFORMANCE Server request: 0.000465s
+2021-02-06 23:32:42,464 [PID 2147] PERFORMANCE Server request: 0.000588s
+2021-02-06 23:32:42,466 [PID 2147] ERROR Found 14 type errors!
+2021-02-06 23:33:28,451 [PID 2262] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:33:28,451 [PID 2262] INFO Waiting for server...
+2021-02-06 23:33:28,451 [PID 2262] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:33:28,464 [PID 2262] PERFORMANCE Server request: 0.000241s
+2021-02-06 23:33:28,464 [PID 2262] PERFORMANCE Server request: 0.000370s
+2021-02-06 23:33:28,467 [PID 2262] ERROR Found 14 type errors!
+2021-02-06 23:34:12,397 [PID 2381] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:34:12,397 [PID 2381] INFO Waiting for server...
+2021-02-06 23:34:12,397 [PID 2381] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:34:12,502 [PID 2381] PERFORMANCE Server request: 0.000327s
+2021-02-06 23:34:12,502 [PID 2381] PERFORMANCE Server request: 0.000484s
+2021-02-06 23:34:12,506 [PID 2381] ERROR Found 14 type errors!
+2021-02-06 23:34:50,270 [PID 2497] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:34:50,270 [PID 2497] INFO Waiting for server...
+2021-02-06 23:34:50,270 [PID 2497] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:34:50,308 [PID 2497] PERFORMANCE Server request: 0.000508s
+2021-02-06 23:34:50,309 [PID 2497] PERFORMANCE Server request: 0.000731s
+2021-02-06 23:34:50,313 [PID 2497] ERROR Found 14 type errors!
+2021-02-06 23:35:22,849 [PID 2611] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:35:22,849 [PID 2611] INFO Waiting for server...
+2021-02-06 23:35:22,849 [PID 2611] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:35:22,895 [PID 2611] PERFORMANCE Server request: 0.000373s
+2021-02-06 23:35:22,895 [PID 2611] PERFORMANCE Server request: 0.000532s
+2021-02-06 23:35:22,899 [PID 2611] ERROR Found 14 type errors!
+2021-02-06 23:36:14,550 [PID 2757] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:36:14,550 [PID 2757] INFO Waiting for server...
+2021-02-06 23:36:14,550 [PID 2757] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:36:14,629 [PID 2757] PERFORMANCE Server request: 0.000338s
+2021-02-06 23:36:14,629 [PID 2757] PERFORMANCE Server request: 0.000496s
+2021-02-06 23:36:14,633 [PID 2757] ERROR Found 14 type errors!
+2021-02-06 23:37:05,118 [PID 2881] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:37:05,118 [PID 2881] INFO Waiting for server...
+2021-02-06 23:37:05,118 [PID 2881] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:37:05,216 [PID 2881] PERFORMANCE Server request: 0.000446s
+2021-02-06 23:37:05,217 [PID 2881] PERFORMANCE Server request: 0.000670s
+2021-02-06 23:37:05,220 [PID 2881] ERROR Found 12 type errors!
+2021-02-06 23:37:37,186 [PID 2990] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:37:37,186 [PID 2990] INFO Waiting for server...
+2021-02-06 23:37:37,186 [PID 2990] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:37:37,274 [PID 2990] PERFORMANCE Server request: 0.000427s
+2021-02-06 23:37:37,274 [PID 2990] PERFORMANCE Server request: 0.000686s
+2021-02-06 23:37:37,278 [PID 2990] ERROR Found 11 type errors!
+2021-02-06 23:40:03,178 [PID 3124] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:40:03,178 [PID 3124] INFO Waiting for server...
+2021-02-06 23:40:03,178 [PID 3124] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:40:03,211 [PID 3124] PERFORMANCE Server request: 0.000212s
+2021-02-06 23:40:03,211 [PID 3124] PERFORMANCE Server request: 0.000348s
+2021-02-06 23:40:03,214 [PID 3124] ERROR Found 10 type errors!
+2021-02-06 23:43:45,031 [PID 3494] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:43:45,031 [PID 3494] INFO Waiting for server...
+2021-02-06 23:43:45,031 [PID 3494] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:43:45,068 [PID 3494] PERFORMANCE Server request: 0.000233s
+2021-02-06 23:43:45,069 [PID 3494] PERFORMANCE Server request: 0.000400s
+2021-02-06 23:43:45,071 [PID 3494] ERROR Found 9 type errors!
+2021-02-06 23:44:09,126 [PID 3605] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:44:09,127 [PID 3605] INFO Waiting for server...
+2021-02-06 23:44:09,127 [PID 3605] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:44:09,151 [PID 3605] PERFORMANCE Server request: 0.000132s
+2021-02-06 23:44:09,152 [PID 3605] PERFORMANCE Server request: 0.000270s
+2021-02-06 23:44:09,153 [PID 3605] ERROR Found 8 type errors!
+2021-02-06 23:44:59,587 [PID 3753] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:44:59,587 [PID 3753] INFO Waiting for server...
+2021-02-06 23:44:59,587 [PID 3753] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:44:59,676 [PID 3753] PERFORMANCE Server request: 0.004568s
+2021-02-06 23:44:59,676 [PID 3753] PERFORMANCE Server request: 0.004687s
+2021-02-06 23:44:59,679 [PID 3753] ERROR Found 11 type errors!
+2021-02-06 23:46:11,495 [PID 3903] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:46:11,495 [PID 3903] INFO Waiting for server...
+2021-02-06 23:46:11,495 [PID 3903] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:46:11,508 [PID 3903] PERFORMANCE Server request: 0.000140s
+2021-02-06 23:46:11,508 [PID 3903] PERFORMANCE Server request: 0.000258s
+2021-02-06 23:46:11,510 [PID 3903] ERROR Found 8 type errors!
+2021-02-06 23:46:46,351 [PID 3998] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:46:46,351 [PID 3998] INFO Waiting for server...
+2021-02-06 23:46:46,352 [PID 3998] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:46:46,394 [PID 3998] PERFORMANCE Server request: 0.000179s
+2021-02-06 23:46:46,396 [PID 3998] ERROR Found 7 type errors!
+2021-02-06 23:48:18,872 [PID 4142] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:48:18,873 [PID 4142] INFO Waiting for server...
+2021-02-06 23:48:18,873 [PID 4142] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:48:18,947 [PID 4142] PERFORMANCE Server request: 0.000183s
+2021-02-06 23:48:18,950 [PID 4142] ERROR Found 7 type errors!
+2021-02-06 23:48:26,584 [PID 4266] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:48:26,585 [PID 4266] INFO Waiting for server...
+2021-02-06 23:48:26,585 [PID 4266] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:48:26,676 [PID 4266] PERFORMANCE Server request: 0.000240s
+2021-02-06 23:48:26,676 [PID 4266] PERFORMANCE Server request: 0.000486s
+2021-02-06 23:48:26,679 [PID 4266] ERROR Found 6 type errors!
+2021-02-06 23:52:48,224 [PID 4660] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:52:48,225 [PID 4660] INFO Waiting for server...
+2021-02-06 23:52:48,225 [PID 4660] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:52:48,276 [PID 4660] PERFORMANCE Server request: 0.000164s
+2021-02-06 23:52:48,277 [PID 4660] PERFORMANCE Server request: 0.000335s
+2021-02-06 23:52:48,279 [PID 4660] ERROR Found 6 type errors!
+2021-02-06 23:54:08,457 [PID 5071] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:54:08,457 [PID 5071] INFO Waiting for server...
+2021-02-06 23:54:08,458 [PID 5071] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:54:08,486 [PID 5071] PERFORMANCE Server request: 0.000243s
+2021-02-06 23:54:08,487 [PID 5071] PERFORMANCE Server request: 0.000486s
+2021-02-06 23:54:08,489 [PID 5071] ERROR Found 6 type errors!
+2021-02-06 23:56:04,069 [PID 5815] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:56:04,069 [PID 5815] INFO Waiting for server...
+2021-02-06 23:56:04,069 [PID 5815] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:56:04,174 [PID 5815] PERFORMANCE Server request: 0.000235s
+2021-02-06 23:56:04,175 [PID 5815] PERFORMANCE Server request: 0.000474s
+2021-02-06 23:56:04,177 [PID 5815] ERROR Found 6 type errors!
+2021-02-06 23:56:18,790 [PID 5922] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:56:18,791 [PID 5922] INFO Waiting for server...
+2021-02-06 23:56:18,791 [PID 5922] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:56:18,885 [PID 5922] PERFORMANCE Server request: 0.000178s
+2021-02-06 23:56:18,885 [PID 5922] PERFORMANCE Server request: 0.000353s
+2021-02-06 23:56:18,887 [PID 5922] ERROR Found 7 type errors!
+2021-02-06 23:56:22,968 [PID 6027] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:56:22,969 [PID 6027] INFO Waiting for server...
+2021-02-06 23:56:22,969 [PID 6027] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:56:23,046 [PID 6027] PERFORMANCE Server request: 0.000214s
+2021-02-06 23:56:23,047 [PID 6027] PERFORMANCE Server request: 0.000464s
+2021-02-06 23:56:23,049 [PID 6027] ERROR Found 5 type errors!
+2021-02-06 23:58:34,603 [PID 6229] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:58:34,604 [PID 6229] INFO Waiting for server...
+2021-02-06 23:58:34,604 [PID 6229] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:58:34,703 [PID 6229] PERFORMANCE Server request: 0.000189s
+2021-02-06 23:58:34,704 [PID 6229] PERFORMANCE Server request: 0.000440s
+2021-02-06 23:58:34,706 [PID 6229] ERROR Found 4 type errors!
+2021-02-06 23:59:55,320 [PID 6378] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-06 23:59:55,320 [PID 6378] INFO Waiting for server...
+2021-02-06 23:59:55,320 [PID 6378] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-06 23:59:55,355 [PID 6378] PERFORMANCE Server request: 0.000055s
+2021-02-06 23:59:55,355 [PID 6378] PERFORMANCE Server request: 0.000173s
+2021-02-06 23:59:55,356 [PID 6378] ERROR Found 3 type errors!
+2021-02-07 00:00:07,956 [PID 6487] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:00:07,956 [PID 6487] INFO Waiting for server...
+2021-02-07 00:00:07,956 [PID 6487] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:00:08,000 [PID 6487] PERFORMANCE Server request: 0.000057s
+2021-02-07 00:00:08,002 [PID 6487] ERROR Found 2 type errors!
+2021-02-07 00:01:55,571 [PID 6633] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:01:55,571 [PID 6633] INFO Waiting for server...
+2021-02-07 00:01:55,571 [PID 6633] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:01:55,623 [PID 6633] PERFORMANCE Server request: 0.000060s
+2021-02-07 00:01:55,624 [PID 6633] ERROR Found 2 type errors!
+2021-02-07 00:02:04,060 [PID 6814] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:02:04,060 [PID 6814] INFO Waiting for server...
+2021-02-07 00:02:04,060 [PID 6814] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:02:04,118 [PID 6814] PERFORMANCE Server request: 0.000072s
+2021-02-07 00:02:04,118 [PID 6814] PERFORMANCE Server request: 0.000255s
+2021-02-07 00:02:04,120 [PID 6814] ERROR Found 2 type errors!
+2021-02-07 00:03:42,638 [PID 6967] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:03:42,638 [PID 6967] INFO Waiting for server...
+2021-02-07 00:03:42,638 [PID 6967] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:03:42,695 [PID 6967] PERFORMANCE Server request: 0.000115s
+2021-02-07 00:03:42,696 [PID 6967] PERFORMANCE Server request: 0.000365s
+2021-02-07 00:03:42,697 [PID 6967] ERROR Found 2 type errors!
+2021-02-07 00:04:24,818 [PID 7077] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:04:24,818 [PID 7077] INFO Waiting for server...
+2021-02-07 00:04:24,818 [PID 7077] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:04:24,917 [PID 7077] PERFORMANCE Server request: 0.000056s
+2021-02-07 00:04:24,918 [PID 7077] PERFORMANCE Server request: 0.000193s
+2021-02-07 00:04:24,919 [PID 7077] ERROR Found 2 type errors!
+2021-02-07 00:05:21,061 [PID 7202] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:05:21,061 [PID 7202] INFO Waiting for server...
+2021-02-07 00:05:21,061 [PID 7202] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:05:21,075 [PID 7202] PERFORMANCE Server request: 0.000058s
+2021-02-07 00:05:21,075 [PID 7202] PERFORMANCE Server request: 0.000197s
+2021-02-07 00:05:21,076 [PID 7202] ERROR Found 2 type errors!
+2021-02-07 00:07:03,274 [PID 7317] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:07:03,274 [PID 7317] INFO Waiting for server...
+2021-02-07 00:07:03,275 [PID 7317] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:07:03,293 [PID 7317] PERFORMANCE Server request: 0.000092s
+2021-02-07 00:07:03,295 [PID 7317] ERROR Found 2 type errors!
+2021-02-07 00:07:11,347 [PID 7433] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:07:11,347 [PID 7433] INFO Waiting for server...
+2021-02-07 00:07:11,347 [PID 7433] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:07:11,361 [PID 7433] PERFORMANCE Server request: 0.000085s
+2021-02-07 00:07:11,361 [PID 7433] PERFORMANCE Server request: 0.000348s
+2021-02-07 00:07:11,363 [PID 7433] ERROR Found 1 type error!
+2021-02-07 00:07:21,735 [PID 7540] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:07:21,736 [PID 7540] INFO Waiting for server...
+2021-02-07 00:07:21,736 [PID 7540] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:07:21,751 [PID 7540] PERFORMANCE Server request: 0.000124s
+2021-02-07 00:07:21,752 [PID 7540] PERFORMANCE Server request: 0.000246s
+2021-02-07 00:07:21,754 [PID 7540] ERROR Found 12 type errors!
+2021-02-07 00:08:26,341 [PID 7668] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:08:26,341 [PID 7668] INFO Waiting for server...
+2021-02-07 00:08:26,341 [PID 7668] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:08:26,437 [PID 7668] PERFORMANCE Server request: 0.000090s
+2021-02-07 00:08:26,439 [PID 7668] ERROR Found 3 type errors!
+2021-02-07 00:11:31,744 [PID 7817] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:11:31,745 [PID 7817] INFO Waiting for server...
+2021-02-07 00:11:31,745 [PID 7817] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:11:31,845 [PID 7817] PERFORMANCE Server request: 0.000055s
+2021-02-07 00:11:31,846 [PID 7817] PERFORMANCE Server request: 0.000264s
+2021-02-07 00:11:31,847 [PID 7817] ERROR Found 2 type errors!
+2021-02-07 00:12:37,684 [PID 7945] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:12:37,685 [PID 7945] INFO Waiting for server...
+2021-02-07 00:12:37,685 [PID 7945] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:12:37,778 [PID 7945] PERFORMANCE Server request: 0.000109s
+2021-02-07 00:12:37,779 [PID 7945] PERFORMANCE Server request: 0.000385s
+2021-02-07 00:12:37,780 [PID 7945] ERROR Found 2 type errors!
+2021-02-07 00:13:07,106 [PID 8060] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:13:07,106 [PID 8060] INFO Waiting for server...
+2021-02-07 00:13:07,106 [PID 8060] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:13:07,213 [PID 8060] PERFORMANCE Server request: 0.005466s
+2021-02-07 00:13:07,213 [PID 8060] PERFORMANCE Server request: 0.005613s
+2021-02-07 00:13:07,214 [PID 8060] ERROR Found 2 type errors!
+2021-02-07 00:13:24,408 [PID 8167] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 00:13:24,408 [PID 8167] INFO Waiting for server...
+2021-02-07 00:13:24,408 [PID 8167] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 00:13:24,506 [PID 8167] PERFORMANCE Server request: 0.000002s
+2021-02-07 00:13:24,508 [PID 8167] SUCCESS No type errors found
+2021-02-07 00:13:47,123 [PID 8585] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre analyze`...
+2021-02-07 00:13:47,123 [PID 8585] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-07 00:13:47,123 [PID 8585] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin analyze -strict -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 -analysis taint -taint-models /Users/lukasz/studies/chess-online/venv/lib /Users/lukasz/studies/chess-online/app`
+2021-02-07 00:13:47,129 [PID 8585] DEBUG Registering process with pid 8589 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/analyze-8589.pid`
+2021-02-07 00:13:47,159 [PID 8585] INFO Verifying model syntax and configuration.
+2021-02-07 00:13:47,482 [PID 8585] INFO Finding taint models in `/Users/lukasz/studies/chess-online/venv/lib`.
+2021-02-07 00:13:47,512 [PID 8585] INFO No cached type environment loaded, starting a clean run.
+2021-02-07 00:13:47,711 [PID 8585] PERFORMANCE Module tracker built: 0.197997s
+2021-02-07 00:13:47,711 [PID 8585] INFO Building type environment...
+2021-02-07 00:13:47,926 [PID 8585] INFO Parsing 6893 stubs and sources...
+2021-02-07 00:13:51,334 [PID 8585] PERFORMANCE Sources parsed: 3.409023s
+2021-02-07 00:13:54,317 [PID 8585] PERFORMANCE Full environment built: 6.607116s
+2021-02-07 00:13:54,642 [PID 8585] INFO Checking 119642 functions...
+2021-02-07 00:13:55,444 [PID 8585] INFO Processed 499 of 119642 functions
+2021-02-07 00:13:55,501 [PID 8585] INFO Processed 998 of 119642 functions
+2021-02-07 00:13:55,527 [PID 8585] INFO Processed 1497 of 119642 functions
+2021-02-07 00:13:55,555 [PID 8585] INFO Processed 1996 of 119642 functions
+2021-02-07 00:13:55,587 [PID 8585] INFO Processed 2495 of 119642 functions
+2021-02-07 00:13:55,966 [PID 8585] INFO Processed 2994 of 119642 functions
+2021-02-07 00:13:56,139 [PID 8585] INFO Processed 3493 of 119642 functions
+2021-02-07 00:13:56,190 [PID 8585] INFO Processed 3992 of 119642 functions
+2021-02-07 00:13:56,248 [PID 8585] INFO Processed 4491 of 119642 functions
+2021-02-07 00:13:56,298 [PID 8585] INFO Processed 4990 of 119642 functions
+2021-02-07 00:13:56,498 [PID 8585] INFO Processed 5489 of 119642 functions
+2021-02-07 00:13:56,550 [PID 8585] INFO Processed 5988 of 119642 functions
+2021-02-07 00:13:56,581 [PID 8585] INFO Processed 6487 of 119642 functions
+2021-02-07 00:13:56,586 [PID 8585] INFO Processed 6986 of 119642 functions
+2021-02-07 00:13:56,706 [PID 8585] INFO Processed 7485 of 119642 functions
+2021-02-07 00:13:56,743 [PID 8585] INFO Processed 7984 of 119642 functions
+2021-02-07 00:13:57,012 [PID 8585] INFO Processed 8483 of 119642 functions
+2021-02-07 00:13:57,190 [PID 8585] INFO Processed 8982 of 119642 functions
+2021-02-07 00:13:57,239 [PID 8585] INFO Processed 9481 of 119642 functions
+2021-02-07 00:13:57,283 [PID 8585] INFO Processed 9980 of 119642 functions
+2021-02-07 00:13:57,314 [PID 8585] INFO Processed 10479 of 119642 functions
+2021-02-07 00:13:57,498 [PID 8585] INFO Processed 10978 of 119642 functions
+2021-02-07 00:13:57,539 [PID 8585] INFO Processed 11477 of 119642 functions
+2021-02-07 00:13:57,576 [PID 8585] INFO Processed 11976 of 119642 functions
+2021-02-07 00:13:57,702 [PID 8585] INFO Processed 12475 of 119642 functions
+2021-02-07 00:13:57,855 [PID 8585] INFO Processed 12974 of 119642 functions
+2021-02-07 00:13:57,897 [PID 8585] INFO Processed 13473 of 119642 functions
+2021-02-07 00:13:58,046 [PID 8585] INFO Processed 13972 of 119642 functions
+2021-02-07 00:13:58,177 [PID 8585] INFO Processed 14471 of 119642 functions
+2021-02-07 00:13:58,191 [PID 8585] INFO Processed 14970 of 119642 functions
+2021-02-07 00:13:58,341 [PID 8585] INFO Processed 15469 of 119642 functions
+2021-02-07 00:13:58,437 [PID 8585] INFO Processed 15968 of 119642 functions
+2021-02-07 00:13:58,591 [PID 8585] INFO Processed 16467 of 119642 functions
+2021-02-07 00:13:58,817 [PID 8585] INFO Processed 16966 of 119642 functions
+2021-02-07 00:13:58,882 [PID 8585] INFO Processed 17465 of 119642 functions
+2021-02-07 00:13:58,921 [PID 8585] INFO Processed 17964 of 119642 functions
+2021-02-07 00:13:59,114 [PID 8585] INFO Processed 18463 of 119642 functions
+2021-02-07 00:13:59,262 [PID 8585] INFO Processed 18962 of 119642 functions
+2021-02-07 00:13:59,385 [PID 8585] INFO Processed 19461 of 119642 functions
+2021-02-07 00:13:59,707 [PID 8585] INFO Processed 19960 of 119642 functions
+2021-02-07 00:14:00,197 [PID 8585] INFO Processed 20459 of 119642 functions
+2021-02-07 00:14:00,433 [PID 8585] INFO Processed 20958 of 119642 functions
+2021-02-07 00:14:00,479 [PID 8585] INFO Processed 21457 of 119642 functions
+2021-02-07 00:14:00,587 [PID 8585] INFO Processed 21956 of 119642 functions
+2021-02-07 00:14:00,722 [PID 8585] INFO Processed 22455 of 119642 functions
+2021-02-07 00:14:00,761 [PID 8585] INFO Processed 22954 of 119642 functions
+2021-02-07 00:14:00,797 [PID 8585] INFO Processed 23453 of 119642 functions
+2021-02-07 00:14:00,878 [PID 8585] INFO Processed 23952 of 119642 functions
+2021-02-07 00:14:00,919 [PID 8585] INFO Processed 24451 of 119642 functions
+2021-02-07 00:14:01,024 [PID 8585] INFO Processed 24950 of 119642 functions
+2021-02-07 00:14:01,109 [PID 8585] INFO Processed 25449 of 119642 functions
+2021-02-07 00:14:01,145 [PID 8585] INFO Processed 25948 of 119642 functions
+2021-02-07 00:14:01,735 [PID 8585] INFO Processed 26447 of 119642 functions
+2021-02-07 00:14:01,862 [PID 8585] INFO Processed 26946 of 119642 functions
+2021-02-07 00:14:01,938 [PID 8585] INFO Processed 27445 of 119642 functions
+2021-02-07 00:14:01,978 [PID 8585] INFO Processed 27944 of 119642 functions
+2021-02-07 00:14:02,187 [PID 8585] INFO Processed 28443 of 119642 functions
+2021-02-07 00:14:02,399 [PID 8585] INFO Processed 28942 of 119642 functions
+2021-02-07 00:14:02,597 [PID 8585] INFO Processed 29441 of 119642 functions
+2021-02-07 00:14:03,139 [PID 8585] INFO Processed 29940 of 119642 functions
+2021-02-07 00:14:03,567 [PID 8585] INFO Processed 30439 of 119642 functions
+2021-02-07 00:14:03,929 [PID 8585] INFO Processed 30938 of 119642 functions
+2021-02-07 00:14:04,079 [PID 8585] INFO Processed 31437 of 119642 functions
+2021-02-07 00:14:04,192 [PID 8585] INFO Processed 31936 of 119642 functions
+2021-02-07 00:14:04,246 [PID 8585] INFO Processed 32435 of 119642 functions
+2021-02-07 00:14:04,307 [PID 8585] INFO Processed 32934 of 119642 functions
+2021-02-07 00:14:04,902 [PID 8585] INFO Processed 33433 of 119642 functions
+2021-02-07 00:14:05,062 [PID 8585] INFO Processed 33932 of 119642 functions
+2021-02-07 00:14:05,184 [PID 8585] INFO Processed 34431 of 119642 functions
+2021-02-07 00:14:05,739 [PID 8585] INFO Processed 34930 of 119642 functions
+2021-02-07 00:14:05,789 [PID 8585] INFO Processed 35429 of 119642 functions
+2021-02-07 00:14:05,828 [PID 8585] INFO Processed 35928 of 119642 functions
+2021-02-07 00:14:05,901 [PID 8585] INFO Processed 36427 of 119642 functions
+2021-02-07 00:14:05,932 [PID 8585] INFO Processed 36926 of 119642 functions
+2021-02-07 00:14:06,302 [PID 8585] INFO Processed 37425 of 119642 functions
+2021-02-07 00:14:06,310 [PID 8585] INFO Processed 37924 of 119642 functions
+2021-02-07 00:14:06,312 [PID 8585] INFO Processed 38423 of 119642 functions
+2021-02-07 00:14:06,320 [PID 8585] INFO Processed 38922 of 119642 functions
+2021-02-07 00:14:06,400 [PID 8585] INFO Processed 39421 of 119642 functions
+2021-02-07 00:14:06,439 [PID 8585] INFO Processed 39920 of 119642 functions
+2021-02-07 00:14:06,759 [PID 8585] INFO Processed 40419 of 119642 functions
+2021-02-07 00:14:06,809 [PID 8585] INFO Processed 40918 of 119642 functions
+2021-02-07 00:14:06,888 [PID 8585] INFO Processed 41417 of 119642 functions
+2021-02-07 00:14:06,925 [PID 8585] INFO Processed 41916 of 119642 functions
+2021-02-07 00:14:07,174 [PID 8585] INFO Processed 42415 of 119642 functions
+2021-02-07 00:14:07,244 [PID 8585] INFO Processed 42914 of 119642 functions
+2021-02-07 00:14:07,309 [PID 8585] INFO Processed 43413 of 119642 functions
+2021-02-07 00:14:07,341 [PID 8585] INFO Processed 43912 of 119642 functions
+2021-02-07 00:14:07,386 [PID 8585] INFO Processed 44411 of 119642 functions
+2021-02-07 00:14:07,422 [PID 8585] INFO Processed 44910 of 119642 functions
+2021-02-07 00:14:07,425 [PID 8585] INFO Processed 45409 of 119642 functions
+2021-02-07 00:14:08,324 [PID 8585] INFO Processed 45908 of 119642 functions
+2021-02-07 00:14:08,435 [PID 8585] INFO Processed 46407 of 119642 functions
+2021-02-07 00:14:08,484 [PID 8585] INFO Processed 46906 of 119642 functions
+2021-02-07 00:14:08,487 [PID 8585] INFO Processed 47405 of 119642 functions
+2021-02-07 00:14:08,599 [PID 8585] INFO Processed 47904 of 119642 functions
+2021-02-07 00:14:08,648 [PID 8585] INFO Processed 48403 of 119642 functions
+2021-02-07 00:14:08,683 [PID 8585] INFO Processed 48902 of 119642 functions
+2021-02-07 00:14:08,838 [PID 8585] INFO Processed 49401 of 119642 functions
+2021-02-07 00:14:08,882 [PID 8585] INFO Processed 49900 of 119642 functions
+2021-02-07 00:14:08,907 [PID 8585] INFO Processed 50399 of 119642 functions
+2021-02-07 00:14:08,999 [PID 8585] INFO Processed 50898 of 119642 functions
+2021-02-07 00:14:09,061 [PID 8585] INFO Processed 51397 of 119642 functions
+2021-02-07 00:14:09,088 [PID 8585] INFO Processed 51896 of 119642 functions
+2021-02-07 00:14:09,092 [PID 8585] INFO Processed 52395 of 119642 functions
+2021-02-07 00:14:09,243 [PID 8585] INFO Processed 52894 of 119642 functions
+2021-02-07 00:14:09,321 [PID 8585] INFO Processed 53393 of 119642 functions
+2021-02-07 00:14:09,595 [PID 8585] INFO Processed 53892 of 119642 functions
+2021-02-07 00:14:09,603 [PID 8585] INFO Processed 54391 of 119642 functions
+2021-02-07 00:14:09,656 [PID 8585] INFO Processed 54890 of 119642 functions
+2021-02-07 00:14:09,699 [PID 8585] INFO Processed 55389 of 119642 functions
+2021-02-07 00:14:09,996 [PID 8585] INFO Processed 55888 of 119642 functions
+2021-02-07 00:14:10,028 [PID 8585] INFO Processed 56387 of 119642 functions
+2021-02-07 00:14:10,174 [PID 8585] INFO Processed 56886 of 119642 functions
+2021-02-07 00:14:10,209 [PID 8585] INFO Processed 57385 of 119642 functions
+2021-02-07 00:14:10,388 [PID 8585] INFO Processed 57884 of 119642 functions
+2021-02-07 00:14:10,449 [PID 8585] INFO Processed 58383 of 119642 functions
+2021-02-07 00:14:10,524 [PID 8585] INFO Processed 58882 of 119642 functions
+2021-02-07 00:14:10,632 [PID 8585] INFO Processed 59381 of 119642 functions
+2021-02-07 00:14:10,762 [PID 8585] INFO Processed 59880 of 119642 functions
+2021-02-07 00:14:10,814 [PID 8585] INFO Processed 60379 of 119642 functions
+2021-02-07 00:14:10,850 [PID 8585] INFO Processed 60878 of 119642 functions
+2021-02-07 00:14:10,924 [PID 8585] INFO Processed 61377 of 119642 functions
+2021-02-07 00:14:11,049 [PID 8585] INFO Processed 61876 of 119642 functions
+2021-02-07 00:14:11,082 [PID 8585] INFO Processed 62375 of 119642 functions
+2021-02-07 00:14:11,086 [PID 8585] INFO Processed 62874 of 119642 functions
+2021-02-07 00:14:11,228 [PID 8585] INFO Processed 63373 of 119642 functions
+2021-02-07 00:14:11,284 [PID 8585] INFO Processed 63872 of 119642 functions
+2021-02-07 00:14:11,346 [PID 8585] INFO Processed 64371 of 119642 functions
+2021-02-07 00:14:11,433 [PID 8585] INFO Processed 64870 of 119642 functions
+2021-02-07 00:14:11,503 [PID 8585] INFO Processed 65369 of 119642 functions
+2021-02-07 00:14:11,643 [PID 8585] INFO Processed 65868 of 119642 functions
+2021-02-07 00:14:11,687 [PID 8585] INFO Processed 66367 of 119642 functions
+2021-02-07 00:14:11,720 [PID 8585] INFO Processed 66866 of 119642 functions
+2021-02-07 00:14:11,767 [PID 8585] INFO Processed 67365 of 119642 functions
+2021-02-07 00:14:11,890 [PID 8585] INFO Processed 67864 of 119642 functions
+2021-02-07 00:14:11,903 [PID 8585] INFO Processed 68363 of 119642 functions
+2021-02-07 00:14:11,905 [PID 8585] INFO Processed 68862 of 119642 functions
+2021-02-07 00:14:11,937 [PID 8585] INFO Processed 69361 of 119642 functions
+2021-02-07 00:14:11,965 [PID 8585] INFO Processed 69860 of 119642 functions
+2021-02-07 00:14:12,172 [PID 8585] INFO Processed 70359 of 119642 functions
+2021-02-07 00:14:12,204 [PID 8585] INFO Processed 70858 of 119642 functions
+2021-02-07 00:14:12,229 [PID 8585] INFO Processed 71357 of 119642 functions
+2021-02-07 00:14:12,231 [PID 8585] INFO Processed 71856 of 119642 functions
+2021-02-07 00:14:12,232 [PID 8585] INFO Processed 72355 of 119642 functions
+2021-02-07 00:14:12,236 [PID 8585] INFO Processed 72854 of 119642 functions
+2021-02-07 00:14:12,266 [PID 8585] INFO Processed 73353 of 119642 functions
+2021-02-07 00:14:12,375 [PID 8585] INFO Processed 73852 of 119642 functions
+2021-02-07 00:14:12,430 [PID 8585] INFO Processed 74351 of 119642 functions
+2021-02-07 00:14:12,635 [PID 8585] INFO Processed 74850 of 119642 functions
+2021-02-07 00:14:12,669 [PID 8585] INFO Processed 75349 of 119642 functions
+2021-02-07 00:14:12,696 [PID 8585] INFO Processed 75848 of 119642 functions
+2021-02-07 00:14:12,698 [PID 8585] INFO Processed 76347 of 119642 functions
+2021-02-07 00:14:12,700 [PID 8585] INFO Processed 76846 of 119642 functions
+2021-02-07 00:14:12,732 [PID 8585] INFO Processed 77345 of 119642 functions
+2021-02-07 00:14:12,734 [PID 8585] INFO Processed 77844 of 119642 functions
+2021-02-07 00:14:12,885 [PID 8585] INFO Processed 78343 of 119642 functions
+2021-02-07 00:14:12,925 [PID 8585] INFO Processed 78842 of 119642 functions
+2021-02-07 00:14:13,086 [PID 8585] INFO Processed 79341 of 119642 functions
+2021-02-07 00:14:13,139 [PID 8585] INFO Processed 79840 of 119642 functions
+2021-02-07 00:14:13,171 [PID 8585] INFO Processed 80339 of 119642 functions
+2021-02-07 00:14:13,201 [PID 8585] INFO Processed 80838 of 119642 functions
+2021-02-07 00:14:13,232 [PID 8585] INFO Processed 81337 of 119642 functions
+2021-02-07 00:14:13,234 [PID 8585] INFO Processed 81836 of 119642 functions
+2021-02-07 00:14:13,334 [PID 8585] INFO Processed 82335 of 119642 functions
+2021-02-07 00:14:13,352 [PID 8585] INFO Processed 82834 of 119642 functions
+2021-02-07 00:14:13,485 [PID 8585] INFO Processed 83333 of 119642 functions
+2021-02-07 00:14:13,517 [PID 8585] INFO Processed 83832 of 119642 functions
+2021-02-07 00:14:13,643 [PID 8585] INFO Processed 84331 of 119642 functions
+2021-02-07 00:14:13,685 [PID 8585] INFO Processed 84830 of 119642 functions
+2021-02-07 00:14:13,721 [PID 8585] INFO Processed 85329 of 119642 functions
+2021-02-07 00:14:13,755 [PID 8585] INFO Processed 85828 of 119642 functions
+2021-02-07 00:14:13,927 [PID 8585] INFO Processed 86327 of 119642 functions
+2021-02-07 00:14:13,938 [PID 8585] INFO Processed 86826 of 119642 functions
+2021-02-07 00:14:13,940 [PID 8585] INFO Processed 87325 of 119642 functions
+2021-02-07 00:14:14,150 [PID 8585] INFO Processed 87824 of 119642 functions
+2021-02-07 00:14:14,185 [PID 8585] INFO Processed 88323 of 119642 functions
+2021-02-07 00:14:14,218 [PID 8585] INFO Processed 88822 of 119642 functions
+2021-02-07 00:14:14,255 [PID 8585] INFO Processed 89321 of 119642 functions
+2021-02-07 00:14:14,293 [PID 8585] INFO Processed 89820 of 119642 functions
+2021-02-07 00:14:14,297 [PID 8585] INFO Processed 90319 of 119642 functions
+2021-02-07 00:14:14,603 [PID 8585] INFO Processed 90818 of 119642 functions
+2021-02-07 00:14:14,688 [PID 8585] INFO Processed 91317 of 119642 functions
+2021-02-07 00:14:14,983 [PID 8585] INFO Processed 91816 of 119642 functions
+2021-02-07 00:14:15,041 [PID 8585] INFO Processed 92315 of 119642 functions
+2021-02-07 00:14:15,102 [PID 8585] INFO Processed 92814 of 119642 functions
+2021-02-07 00:14:15,505 [PID 8585] INFO Processed 93313 of 119642 functions
+2021-02-07 00:14:15,541 [PID 8585] INFO Processed 93812 of 119642 functions
+2021-02-07 00:14:15,622 [PID 8585] INFO Processed 94311 of 119642 functions
+2021-02-07 00:14:15,721 [PID 8585] INFO Processed 94810 of 119642 functions
+2021-02-07 00:14:16,008 [PID 8585] INFO Processed 95309 of 119642 functions
+2021-02-07 00:14:16,043 [PID 8585] INFO Processed 95808 of 119642 functions
+2021-02-07 00:14:16,075 [PID 8585] INFO Processed 96307 of 119642 functions
+2021-02-07 00:14:16,139 [PID 8585] INFO Processed 96806 of 119642 functions
+2021-02-07 00:14:16,394 [PID 8585] INFO Processed 97305 of 119642 functions
+2021-02-07 00:14:16,448 [PID 8585] INFO Processed 97804 of 119642 functions
+2021-02-07 00:14:16,496 [PID 8585] INFO Processed 98303 of 119642 functions
+2021-02-07 00:14:16,775 [PID 8585] INFO Processed 98802 of 119642 functions
+2021-02-07 00:14:16,874 [PID 8585] INFO Processed 99301 of 119642 functions
+2021-02-07 00:14:17,279 [PID 8585] INFO Processed 99800 of 119642 functions
+2021-02-07 00:14:17,331 [PID 8585] INFO Processed 100299 of 119642 functions
+2021-02-07 00:14:17,508 [PID 8585] INFO Processed 100798 of 119642 functions
+2021-02-07 00:14:17,551 [PID 8585] INFO Processed 101297 of 119642 functions
+2021-02-07 00:14:17,780 [PID 8585] INFO Processed 101796 of 119642 functions
+2021-02-07 00:14:17,812 [PID 8585] INFO Processed 102295 of 119642 functions
+2021-02-07 00:14:17,846 [PID 8585] INFO Processed 102794 of 119642 functions
+2021-02-07 00:14:17,879 [PID 8585] INFO Processed 103293 of 119642 functions
+2021-02-07 00:14:18,222 [PID 8585] INFO Processed 103792 of 119642 functions
+2021-02-07 00:14:18,317 [PID 8585] INFO Processed 104291 of 119642 functions
+2021-02-07 00:14:18,388 [PID 8585] INFO Processed 104790 of 119642 functions
+2021-02-07 00:14:18,453 [PID 8585] INFO Processed 105289 of 119642 functions
+2021-02-07 00:14:18,507 [PID 8585] INFO Processed 105788 of 119642 functions
+2021-02-07 00:14:18,712 [PID 8585] INFO Processed 106287 of 119642 functions
+2021-02-07 00:14:18,746 [PID 8585] INFO Processed 106786 of 119642 functions
+2021-02-07 00:14:18,801 [PID 8585] INFO Processed 107285 of 119642 functions
+2021-02-07 00:14:18,982 [PID 8585] INFO Processed 107784 of 119642 functions
+2021-02-07 00:14:18,995 [PID 8585] INFO Processed 108283 of 119642 functions
+2021-02-07 00:14:19,044 [PID 8585] INFO Processed 108782 of 119642 functions
+2021-02-07 00:14:19,098 [PID 8585] INFO Processed 109281 of 119642 functions
+2021-02-07 00:14:19,164 [PID 8585] INFO Processed 109780 of 119642 functions
+2021-02-07 00:14:19,279 [PID 8585] INFO Processed 110279 of 119642 functions
+2021-02-07 00:14:19,593 [PID 8585] INFO Processed 110778 of 119642 functions
+2021-02-07 00:14:19,718 [PID 8585] INFO Processed 111277 of 119642 functions
+2021-02-07 00:14:19,750 [PID 8585] INFO Processed 111776 of 119642 functions
+2021-02-07 00:14:19,753 [PID 8585] INFO Processed 112275 of 119642 functions
+2021-02-07 00:14:19,871 [PID 8585] INFO Processed 112774 of 119642 functions
+2021-02-07 00:14:20,031 [PID 8585] INFO Processed 113273 of 119642 functions
+2021-02-07 00:14:20,056 [PID 8585] INFO Processed 113772 of 119642 functions
+2021-02-07 00:14:20,183 [PID 8585] INFO Processed 114271 of 119642 functions
+2021-02-07 00:14:20,426 [PID 8585] INFO Processed 114770 of 119642 functions
+2021-02-07 00:14:20,652 [PID 8585] INFO Processed 115269 of 119642 functions
+2021-02-07 00:14:20,688 [PID 8585] INFO Processed 115768 of 119642 functions
+2021-02-07 00:14:20,747 [PID 8585] INFO Processed 116267 of 119642 functions
+2021-02-07 00:14:20,822 [PID 8585] INFO Processed 116648 of 119642 functions
+2021-02-07 00:14:20,904 [PID 8585] INFO Processed 117147 of 119642 functions
+2021-02-07 00:14:21,056 [PID 8585] INFO Processed 117646 of 119642 functions
+2021-02-07 00:14:25,148 [PID 8585] INFO Processed 118145 of 119642 functions
+2021-02-07 00:14:33,522 [PID 8585] INFO Processed 118644 of 119642 functions
+2021-02-07 00:14:34,251 [PID 8585] INFO Processed 119143 of 119642 functions
+2021-02-07 00:14:39,756 [PID 8585] INFO Processed 119642 of 119642 functions
+2021-02-07 00:14:39,756 [PID 8585] PERFORMANCE Check_TypeCheck: 45.119351s
+2021-02-07 00:14:39,756 [PID 8585] MEMORY Shared memory size post-typecheck (size: 373)
+2021-02-07 00:14:39,756 [PID 8585] INFO Postprocessing 6893 sources...
+2021-02-07 00:14:40,051 [PID 8585] INFO Postprocessed 247 of 6893 sources
+2021-02-07 00:14:40,068 [PID 8585] INFO Postprocessed 494 of 6893 sources
+2021-02-07 00:14:40,099 [PID 8585] INFO Postprocessed 741 of 6893 sources
+2021-02-07 00:14:40,274 [PID 8585] INFO Postprocessed 988 of 6893 sources
+2021-02-07 00:14:40,917 [PID 8585] INFO Postprocessed 1235 of 6893 sources
+2021-02-07 00:14:40,933 [PID 8585] INFO Postprocessed 1482 of 6893 sources
+2021-02-07 00:14:40,949 [PID 8585] INFO Postprocessed 1729 of 6893 sources
+2021-02-07 00:14:40,958 [PID 8585] INFO Postprocessed 1976 of 6893 sources
+2021-02-07 00:14:40,980 [PID 8585] INFO Postprocessed 2223 of 6893 sources
+2021-02-07 00:14:41,001 [PID 8585] INFO Postprocessed 2470 of 6893 sources
+2021-02-07 00:14:41,008 [PID 8585] INFO Postprocessed 2717 of 6893 sources
+2021-02-07 00:14:41,016 [PID 8585] INFO Postprocessed 2964 of 6893 sources
+2021-02-07 00:14:41,023 [PID 8585] INFO Postprocessed 3211 of 6893 sources
+2021-02-07 00:14:41,031 [PID 8585] INFO Postprocessed 3458 of 6893 sources
+2021-02-07 00:14:41,036 [PID 8585] INFO Postprocessed 3705 of 6893 sources
+2021-02-07 00:14:41,094 [PID 8585] INFO Postprocessed 3952 of 6893 sources
+2021-02-07 00:14:41,408 [PID 8585] INFO Postprocessed 4199 of 6893 sources
+2021-02-07 00:14:41,526 [PID 8585] INFO Postprocessed 4446 of 6893 sources
+2021-02-07 00:14:41,691 [PID 8585] INFO Postprocessed 4693 of 6893 sources
+2021-02-07 00:14:41,750 [PID 8585] INFO Postprocessed 4940 of 6893 sources
+2021-02-07 00:14:41,812 [PID 8585] INFO Postprocessed 5187 of 6893 sources
+2021-02-07 00:14:41,853 [PID 8585] INFO Postprocessed 5411 of 6893 sources
+2021-02-07 00:14:41,946 [PID 8585] INFO Postprocessed 5658 of 6893 sources
+2021-02-07 00:14:41,953 [PID 8585] INFO Postprocessed 5905 of 6893 sources
+2021-02-07 00:14:41,963 [PID 8585] INFO Postprocessed 6152 of 6893 sources
+2021-02-07 00:14:42,009 [PID 8585] INFO Postprocessed 6399 of 6893 sources
+2021-02-07 00:14:42,528 [PID 8585] INFO Postprocessed 6646 of 6893 sources
+2021-02-07 00:14:42,776 [PID 8585] INFO Postprocessed 6893 of 6893 sources
+2021-02-07 00:14:42,779 [PID 8585] INFO No cached initial callables loaded, fetching initial callables to analyze...
+2021-02-07 00:14:46,200 [PID 8585] PERFORMANCE Fetched initial callables to analyze: 3.421568s
+2021-02-07 00:14:46,200 [PID 8585] INFO Initializing analysis...
+2021-02-07 00:14:46,202 [PID 8585] INFO Computing inferred models...
+2021-02-07 00:14:49,978 [PID 8585] INFO Finding taint models in `/Users/lukasz/studies/chess-online/venv/lib`.
+2021-02-07 00:14:50,253 [PID 8585] PERFORMANCE Parsed taint models: 0.271435s
+2021-02-07 00:14:50,310 [PID 8585] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/analyze-8589.pid`
+2021-02-07 00:14:50,363 [PID 8585] ERROR Found 224 model verification errors!
+2021-02-07 00:15:54,437 [PID 9237] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre check`...
+2021-02-07 00:15:54,438 [PID 9237] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 12.
+2021-02-07 00:15:54,438 [PID 9237] DEBUG Running `/Users/lukasz/studies/chess-online/venv/bin/pyre.bin check -strict -project-root /Users/lukasz/studies/chess-online -log-directory /Users/lukasz/studies/chess-online/.pyre -filter-directories /Users/lukasz/studies/chess-online/app -workers 12 -search-path /Users/lukasz/studies/chess-online/venv/lib/python3.8/site-packages,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.9,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3.7,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/stdlib/2and3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/3,/Users/lukasz/studies/chess-online/venv/lib/pyre_check/typeshed/third_party/2and3 /Users/lukasz/studies/chess-online/app`
+2021-02-07 00:15:54,442 [PID 9237] DEBUG Registering process with pid 9241 in pid file `/Users/lukasz/studies/chess-online/.pyre/pid_files/check-9241.pid`
+2021-02-07 00:15:54,924 [PID 9237] PERFORMANCE Module tracker built: 0.437762s
+2021-02-07 00:15:54,924 [PID 9237] INFO Building type environment...
+2021-02-07 00:15:55,132 [PID 9237] INFO Parsing 6893 stubs and sources...
+2021-02-07 00:15:58,500 [PID 9237] PERFORMANCE Sources parsed: 3.369032s
+2021-02-07 00:16:00,888 [PID 9237] PERFORMANCE Full environment built: 5.964264s
+2021-02-07 00:16:01,181 [PID 9237] INFO Checking 249 functions...
+2021-02-07 00:16:01,251 [PID 9237] INFO Processed 11 of 249 functions
+2021-02-07 00:16:01,284 [PID 9237] INFO Processed 22 of 249 functions
+2021-02-07 00:16:01,296 [PID 9237] INFO Processed 33 of 249 functions
+2021-02-07 00:16:01,297 [PID 9237] INFO Processed 44 of 249 functions
+2021-02-07 00:16:01,297 [PID 9237] INFO Processed 55 of 249 functions
+2021-02-07 00:16:01,321 [PID 9237] INFO Processed 66 of 249 functions
+2021-02-07 00:16:01,332 [PID 9237] INFO Processed 77 of 249 functions
+2021-02-07 00:16:01,346 [PID 9237] INFO Processed 88 of 249 functions
+2021-02-07 00:16:01,347 [PID 9237] INFO Processed 99 of 249 functions
+2021-02-07 00:16:01,347 [PID 9237] INFO Processed 110 of 249 functions
+2021-02-07 00:16:01,347 [PID 9237] INFO Processed 121 of 249 functions
+2021-02-07 00:16:01,370 [PID 9237] INFO Processed 132 of 249 functions
+2021-02-07 00:16:01,371 [PID 9237] INFO Processed 143 of 249 functions
+2021-02-07 00:16:01,371 [PID 9237] INFO Processed 154 of 249 functions
+2021-02-07 00:16:01,371 [PID 9237] INFO Processed 165 of 249 functions
+2021-02-07 00:16:01,372 [PID 9237] INFO Processed 176 of 249 functions
+2021-02-07 00:16:01,374 [PID 9237] INFO Processed 187 of 249 functions
+2021-02-07 00:16:01,383 [PID 9237] INFO Processed 198 of 249 functions
+2021-02-07 00:16:01,410 [PID 9237] INFO Processed 209 of 249 functions
+2021-02-07 00:16:01,414 [PID 9237] INFO Processed 220 of 249 functions
+2021-02-07 00:16:01,418 [PID 9237] INFO Processed 231 of 249 functions
+2021-02-07 00:16:01,420 [PID 9237] INFO Processed 238 of 249 functions
+2021-02-07 00:16:01,427 [PID 9237] INFO Processed 249 of 249 functions
+2021-02-07 00:16:01,427 [PID 9237] PERFORMANCE Check_TypeCheck: 0.245355s
+2021-02-07 00:16:01,427 [PID 9237] MEMORY Shared memory size post-typecheck (size: 93)
+2021-02-07 00:16:01,427 [PID 9237] INFO Postprocessing 6893 sources...
+2021-02-07 00:16:01,495 [PID 9237] INFO Postprocessed 247 of 6893 sources
+2021-02-07 00:16:01,502 [PID 9237] INFO Postprocessed 494 of 6893 sources
+2021-02-07 00:16:01,515 [PID 9237] INFO Postprocessed 741 of 6893 sources
+2021-02-07 00:16:01,524 [PID 9237] INFO Postprocessed 988 of 6893 sources
+2021-02-07 00:16:01,529 [PID 9237] INFO Postprocessed 1235 of 6893 sources
+2021-02-07 00:16:01,539 [PID 9237] INFO Postprocessed 1482 of 6893 sources
+2021-02-07 00:16:01,545 [PID 9237] INFO Postprocessed 1729 of 6893 sources
+2021-02-07 00:16:01,546 [PID 9237] INFO Postprocessed 1976 of 6893 sources
+2021-02-07 00:16:01,557 [PID 9237] INFO Postprocessed 2223 of 6893 sources
+2021-02-07 00:16:01,557 [PID 9237] INFO Postprocessed 2470 of 6893 sources
+2021-02-07 00:16:01,566 [PID 9237] INFO Postprocessed 2717 of 6893 sources
+2021-02-07 00:16:01,576 [PID 9237] INFO Postprocessed 2964 of 6893 sources
+2021-02-07 00:16:01,582 [PID 9237] INFO Postprocessed 3211 of 6893 sources
+2021-02-07 00:16:01,588 [PID 9237] INFO Postprocessed 3458 of 6893 sources
+2021-02-07 00:16:01,599 [PID 9237] INFO Postprocessed 3705 of 6893 sources
+2021-02-07 00:16:01,622 [PID 9237] INFO Postprocessed 3952 of 6893 sources
+2021-02-07 00:16:01,650 [PID 9237] INFO Postprocessed 4199 of 6893 sources
+2021-02-07 00:16:01,659 [PID 9237] INFO Postprocessed 4446 of 6893 sources
+2021-02-07 00:16:01,660 [PID 9237] INFO Postprocessed 4693 of 6893 sources
+2021-02-07 00:16:01,688 [PID 9237] INFO Postprocessed 4940 of 6893 sources
+2021-02-07 00:16:01,698 [PID 9237] INFO Postprocessed 5187 of 6893 sources
+2021-02-07 00:16:01,714 [PID 9237] INFO Postprocessed 5434 of 6893 sources
+2021-02-07 00:16:01,718 [PID 9237] INFO Postprocessed 5658 of 6893 sources
+2021-02-07 00:16:01,722 [PID 9237] INFO Postprocessed 5905 of 6893 sources
+2021-02-07 00:16:01,723 [PID 9237] INFO Postprocessed 6152 of 6893 sources
+2021-02-07 00:16:01,725 [PID 9237] INFO Postprocessed 6399 of 6893 sources
+2021-02-07 00:16:01,758 [PID 9237] INFO Postprocessed 6646 of 6893 sources
+2021-02-07 00:16:01,776 [PID 9237] INFO Postprocessed 6893 of 6893 sources
+2021-02-07 00:16:01,778 [PID 9237] PERFORMANCE Check: 7.295576s
+2021-02-07 00:16:01,802 [PID 9237] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/check-9241.pid`
+2021-02-07 00:16:01,803 [PID 9237] SUCCESS No type errors found

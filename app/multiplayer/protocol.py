@@ -1,6 +1,7 @@
 """
 A module which defines the multiplayer protocol
 """
+from typing import Union
 from dataclasses import dataclass, field
 from enum import Enum
 import chess
@@ -24,7 +25,7 @@ class Message:
     """
     type: MessageType = field(init=False)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return "[{}]".format(self.type)
 
 
@@ -33,7 +34,8 @@ class StartMessage(Message):
     """
     A start message
     """
-    type = MessageType.START
+    def __post_init__(self) -> None:
+        self.type = MessageType.START
 
 
 @dataclass
@@ -41,10 +43,12 @@ class SetTeamMessage(Message):
     """
     Set team message
     """
-    type = MessageType.SET_TEAM
     team: Team
 
-    def __str__(self):
+    def __post_init__(self) -> None:
+        self.type = MessageType.SET_TEAM
+
+    def __str__(self) -> str:
         return "{} {}".format(super().__str__(), self.team)
 
 
@@ -53,8 +57,13 @@ class MoveMessage(Message):
     """
     Message which represents move
     """
-    type = MessageType.MOVE
     move: chess.Move
 
-    def __str__(self):
+    def __post_init__(self) -> None:
+        self.type = MessageType.MOVE
+
+    def __str__(self) -> str:
         return "{} {}".format(super().__str__(), self.move)
+
+
+AllMessageType = Union[StartMessage, SetTeamMessage, MoveMessage]

@@ -1,7 +1,8 @@
 """
 A module that contains GameBoardInterface
 """
-from typing import Optional, Iterator, List
+# pyre-ignore-all-errors
+from typing import Optional, Iterator, List, Tuple
 
 from langextensions import Interface, abstract
 
@@ -96,4 +97,11 @@ class GameBoardInterface(metaclass=Interface):
         :param col: Col of square
         :return: ChessPieceSprite if the piece exists on the provided square
         otherwise returns None
+        """
+
+    @abstract
+    def get_cell_size(self) -> Tuple[int, int]:
+        """Gets size of single cell
+
+        :return: Cell szie
         """

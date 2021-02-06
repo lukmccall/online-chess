@@ -11,13 +11,13 @@ class Window:
     Wrapper for the pygame display.
     """
 
-    def __init__(self, width: int, height: int, *, fps: int = 60):
+    def __init__(self, width: int, height: int, *, fps: int = 60) -> None:
         self._width = width
         self._height = height
 
         pygame.time.Clock().tick(fps)
         pygame.init()
-        self.game_display = pygame.display.set_mode((width, height))
+        self.game_display: pygame.surface.Surface = pygame.display.set_mode((width, height))
         pygame.display.set_caption("Chess Online")
         self._is_running = False
 

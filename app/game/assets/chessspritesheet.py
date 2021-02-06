@@ -1,7 +1,7 @@
 """
 A module that contains a chess sprite sheet
 """
-from typing import ValuesView
+from typing import ValuesView, Dict, Tuple
 import pygame
 
 from constants import Team
@@ -15,7 +15,7 @@ class ChessSpriteSheet:
     Class which is encapsulate a functionality connect witch chess sprite sheet
     This sprite sheet has a special form which indicates arrangement of the pieces
     """
-    def __init__(self, filename: str):
+    def __init__(self, filename: str) -> None:
         """
         :param filename: A path to the "chess" sprite sheet
         """
@@ -23,7 +23,7 @@ class ChessSpriteSheet:
         images = sprite_sheet.images(2, 6)
 
         piece_num = 0
-        self._pieces_type_image = {}
+        self._pieces_type_image: Dict[Tuple[ChessPieceEnum, Team], pygame.surface.Surface] = {}
 
         for team in (Team.WHITE, Team.BLACK):
             for piece_type in (
@@ -36,7 +36,7 @@ class ChessSpriteSheet:
                 self._pieces_type_image[(piece_type, team)] = images[piece_num]
                 piece_num += 1
 
-    def get_piece_image(self, piece_type: ChessPieceEnum, team: Team) -> pygame.Surface:
+    def get_piece_image(self, piece_type: ChessPieceEnum, team: Team) -> pygame.surface.Surface:
         """Gets a piece image
 
         :param piece_type: Type of the piece

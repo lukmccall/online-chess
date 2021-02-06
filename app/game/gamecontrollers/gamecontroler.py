@@ -1,7 +1,7 @@
 """
 A module containing the base game controller implementation
 """
-from typing import List, Tuple
+from typing import List, Tuple, Optional
 import pygame
 import chess
 
@@ -17,12 +17,12 @@ class GameController:
     This implementation is used in the local game.
     Also this class contains the state of the current game.
     """
-    def __init__(self, board: GameBoardInterface, team: Team):
+    def __init__(self, board: GameBoardInterface, team: Team) -> None:
         self._board = board
         self.team = team
         self._mouse_was_press = False
-        self._selected_position = None
-        self._possible_moves = None
+        self._selected_position: Optional[Tuple[int, int]] = None
+        self._possible_moves: Optional[List[chess.Move]] = None
 
     def prepare(self) -> None:
         """Prepare game controller
@@ -76,5 +76,5 @@ class GameController:
         """
         cursor_position = pygame.mouse.get_pos()
         mouse_x, mouse_y = cursor_position
-        width, height = self._board.cell_size
+        width, height = self._board.get_cell_size()
         return mouse_y // width, mouse_x // height

@@ -1,9 +1,10 @@
 """
 A module containing JoiningGameState
 """
-from typing import List
+from typing import List, Optional
 import pygame
 
+from constants import Team
 from multiplayer import SocketWrapperInterface, MessageType
 
 from .menubasestate import MenuBaseState
@@ -19,7 +20,7 @@ class JoiningGameState(MenuBaseState):
             self,
             game_manager: GameManagerInterface,
             socket: SocketWrapperInterface
-    ):
+    ) -> None:
         super().__init__(game_manager)
 
         self._socket = socket
@@ -28,7 +29,7 @@ class JoiningGameState(MenuBaseState):
         self._menu.add_button("Quit", self.on_end)
 
         self._preserve_socket = False
-        self._team = None
+        self._team: Optional[Team] = None
 
     def on_state_exit(self) -> None:
         super().on_state_exit()
@@ -42,7 +43,8 @@ class JoiningGameState(MenuBaseState):
             super().on_game_loop(events)
             return
 
-        if self._team is None:
+        team = self._team
+        if team is None:
             if message.type == MessageType.SET_TEAM:
                 self._team = message.team
             else:
@@ -54,7 +56,7 @@ class JoiningGameState(MenuBaseState):
                     OnlineGameState(
                         self._game_manager,
                         self._socket,
-                        self._team
+                        team
                     )
                 )
                 return

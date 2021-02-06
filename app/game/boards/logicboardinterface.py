@@ -1,6 +1,7 @@
 """
 A module that contains LogicBoardInterface
 """
+# pyre-ignore-all-errors
 from typing import Optional, Iterator
 
 import chess

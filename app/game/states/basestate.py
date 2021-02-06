@@ -14,7 +14,7 @@ class BaseState(StateInterface):
     A abstract class of the game state that providing shortcut methods
     and storing game manager instance
     """
-    def __init__(self, game_manager: GameManagerInterface):
+    def __init__(self, game_manager: GameManagerInterface) -> None:
         self._game_manager = game_manager
 
     def get_display(self) -> pygame.Surface:

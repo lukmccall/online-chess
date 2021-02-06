@@ -10,14 +10,14 @@ class SpriteSheet:
     A base class which loads and cuts a sprite sheet.
     It's also responsible for converting an image to the proper format.
     """
-    def __init__(self, filename: str):
+    def __init__(self, filename: str) -> None:
         """Basic constructor, which loads a sprite sheet to the memory
 
         :param filename: Path to the sprite sheet
         """
-        self._img = pygame.image.load(filename)
+        self._img: pygame.surface.Surface = pygame.image.load(filename)
 
-    def image_at(self, rectangle: pygame.Rect) -> pygame.Surface:
+    def image_at(self, rectangle: pygame.Rect) -> pygame.surface.Surface:
         """Gets image from loaded sprite sheet
         at the provided position
 
@@ -29,7 +29,7 @@ class SpriteSheet:
         image.blit(self._img, (0, 0), rect)
         return image
 
-    def images(self, rows: int, cols: int) -> List[pygame.Surface]:
+    def images(self, rows: int, cols: int) -> List[pygame.surface.Surface]:
         """Gets all images
 
         :param rows: An number of rows

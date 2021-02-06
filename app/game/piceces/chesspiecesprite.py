@@ -14,17 +14,17 @@ class ChessPieceSprite(pygame.sprite.Sprite):  # pylint: disable=R0903
     """
     def __init__(
             self,
-            image: pygame.Surface,
+            image: pygame.surface.Surface,
             position: Tuple[int, int],
             team: Team,
             cell_size: Tuple[int, int]
-    ):
+    ) -> None:
         super().__init__()
 
-        self._cell_size = cell_size
-        self.image = pygame.transform.smoothscale(image, cell_size)
-        self._team = team
-        self.rect = self.image.get_rect()
+        self._cell_size: Tuple[int, int] = cell_size
+        self.image: pygame.surface.Surface = pygame.transform.smoothscale(image, cell_size)
+        self._team: Team = team
+        self.rect: pygame.rect.Rect = self.image.get_rect()
 
         self._recalculate_rect(position)
 

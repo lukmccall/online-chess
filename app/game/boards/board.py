@@ -1,13 +1,13 @@
 """
 This module contains a graphic board class
 """
-from collections import defaultdict
-from typing import Optional, Iterator, List
+from typing import Optional, Iterator, List, Tuple, Dict
 
 import pygame
 import chess
 
-from settings import Settings
+from settings import Settings, ColorTuple
+from constants import Team
 
 from .helper import \
     iterate_over_board_squares, \
@@ -25,11 +25,11 @@ class FlippableGroup(pygame.sprite.Group):
     """
     Implementation of the pygame group to transform the position of sprites before drawing
     """
-    def __init__(self, is_flipped: bool):
+    def __init__(self, is_flipped: bool) -> None:
         pygame.sprite.Group.__init__(self)
         self._is_flipped = is_flipped
 
-    def draw(self, surface: pygame.Surface) -> None:
+    def draw(self, surface: pygame.surface.Surface) -> None:
         """Draws all sprites in the group on the provided surface
 
         :param surface: A surface
@@ -37,23 +37,28 @@ class FlippableGroup(pygame.sprite.Group):
         if self._is_flipped:
             sprites = self.sprites()
 
+            # pyre-ignore[6]:
             to_blits = [(spr.image, self.transform_rect(surface, spr.rect)) for spr in sprites]
             self.spritedict.update(
+                # pyre-ignore[6]:
                 zip(
                     sprites,
+                    # pyre-ignore[6]:
+                    # pyre-ignore[20]:
                     surface.blits(to_blits)
                 )
             )
 
+            # pyre-ignore[8]:
             self.lostsprites = []  # pylint: disable=W0201
         else:
             super().draw(surface)
 
     @staticmethod
     def transform_rect(
-            surface: pygame.Surface,
-            rect: pygame.Rect
-    ) -> pygame.Rect:
+            surface: pygame.surface.Surface,
+            rect: pygame.rect.Rect
+    ) -> pygame.rect.Rect:
         """Flips the position of the provided rectangle
 
         :param surface: Surface which will be used to calculate the flipped position
@@ -70,18 +75,28 @@ class Board(GameBoardInterface):
     Bord class which binds graphic and logic.
     It's the main class which is a bridge between logic board and user.
     """
-    def __init__(self,
-                 surface: pygame.Surface,
-                 pieces_factory: PiecesFactory,
-                 logic_board: Optional[LogicBoardInterface] = None):
+    def __init__(
+        self,
+        surface: pygame.Surface,
+        pieces_factory: PiecesFactory,
+        logic_board: Optional[LogicBoardInterface] = None
+    ) -> None:
         self._surface = surface
-        self._logic_board = logic_board if logic_board is not None else PythonChessLogicBoard()
+        self._logic_board: LogicBoardInterface = logic_board \
+            if logic_board is not None\
+            else PythonChessLogicBoard()
 
-        self._display_board = defaultdict()
-        self._pieces_factory = pieces_factory
+        self._display_board: Dict[chess.Square, ChessPieceSprite] = {}
+        self._pieces_factory: PiecesFactory = pieces_factory
 
-        self._colors = (Settings().get_light_squares_color(), Settings().get_dark_squares_color())
-        self.cell_size = self._surface.get_width() // 8, self._surface.get_height() // 8
+        self._colors: Tuple[ColorTuple, ColorTuple] = (
+            Settings().get_light_squares_color(),
+            Settings().get_dark_squares_color()
+        )
+        self._cell_size: Tuple[int, int] = (
+            self._surface.get_width() // 8,
+            self._surface.get_height() // 8
+        )
         self._is_flipped = True
 
         for square in iterate_over_board_squares():
@@ -95,7 +110,7 @@ class Board(GameBoardInterface):
                     mapped_piece,
                     mapped_color,
                     position,
-                    self.cell_size
+                    self._cell_size
                 )
 
                 self._display_board[square] = py_piece
@@ -120,7 +135,7 @@ class Board(GameBoardInterface):
                 index = (index - 1) * -1
             index = (index - 1) * -1
 
-    def get_piece_at(self, row, col) -> Optional[ChessPieceSprite]:
+    def get_piece_at(self, row: int, col: int) -> Optional[ChessPieceSprite]:
         if self._is_flipped:
             row = 7 - row
 
@@ -129,14 +144,14 @@ class Board(GameBoardInterface):
             return self._display_board[index]
         return None
 
-    def get_possible_moves_from(self, row, col) -> Iterator[chess.Move]:
+    def get_possible_moves_from(self, row: int, col: int) -> Iterator[chess.Move]:
         if self._is_flipped:
             row = 7 - row
 
         return self._logic_board.get_possible_moves_from(row, col)
 
-    def draw_moves(self, moves: List[chess.Move]):
-        width, height = self.cell_size
+    def draw_moves(self, moves: List[chess.Move]) -> None:
+        width, height = self._cell_size
 
         for move in moves:
             target = move.to_square
@@ -156,7 +171,13 @@ class Board(GameBoardInterface):
                 Settings().get_highlights_moves_size()
             )
 
-    def generate_move(self, from_row, from_col, to_row, to_col) -> Optional[chess.Move]:
+    def generate_move(
+            self,
+            from_row: int,
+            from_col: int,
+            to_row: int,
+            to_col: int
+    ) -> Optional[chess.Move]:
         if self._is_flipped:
             from_row = 7 - from_row
             to_row = 7 - to_row
@@ -168,13 +189,40 @@ class Board(GameBoardInterface):
             to_col
         )
 
-    def move(self, move: chess.Move):
+    def move(self, move: chess.Move) -> None:
         if not self._logic_board.is_move_legal(move):
             raise AssertionError("Illegal move")
 
         piece = self._display_board.get(move.from_square)
-        self._display_board.pop(move.from_square)
+        assert piece
 
+        self._display_board.pop(move.from_square)
+        self._try_to_execute_en_passant(move)
+        new_position = map_square_to_index(move.to_square)
+
+        promotion = move.promotion
+
+        if promotion is not None:
+            promoted_piece_type = map_piece_types(promotion)
+            promoted_piece_color = map_piece_color(
+                self._logic_board.piece_at(move.from_square).color
+            )
+            promoted_piece = self._pieces_factory.crete_piece(
+                promoted_piece_type,
+                promoted_piece_color,
+                new_position,
+                self._cell_size
+            )
+            self._display_board[move.to_square] = promoted_piece
+        else:
+            piece.move_to(new_position)
+            self._display_board[move.to_square] = piece
+
+            self._try_to_execute_castling(move)
+
+        self._logic_board.execute_move(move)
+
+    def _try_to_execute_en_passant(self, move: chess.Move) -> None:
         if self._logic_board.is_en_passant(move):
             sign = 1 if move.from_square < move.to_square else -1
             square_in_front = move.from_square + 8 * sign
@@ -184,45 +232,29 @@ class Board(GameBoardInterface):
 
             self._display_board.pop(captured_square)
 
-        new_position = map_square_to_index(move.to_square)
+    def _try_to_execute_castling(self, move: chess.Move) -> None:
+        if self._logic_board.is_castling(move):
+            direction = move.to_square - move.from_square
+            if direction > 0:
+                rock = self._display_board.pop(move.to_square // 8 * 8 + 7)
+                self._display_board[move.to_square - 1] = rock
+                rock.move_to(map_square_to_index(move.to_square - 1))
+            else:
+                rock = self._display_board.pop(move.to_square // 8 * 8)
+                self._display_board[move.to_square + 1] = rock
+                rock.move_to(map_square_to_index(move.to_square + 1))
 
-        if move.promotion is not None:
-            promoted_piece_type = map_piece_types(move.promotion)
-            promoted_piece_color = map_piece_color(
-                self._logic_board.piece_at(move.from_square).color
-            )
-            promoted_piece = self._pieces_factory.crete_piece(
-                promoted_piece_type,
-                promoted_piece_color,
-                new_position,
-                self.cell_size
-            )
-            self._display_board[move.to_square] = promoted_piece
-        else:
-            piece.move_to(new_position)
-            self._display_board[move.to_square] = piece
-
-            if self._logic_board.is_castling(move):
-                direction = move.to_square - move.from_square
-                if direction > 0:
-                    rock = self._display_board.pop(move.to_square // 8 * 8 + 7)
-                    self._display_board[move.to_square - 1] = rock
-                    rock.move_to(map_square_to_index(move.to_square - 1))
-                else:
-                    rock = self._display_board.pop(move.to_square // 8 * 8)
-                    self._display_board[move.to_square + 1] = rock
-                    rock.move_to(map_square_to_index(move.to_square + 1))
-
-        self._logic_board.execute_move(move)
-
-    def turn(self):
+    def turn(self) -> Team:
         return map_piece_color(self._logic_board.turn())
 
-    def is_game_over(self):
+    def is_game_over(self) -> bool:
         return self._logic_board.is_game_over()
 
     def winner(self) -> Optional[chess.Color]:
         return self._logic_board.winner()
 
-    def set_flip(self, new_value: bool):
+    def set_flip(self, new_value: bool) -> None:
         self._is_flipped = new_value
+
+    def get_cell_size(self) -> Tuple[int, int]:
+        return self._cell_size

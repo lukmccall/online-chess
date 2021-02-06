@@ -17,16 +17,16 @@ class ResultState(BaseState):
     State when the user finish local or multiplayer game with score.
     """
     def __init__(
-            self,
-            game_manager: GameManagerInterface,
-            board: GameBoardInterface
-    ):
+        self,
+        game_manager: GameManagerInterface,
+        board: GameBoardInterface
+    ) -> None:
         super().__init__(game_manager)
 
         self._board = board
         self._font = pygame.font.Font(pygame.font.get_default_font(), 70)
 
-        self._result = self._get_result()
+        self._result: str = self._get_result()
 
     def _get_result(self) -> str:
         """Gets string representing game result
@@ -37,7 +37,7 @@ class ResultState(BaseState):
 
         if color is None:
             text = "Draw"
-        elif color == chess.WHITE:
+        elif color == chess.WHITE:  # pyre-ignore[16]
             text = "White win"
         else:
             text = "Black win"

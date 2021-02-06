@@ -6,7 +6,8 @@ from .protocol import \
     Message,\
     StartMessage,\
     MoveMessage,\
-    SetTeamMessage
+    SetTeamMessage,\
+    AllMessageType
 from .socketwrapperinterface import SocketWrapperInterface
 from .socketwrappers import \
     SocketWrapper,\

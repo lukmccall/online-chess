@@ -12,7 +12,7 @@ class PythonChessLogicBoard(LogicBoardInterface):
     """
     Implementation of the logic board which uses python-chess package
     """
-    def __init__(self):
+    def __init__(self) -> None:
         self.board = chess.Board()
 
     def get_possible_moves_from(self, row: int, col: int) -> Iterator[chess.Move]:
@@ -74,9 +74,9 @@ class PythonChessLogicBoard(LogicBoardInterface):
             return None
 
         if result == "1-0":
-            return chess.WHITE
+            return chess.WHITE  # pyre-ignore[16]
 
         if result == "0-1":
-            return chess.BLACK
+            return chess.BLACK  # pyre-ignore[16]
 
         return None

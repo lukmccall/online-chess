@@ -8,13 +8,14 @@ from constants import Team
 
 from ..piceces import ChessPieceEnum
 
+# pyre-ignore[5]:
 piece_type_mapper = {
-    chess.PAWN: ChessPieceEnum.PAWN,
-    chess.KNIGHT: ChessPieceEnum.KNIGHT,
-    chess.BISHOP: ChessPieceEnum.BISHOP,
-    chess.ROOK: ChessPieceEnum.ROOK,
-    chess.QUEEN: ChessPieceEnum.QUEEN,
-    chess.KING: ChessPieceEnum.KING
+    chess.PAWN: ChessPieceEnum.PAWN,  # pyre-ignore[16]
+    chess.KNIGHT: ChessPieceEnum.KNIGHT,  # pyre-ignore[16]
+    chess.BISHOP: ChessPieceEnum.BISHOP,  # pyre-ignore[16]
+    chess.ROOK: ChessPieceEnum.ROOK,  # pyre-ignore[16]
+    chess.QUEEN: ChessPieceEnum.QUEEN,  # pyre-ignore[16]
+    chess.KING: ChessPieceEnum.KING  # pyre-ignore[16]
 }
 
 
@@ -45,7 +46,7 @@ def map_piece_color(piece_color: chess.Color) -> Team:
     :param piece_color: Piece color from chess package
     :return: Piece color(Team) from game.pieces package
     """
-    if piece_color == chess.WHITE:
+    if piece_color == chess.WHITE:  # pyre-ignore[16]
         return Team.WHITE
     return Team.BLACK
 

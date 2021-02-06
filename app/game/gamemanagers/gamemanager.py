@@ -16,10 +16,10 @@ class GameManager(GameManagerInterface):
     Class which responsible for holding and managing state of the application.
     Moreover this class is also responsible for sending events from the window.
     """
-    def __init__(self, window: Window, asset_provider: AssetsProvider):
+    def __init__(self, window: Window, asset_provider: AssetsProvider) -> None:
         self.window = window
         self.asset_provider = asset_provider
-        self.state = None
+        self.state: StateInterface = MainMenuState(self)
         self.go_to_main_state()
 
     def game_loop(self, events: List[pygame.event.Event]) -> None:
@@ -47,7 +47,7 @@ class GameManager(GameManagerInterface):
     def get_asset_provider(self) -> AssetsProvider:
         return self.asset_provider
 
-    def change_state(self, new_state: StateInterface):
+    def change_state(self, new_state: StateInterface) -> None:
         if self.state is not None:
             self.state.on_state_exit()
         self.state = new_state
@@ -55,5 +55,5 @@ class GameManager(GameManagerInterface):
 
         self.state.on_game_loop([])
 
-    def go_to_main_state(self):
+    def go_to_main_state(self) -> None:
         self.change_state(MainMenuState(self))

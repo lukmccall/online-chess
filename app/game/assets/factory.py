@@ -13,7 +13,7 @@ class PiecesFactory:  # pylint: disable=R0903
     """
     Class which construct a piece type with correct image from given spite sheet
     """
-    def __init__(self, chess_sprite_sheet: ChessSpriteSheet):
+    def __init__(self, chess_sprite_sheet: ChessSpriteSheet) -> None:
         """
 
         :param chess_sprite_sheet: A chess piece sprite sheet

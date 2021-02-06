@@ -1,7 +1,7 @@
 """
 A module containing base game state
 """
-from typing import List
+from typing import List, Optional
 import pygame
 
 from .basestate import BaseState
@@ -15,9 +15,9 @@ class BaseGameState(BaseState):
     """
     A base game state implementation
     """
-    def __init__(self, game_manager: GameManagerInterface):
+    def __init__(self, game_manager: GameManagerInterface) -> None:
         super().__init__(game_manager)
-        self._board = None
+        self._board: Optional[Board] = None
 
     def on_state_exit(self) -> None:
         pass
@@ -27,6 +27,15 @@ class BaseGameState(BaseState):
             self.get_display(),
             self.get_pieces_factory()
         )
+
+    def get_board(self) -> Board:
+        """Gets board
+
+        :return: Board
+        """
+        board = self._board
+        assert board
+        return board
 
     def get_game_controller(self) -> GameController:
         """Gets the instance of the game controller
@@ -38,15 +47,17 @@ class BaseGameState(BaseState):
         raise NotImplementedError()
 
     def on_game_loop(self, events: List[pygame.event.Event]) -> None:
+        board = self.get_board()
+
         game_controller = self.get_game_controller()
 
         game_controller.prepare()
 
-        self._board.draw()
+        board.draw()
 
-        if self._board.is_game_over():
+        if board.is_game_over():
             self._game_manager.change_state(
-                ResultState(self._game_manager, self._board)
+                ResultState(self._game_manager, board)
             )
             return
 

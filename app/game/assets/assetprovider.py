@@ -12,7 +12,7 @@ class AssetsProvider:
     A simple provider which is responsible for
     binding and propagating the currently used piece factory
     """
-    def __init__(self):
+    def __init__(self) -> None:
         chess_sprite_sheet = ChessSpriteSheet(Settings().get_chess_assets_path())
         self._pieces_factory = PiecesFactory(chess_sprite_sheet)
 
