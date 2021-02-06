@@ -4,3 +4,5 @@ pygame-menu==3.5.5
 pylint==2.6.0
 pyinstaller==4.2
 pyre-check==0.0.59
+Sphinx==3.4.3
+sphinx-rtd-theme==0.5.1
