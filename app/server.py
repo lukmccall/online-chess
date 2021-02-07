@@ -107,6 +107,7 @@ def main() -> None:
             start_new_thread(client, (connection, lobby))
     except KeyboardInterrupt:
         server_socket.close()
+        print("Socket closed")
 
 
 if __name__ == "__main__":
