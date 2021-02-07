@@ -1576,3 +1576,19 @@
 2021-02-07 17:06:25,942 [PID 29275] PERFORMANCE Server request: 0.000001s
 2021-02-07 17:06:25,942 [PID 29275] PERFORMANCE Server request: 0.000183s
 2021-02-07 17:06:25,942 [PID 29275] SUCCESS No type errors found
+2021-02-07 17:22:59,332 [PID 36402] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 17:22:59,333 [PID 36402] INFO Waiting for server...
+2021-02-07 17:22:59,333 [PID 36402] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 17:22:59,426 [PID 36402] PERFORMANCE Server request: 0.000001s
+2021-02-07 17:22:59,426 [PID 36402] PERFORMANCE Server request: 0.000280s
+2021-02-07 17:22:59,427 [PID 36402] SUCCESS No type errors found
+2021-02-07 18:31:39,262 [PID 39880] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 18:31:39,262 [PID 39880] INFO Waiting for server...
+2021-02-07 18:31:39,262 [PID 39880] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 18:31:39,295 [PID 39880] PERFORMANCE Server request: 0.000066s
+2021-02-07 18:31:39,296 [PID 39880] ERROR Found 1 type error!
+2021-02-07 18:31:46,389 [PID 39989] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 18:31:46,389 [PID 39989] INFO Waiting for server...
+2021-02-07 18:31:46,389 [PID 39989] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 18:31:46,394 [PID 39989] PERFORMANCE Server request: 0.000001s
+2021-02-07 18:31:46,394 [PID 39989] SUCCESS No type errors found

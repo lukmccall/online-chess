@@ -4,7 +4,7 @@ block_cipher = None
 
 added_files = [('assets', 'assets')]
 
-a = Analysis(['game/main.py'],
+a = Analysis(['app/main.py'],
              pathex=['/Users/lukasz/studies/chess-online'],
              binaries=[],
              datas=added_files,

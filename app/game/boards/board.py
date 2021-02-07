@@ -34,32 +34,33 @@ class FlippableGroup(pygame.sprite.Group):
 
         :param surface: A surface
         """
+        sprites = self.sprites()
         if self._is_flipped:
-            sprites = self.sprites()
-
             # pyre-ignore[6]:
-            to_blits = [(spr.image, self.transform_rect(surface, spr.rect)) for spr in sprites]
-            self.spritedict.update(
-                # pyre-ignore[6]:
-                zip(
-                    sprites,
-                    # pyre-ignore[6]:
-                    # pyre-ignore[20]:
-                    surface.blits(to_blits)
-                )
-            )
-
-            # pyre-ignore[8]:
-            self.lostsprites = []  # pylint: disable=W0201
+            to_blits = [(spr.image, self.transform_rect_y(surface, spr.rect)) for spr in sprites]
         else:
-            super().draw(surface)
+            # pyre-ignore[6]:
+            to_blits = [(spr.image, self.transform_rect_x(surface, spr.rect)) for spr in sprites]
+
+        self.spritedict.update(
+            # pyre-ignore[6]:
+            zip(
+                sprites,
+                # pyre-ignore[6]:
+                # pyre-ignore[20]:
+                surface.blits(to_blits)
+            )
+        )
+
+        # pyre-ignore[8]:
+        self.lostsprites = []  # pylint: disable=W0201
 
     @staticmethod
-    def transform_rect(
+    def transform_rect_y(
             surface: pygame.surface.Surface,
             rect: pygame.rect.Rect
     ) -> pygame.rect.Rect:
-        """Flips the position of the provided rectangle
+        """Flips the Y position of the provided rectangle
 
         :param surface: Surface which will be used to calculate the flipped position
         :param rect: Rect
@@ -67,6 +68,21 @@ class FlippableGroup(pygame.sprite.Group):
         """
         new_rect = rect.copy()
         new_rect.y = surface.get_height() - rect.y - rect.height
+        return new_rect
+
+    @staticmethod
+    def transform_rect_x(
+            surface: pygame.surface.Surface,
+            rect: pygame.rect.Rect
+    ) -> pygame.rect.Rect:
+        """Flips the X position of the provided rectangle
+
+        :param surface: Surface which will be used to calculate the flipped position
+        :param rect: Rect
+        :return: Rect with flipped position
+        """
+        new_rect = rect.copy()
+        new_rect.x = surface.get_height() - rect.x - rect.width
         return new_rect
 
 
@@ -127,7 +143,7 @@ class Board(GameBoardInterface):
         """
         width, height = Settings().get_window_size()
         width, height = width // 8, height // 8
-        index = 1
+        index = 0
         for column in range(8):
             for row in range(8):
                 cell = pygame.Rect(row * height, column * width, width + 1, height + 1)
@@ -136,8 +152,7 @@ class Board(GameBoardInterface):
             index = (index - 1) * -1
 
     def get_piece_at(self, row: int, col: int) -> Optional[ChessPieceSprite]:
-        if self._is_flipped:
-            row = 7 - row
+        row, col = self._transform_coord(row, col)
 
         index = row * 8 + col
         if index in self._display_board:
@@ -145,9 +160,7 @@ class Board(GameBoardInterface):
         return None
 
     def get_possible_moves_from(self, row: int, col: int) -> Iterator[chess.Move]:
-        if self._is_flipped:
-            row = 7 - row
-
+        row, col = self._transform_coord(row, col)
         return self._logic_board.get_possible_moves_from(row, col)
 
     def draw_moves(self, moves: List[chess.Move]) -> None:
@@ -155,11 +168,7 @@ class Board(GameBoardInterface):
 
         for move in moves:
             target = move.to_square
-            row = target // 8
-            col = target % 8
-
-            if self._is_flipped:
-                row = 7 - row
+            row, col = self._transform_coord(target // 8, target % 8)
 
             top_x = col * width + width / 2
             top_y = row * height + height / 2
@@ -178,9 +187,8 @@ class Board(GameBoardInterface):
             to_row: int,
             to_col: int
     ) -> Optional[chess.Move]:
-        if self._is_flipped:
-            from_row = 7 - from_row
-            to_row = 7 - to_row
+        from_row, from_col = self._transform_coord(from_row, from_col)
+        to_row, to_col = self._transform_coord(to_row, to_col)
 
         return self._logic_board.get_generate_move_from_to(
             from_row,
@@ -243,6 +251,11 @@ class Board(GameBoardInterface):
                 rock = self._display_board.pop(move.to_square // 8 * 8)
                 self._display_board[move.to_square + 1] = rock
                 rock.move_to(map_square_to_index(move.to_square + 1))
+
+    def _transform_coord(self, row: int, col: int) -> Tuple[int, int]:
+        if self._is_flipped:
+            return 7 - row, col
+        return row, 7 - col
 
     def turn(self) -> Team:
         return map_piece_color(self._logic_board.turn())
