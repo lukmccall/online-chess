@@ -1519,3 +1519,8 @@
 2021-02-07 00:16:01,778 [PID 9237] PERFORMANCE Check: 7.295576s
 2021-02-07 00:16:01,802 [PID 9237] DEBUG Removing pid file: `/Users/lukasz/studies/chess-online/.pyre/pid_files/check-9241.pid`
 2021-02-07 00:16:01,803 [PID 9237] SUCCESS No type errors found
+2021-02-07 13:36:25,447 [PID 15894] DEBUG Running cli command `/Users/lukasz/studies/chess-online/venv/bin/pyre`...
+2021-02-07 13:36:25,448 [PID 15894] INFO Waiting for server...
+2021-02-07 13:36:25,448 [PID 15894] DEBUG Trying to acquire lock on file /Users/lukasz/studies/chess-online/.pyre/client.lock
+2021-02-07 13:36:25,527 [PID 15894] PERFORMANCE Server request: 0.000003s
+2021-02-07 13:36:25,529 [PID 15894] SUCCESS No type errors found

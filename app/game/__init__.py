@@ -7,3 +7,4 @@ from .gamemanagers import *
 from .states import *
 from .assets import *
 from .window import Window
+from .piceces import *

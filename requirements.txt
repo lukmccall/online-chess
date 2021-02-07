@@ -6,3 +6,4 @@ pyinstaller==4.2
 pyre-check==0.0.59
 Sphinx==3.4.3
 sphinx-rtd-theme==0.5.1
+sphinx-markdown-builder==0.5.4

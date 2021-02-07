@@ -24,14 +24,13 @@ class SocketWrapper(SocketWrapperInterface):
 
             if len(encoded_size) != 4:
                 return None
-            self.socket.recv(4)
 
             size = int.from_bytes(encoded_size, 'little')
-            data = self.socket.recv(size, soc.MSG_PEEK)
+            data = self.socket.recv(4 + size, soc.MSG_PEEK)[4:]
             if len(data) != size:
                 return None
 
-            self.socket.recv(size)
+            self.socket.recv(4 + size)
 
             return pickle.loads(data)
         except BlockingIOError:
