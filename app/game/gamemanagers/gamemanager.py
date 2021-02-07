@@ -48,8 +48,11 @@ class GameManager(GameManagerInterface):
         return self.asset_provider
 
     def change_state(self, new_state: StateInterface) -> None:
+        print("Change state from {} to {}".format(self.state, new_state))
+
         if self.state is not None:
             self.state.on_state_exit()
+
         self.state = new_state
         self.state.on_state_start()
 

@@ -13,3 +13,4 @@ from .socketwrappers import \
     SocketWrapper,\
     NoneBlockingSocketWrapper,\
     ServerSocketWrapper
+from .lobbies import Lobby, LobbyManager

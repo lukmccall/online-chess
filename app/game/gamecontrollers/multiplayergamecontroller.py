@@ -5,7 +5,6 @@ from typing import List, Optional, cast
 import pygame
 import chess
 
-from settings import Settings
 from constants import Team
 from multiplayer import \
     SocketWrapperInterface, \
@@ -33,8 +32,7 @@ class MultiplayerGameController(GameController):
         self._message: Optional[AllMessageType] = None
 
     def prepare(self) -> None:
-        if Settings().get_flip_board():
-            self._board.set_flip(self.team == Team.WHITE)
+        self._board.set_flip(self.team == Team.WHITE)
 
     def pipe_events(self, events: List[pygame.event.Event]) -> None:
         if not self.team == self._board.turn():

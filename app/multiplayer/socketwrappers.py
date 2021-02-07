@@ -20,6 +20,7 @@ class SocketWrapper(SocketWrapperInterface):
         try:
             encoded_size = self.socket.recv(4, soc.MSG_PEEK)
             if len(encoded_size) == 0:
+                print("Connection abort")
                 raise ConnectionAbortedError("Connection abort")
 
             if len(encoded_size) != 4:
@@ -32,7 +33,10 @@ class SocketWrapper(SocketWrapperInterface):
 
             self.socket.recv(4 + size)
 
-            return pickle.loads(data)
+            message = pickle.loads(data)
+            print("Received {}".format(message))
+
+            return message
         except BlockingIOError:
             return None
 
@@ -41,6 +45,7 @@ class SocketWrapper(SocketWrapperInterface):
         size = len(data)
         encoded_size = size.to_bytes(4, 'little')
 
+        print("Send {}".format(message))
         self.socket.send(encoded_size + data)
 
     def close(self) -> None:
